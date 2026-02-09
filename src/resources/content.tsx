@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
+  firstName: "Edwin",
+  lastName: "Puertas",
+  name: `Edwin Puertas`,
   role: "Design Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "epueta@utb.edu.co",
+  location: "Cartagena/Colombia", // Expecting the IANA time zone identifier, e.g., 'Europe/'
+  languages: ["English", "Spanish"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,7 +25,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://edwinpuertas.github.io/",
     essential: true,
   },
   {
@@ -102,9 +102,9 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am an Artificial Intelligence Software Architect and Natural Language Processing (NLP) Researcher with 20 years of experience in academia and industry. 
+        Currently, I serve as an Associate Professor at the Technological University of Bolívar, where I also hold the position of Head of the Master’s and Doctoral Programs in Engineering. 
+        Additionally, I am an active member of the Artificial Intelligence Standards Committee.
       </>
     ),
   },
