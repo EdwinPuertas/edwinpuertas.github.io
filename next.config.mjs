@@ -5,23 +5,15 @@ const withMDX = mdx({
   options: {},
 });
 
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ["ts", "tsx", "md", "mdx"],
-  transpilePackages: ["next-mdx-remote"],
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "edwinpuertas.github.io/",
-        pathname: "**",
-      },
-    ],
-  },
-  sassOptions: {
-    compiler: "modern",
-    silenceDeprecations: ["legacy-js-api"],
-  },
+  output: 'export',              // Export estático para GitHub Pages
+  images: { unoptimized: true }, // Desactiva el Image Optimizer en Pages
+  trailingSlash: true,           // Evita 404 en rutas
+  // Publicación en raíz (edwinpuertas.github.io): NO uses basePath ni assetPrefix
+  // basePath: '',
+  // assetPrefix: '',
 };
 
-export default withMDX(nextConfig);
+export default nextConfig;
