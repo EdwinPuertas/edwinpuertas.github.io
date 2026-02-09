@@ -30,11 +30,11 @@ jobs:
       - name: Install deps
         run: npm install
 
-      - name: Build (Next.js)
+      - name: Build
         run: |
           npm run build
-          # Export estático
           npx next export
+          touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
