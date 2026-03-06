@@ -1,6 +1,7 @@
 // app/robots.ts (o app/robots.txt/route.ts)
 export const dynamic = 'force-static';
 export const revalidate = false;
+export const dynamic = "force-static";
 
 // Para 'app/robots.ts' (file convention) con App Router:
 export default function robots() {
