@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import * as cookie from "cookie";
+export const dynamic = "force-static";
 
 export async function GET(request: NextRequest) {
   const cookieHeader = request.headers.get("cookie") || "";
