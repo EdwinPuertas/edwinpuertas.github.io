@@ -1,4 +1,3 @@
-// app/robots.ts (o app/robots.txt/route.ts)
 export const dynamic = 'force-static';
 export const revalidate = false;
 
