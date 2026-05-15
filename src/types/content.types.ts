@@ -247,10 +247,9 @@ export interface Gallery extends BasePageConfig {
 export type Publication = {
   year: number;
   title: string;
-  authors: string;
-  venue: string;
+  /** Pre-formatted APA citation string */
+  citation: string;
   citations?: number;
-  url?: string;
   award?: string;
 };
 

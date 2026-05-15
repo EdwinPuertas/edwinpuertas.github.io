@@ -12,7 +12,6 @@ export async function generateMetadata() {
 }
 
 export default function PublicationsPage() {
-  // Group by year descending
   const byYear = publications.items.reduce(
     (acc, pub) => {
       if (!acc[pub.year]) acc[pub.year] = [];
@@ -68,19 +67,13 @@ export default function PublicationsPage() {
                       {pub.award}
                     </Tag>
                   )}
-                  {pub.citations && pub.citations > 0 && (
+                  {pub.citations && pub.citations > 0 ? (
                     <Tag size="s">
                       {pub.citations} citation{pub.citations > 1 ? "s" : ""}
                     </Tag>
-                  )}
+                  ) : null}
                 </Row>
-                <Text variant="heading-strong-m">{pub.title}</Text>
-                <Text variant="body-default-s" onBackground="neutral-weak">
-                  {pub.authors}
-                </Text>
-                <Text variant="body-default-s" onBackground="brand-weak">
-                  <em>{pub.venue}</em>
-                </Text>
+                <Text variant="body-default-s">{pub.citation}</Text>
               </Column>
             ))}
           </Column>
