@@ -14,13 +14,14 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://edwinpuertas.github.io";
 
 const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
   "/blog": true,
+  "/publications": true,
   "/gallery": true,
 };
 
@@ -187,17 +188,17 @@ const mailchimp: MailchimpConfig = {
 // default schema data
 const schema: SchemaConfig = {
   logo: "",
-  type: "Organization",
-  name: "Once UI",
+  type: "Person",
+  name: "Edwin Puertas, PhD",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "epuertas@utb.edu.co",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  threads: "",
+  linkedin: "",
+  discord: "",
 };
 
 // social sharing configuration for blog posts

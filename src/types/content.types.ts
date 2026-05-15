@@ -240,3 +240,23 @@ export interface Gallery extends BasePageConfig {
     orientation: string;
   }>;
 }
+
+/**
+ * A single publication entry.
+ */
+export type Publication = {
+  year: number;
+  title: string;
+  authors: string;
+  venue: string;
+  citations?: number;
+  url?: string;
+  award?: string;
+};
+
+/**
+ * Publications page configuration.
+ */
+export interface Publications extends BasePageConfig {
+  items: Publication[];
+}
