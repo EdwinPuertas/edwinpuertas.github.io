@@ -1,10 +1,10 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Newsletter, Person, Publications, Social, Work } from "@/types";
 
 const person: Person = {
   firstName: "Edwin",
   lastName: "Puertas",
-  name: `Edwin Puertas`,
-  role: "Associate Professor & AI / NLP Researcher",
+  name: "Edwin Puertas",
+  role: "AI Software Architect & NLP Researcher · Associate Professor",
   avatar: "/images/avatar.jpg",
   email: "epuertas@utb.edu.co",
   location: "America/Bogota",
@@ -49,9 +49,9 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `Edwin Puertas, PhD`,
+  title: "Edwin Puertas, PhD",
   description:
-    "Associate Professor and researcher in AI, NLP and Computer Vision. Technological University of Bolívar, Cartagena, Colombia.",
+    "AI Software Architect, NLP Researcher and Associate Professor at the Technological University of Bolívar. IEEE Senior Member. Cartagena, Colombia.",
   headline: <>AI Research Applied from Latin America</>,
   featured: {
     display: false,
@@ -60,10 +60,10 @@ const home: Home = {
   },
   subline: (
     <>
-      Associate Professor at the{" "}
+      Associate Professor &amp; Program Director at the{" "}
       <strong>Technological University of Bolívar</strong>. PhD in Engineering
-      (PUJ, 2023). IEEE AI Standards Committee member. Over 299 citations in
-      international publications on AI, NLP and Computer Vision.
+      (PUJ, 2023). IEEE Senior Member. Specialising in NLP, Deep Learning and
+      Computer Vision applied to real-world problems.
     </>
   ),
 };
@@ -71,9 +71,9 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `Edwin Puertas, PhD`,
+  title: "Edwin Puertas, PhD",
   description:
-    "Associate Professor and researcher in AI, NLP and Computer Vision at the Technological University of Bolívar, Cartagena, Colombia.",
+    "AI Software Architect, NLP Researcher and Associate Professor at the Technological University of Bolívar, Cartagena, Colombia. IEEE Senior Member.",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -90,15 +90,15 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I hold a <strong>PhD in Engineering</strong> from Pontificia Universidad
-        Javeriana (2023) and serve as Associate Professor at the Technological
-        University of Bolívar, where I direct the Doctoral and Master's Programs
-        in Systems Engineering. My work bridges academic research and industrial
-        application in Artificial Intelligence, Natural Language Processing (NLP)
-        and Computer Vision. I have been a member of the{" "}
-        <strong>IEEE Artificial Intelligence Standards Committee</strong> since
-        2022, and my publications have accumulated over 299 citations in
-        international journals and conferences.
+        I am an AI Software Architect and NLP Researcher in computer science,
+        serving as Associate Professor at the Technological University of
+        Bolívar (UTB) and a Senior Member of the IEEE. I have extensive
+        expertise in Artificial Intelligence, Natural Language Processing, Big
+        Data, Data Analytics, and Software Engineering. My interdisciplinary
+        approach has allowed me to make significant contributions to both the
+        academic community and industry. I hold a PhD in Engineering from
+        Pontificia Universidad Javeriana (2023) and direct the Doctoral and
+        Master's Programs in Systems Engineering at UTB.
       </>
     ),
   },
@@ -107,34 +107,87 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Technological University of Bolívar",
-        timeframe: "2016 – Present",
-        role: "Associate Professor — Director of Doctoral & Master's Programs in Engineering",
+        company: "Technological University of Bolívar (UTB)",
+        timeframe: "2008 – Present",
+        role: "Associate Professor & Program Director — Doctoral & Master's Programs in Engineering",
         achievements: [
           <>
-            Lead the Doctoral and Master's Programs in Systems Engineering,
-            mentoring researchers in AI, NLP and Data Science.
+            Direct the academic, research and administrative coordination of the
+            graduate programs in engineering, including curriculum development
+            and strategic planning.
           </>,
           <>
-            Principal investigator on applied NLP projects for Latin American
-            Spanish: sentiment analysis, propaganda detection and media framing
-            using transformer-based models (BERT, LLMs).
+            Implement AI projects across industrial sectors with focus on NLP,
+            Data Analytics and Big Data. Teach AI, Machine Learning, Big Data,
+            Data Analytics, Software Architecture and Data Science to
+            undergraduate and graduate students.
           </>,
           <>
-            Participated in international NLP competitions: IberLEF, DIPROMATS
-            2024 and HOMO-MEX 2024, collaborating with the Latam AI ecosystem.
+            Participated in international NLP competitions: IberLEF,
+            DIPROMATS 2024, HOMO-MEX 2024, SemEval 2023–2024, PAN@CLEF
+            2019–2020.
           </>,
         ],
         images: [],
       },
       {
-        company: "IEEE Artificial Intelligence Standards Committee",
-        timeframe: "2022 – Present",
-        role: "Active Member",
+        company: "Navigating Toward the Future",
+        timeframe: "2024 – Present",
+        role: "Co-Investigator",
         achievements: [
           <>
-            Contribute to the development of international standards for
-            Artificial Intelligence systems.
+            Develop and implement AI-powered solutions for intelligent
+            maintenance in naval environments, integrating IoT systems and
+            advanced analytics.
+          </>,
+          <>
+            Support the design of digital twin components for vessels and data
+            analysis processes for predictive and preventive maintenance
+            (Maintenance 5.0 ecosystem).
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "CAOBA — Center of Excellence in Big Data & Data Analytics",
+        timeframe: "July 2016 – July 2023",
+        role: "Senior Data Scientist",
+        achievements: [
+          <>
+            Oversaw AI projects across industrial sectors with focus on NLP,
+            Data Analytics and Big Data for clients including Nutresa,
+            Bancolombia and others.
+          </>,
+          <>
+            Designed and implemented technology solutions using Python, C#,
+            Java, C++ and Julia across different computing platforms and cloud
+            environments.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Universitat Politècnica de València (UPV)",
+        timeframe: "Jan 2019 – Mar 2019",
+        role: "Visiting Researcher",
+        achievements: [
+          <>
+            Conducted research collaborations and participated in scientific
+            events, contributing to bilateral cooperation and publication of
+            research papers.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "University of Turin",
+        timeframe: "Oct 2018 – Jan 2019",
+        role: "Visiting Researcher",
+        achievements: [
+          <>
+            Established bilateral cooperative ties with researchers, enriching
+            academic perspective and opening avenues for joint research and
+            interdisciplinary projects.
           </>,
         ],
         images: [],
@@ -151,21 +204,44 @@ const about: About = {
       },
       {
         name: "Technological University of Bolívar",
-        description: <>BSc in Systems Engineering. Cartagena, Colombia.</>,
+        description: (
+          <>Master in Engineering — 2008–2011. Cartagena, Colombia.</>
+        ),
+      },
+      {
+        name: "Technological University of Bolívar",
+        description: (
+          <>BSc in Systems Engineering — 1995–2001. Cartagena, Colombia.</>
+        ),
       },
     ],
   },
   technical: {
     display: true,
-    title: "Research Areas & Skills",
+    title: "Research Areas & Technical Skills",
     skills: [
       {
-        title: "Artificial Intelligence & Machine Learning",
+        title: "Artificial Intelligence & Deep Learning",
         description: (
           <>
-            Design, training and production deployment of ML and Deep Learning
-            models. Specialisation in transformer architectures (BERT, LLMs)
-            and fine-tuning for Spanish-language tasks.
+            Machine Learning, Deep Learning, Reinforcement Learning, Transfer
+            Learning. Production deployment with MLOps practices.
+          </>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+          { name: "PyTorch", icon: "pytorch" },
+          { name: "TensorFlow", icon: "tensorflow" },
+        ],
+        images: [],
+      },
+      {
+        title: "Natural Language Processing (NLP)",
+        description: (
+          <>
+            Author profiling, sentiment analysis, text classification,
+            information retrieval, propaganda detection, framing analysis.
+            Transformer-based models (BERT, LLMs) fine-tuned for Spanish.
           </>
         ),
         tags: [
@@ -175,12 +251,11 @@ const about: About = {
         images: [],
       },
       {
-        title: "Natural Language Processing (NLP)",
+        title: "Computer Vision",
         description: (
           <>
-            Sentiment analysis, propaganda detection, media framing, named
-            entity recognition and text classification. Corpora and models for
-            Latin American Spanish.
+            Object detection, disease detection in crops, traffic violation
+            monitoring. YOLO and CNN architectures.
           </>
         ),
         tags: [
@@ -190,16 +265,17 @@ const about: About = {
         images: [],
       },
       {
-        title: "Computer Vision",
+        title: "Data Engineering & Backend",
         description: (
           <>
-            Disease detection in tropical crops, visual inspection and traffic
-            infraction detection using convolutional neural networks and YOLO.
+            Big Data, Data Analytics, Multi-domain signal processing. Backend
+            languages: Python, C++, C#, Java, Julia. Databases: SQL Server,
+            MySQL, MongoDB. DevOps/MLOps, Docker, Git.
           </>
         ),
         tags: [
           { name: "Python", icon: "python" },
-          { name: "PyTorch", icon: "pytorch" },
+          { name: "JavaScript", icon: "javascript" },
         ],
         images: [],
       },
@@ -218,7 +294,7 @@ const work: Work = {
   path: "/work",
   label: "Projects",
   title: `Projects — ${person.name}`,
-  description: `Research and engineering projects by ${person.name} in AI, NLP and Computer Vision.`,
+  description: "Research and engineering projects in AI, NLP and Computer Vision.",
 };
 
 const gallery: Gallery = {
@@ -228,14 +304,500 @@ const gallery: Gallery = {
   description: `Images and moments from ${person.name}'s research journey.`,
   images: [
     { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-4.jpg",   alt: "image", orientation: "vertical"   },
+    { src: "/images/gallery/vertical-4.jpg", alt: "image", orientation: "vertical" },
     { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-1.jpg",   alt: "image", orientation: "vertical"   },
-    { src: "/images/gallery/vertical-2.jpg",   alt: "image", orientation: "vertical"   },
+    { src: "/images/gallery/vertical-1.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/vertical-2.jpg", alt: "image", orientation: "vertical" },
     { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
     { src: "/images/gallery/horizontal-4.jpg", alt: "image", orientation: "horizontal" },
-    { src: "/images/gallery/vertical-3.jpg",   alt: "image", orientation: "vertical"   },
+    { src: "/images/gallery/vertical-3.jpg", alt: "image", orientation: "vertical" },
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const publications: Publications = {
+  path: "/publications",
+  label: "Publications",
+  title: "Publications — Edwin Puertas",
+  description:
+    "Peer-reviewed publications by Edwin Puertas in AI, NLP, Computer Vision and Data Science.",
+  items: [
+    // ── 2026 ────────────────────────────────────────────────────────────────
+    {
+      year: 2026,
+      title: "Detection of diseases in cucumber using deep neural networks",
+      citation:
+        "Menco-Tovar, A., Martinez-Santos, J. C., & Puertas, E. (2026). Detection of diseases in cucumber using deep neural networks. Neural Computing and Applications, 38(5). https://doi.org/10.1007/s00521-026-11945-z",
+    },
+    {
+      year: 2026,
+      title: "SAPSAI – System for acquisition, preprocessing, and storage of agricultural images",
+      citation:
+        "Tovar, A. M., Hernández, C. V., Martinez-Santos, J. C., & Puertas, E. (2026). SAPSAI – System for acquisition, preprocessing, and storage of agricultural images. Communications in Computer and Information Science, 2702, 327–338. https://doi.org/10.1007/978-3-032-08206-0_28",
+    },
+
+    // ── 2025 ────────────────────────────────────────────────────────────────
+    {
+      year: 2025,
+      title: "A computer vision system for detecting motorcycle violations in pedestrian zones",
+      citation:
+        "Hernández-Díaz, N., Peñaloza, Y. C., Rios, Y. Y., Martinez-Santos, J. C., & Puertas, E. (2025). A computer vision system for detecting motorcycle violations in pedestrian zones. Multimedia Tools and Applications, 84(13), 12659–12682. https://doi.org/10.1007/s11042-024-19356-9",
+      citations: 3,
+    },
+    {
+      year: 2025,
+      title: "Enhancing consistency in piping and instrumentation diagrams using DistilBERT and smart PID systems",
+      citation:
+        "Gómez-Vega, F. S., Acuña, O., Camargo, A. C., Jimenez, J. D., Galeano, S. M., Franco, I. E., Lozano, L. L., Vásquez, J., & Puertas, E. (2025). Enhancing consistency in piping and instrumentation diagrams using DistilBERT and smart PID systems. Systems and Soft Computing, 7. https://doi.org/10.1016/j.sasc.2025.200373",
+      citations: 1,
+    },
+    {
+      year: 2025,
+      title: "The media framing dataset: Analyzing news narratives in Mexico and Colombia",
+      citation:
+        "Cuadrado, J., Martinez, E., Martinez-Santos, J. C., & Puertas, E. (2025). The media framing dataset: Analyzing news narratives in Mexico and Colombia. Data in Brief, 58. https://doi.org/10.1016/j.dib.2025.111284",
+    },
+    {
+      year: 2025,
+      title: "Mapping motion: A cognitive approach to dyspraxia multimodal analysis",
+      citation:
+        "Muvdi, D., Hernández, M. R., Cifuentes, E. J., Di Somma, A., Chiappone, F., Di Maro, V., Martínez-Santos, J. C., & Puertas, E. (2025). Mapping motion: A cognitive approach to dyspraxia multimodal analysis. Lecture Notes in Computer Science, 15277, 14–25. https://doi.org/10.1007/978-3-031-80366-6_2",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at CheckThat! 2025: Fine-tuning DeBERTa for multi-label scientific discourse detection in tweets",
+      citation:
+        "Borrero, M. J. S., Castañeda, J. E. S., Santos, J. C. M., & Del Castillo, E. A. P. (2025). VerbaNexAI at CheckThat! 2025: Fine-tuning DeBERTa for multi-label scientific discourse detection in tweets. CEUR Workshop Proceedings, 4038, 1237–1245.",
+    },
+    {
+      year: 2025,
+      title: "Next-generation smart cities: Harnessing AI for enhanced pedestrian protection",
+      citation:
+        "Amaya, D. A. G., Serrano, J. E., Santos, J. C. M., & Castillo, E. A. P. del (2025). Next-generation smart cities: Harnessing AI for enhanced pedestrian protection. In TEMSCON LATAM 2025. IEEE. https://doi.org/10.1109/TEMSCONLATAM65810.2025.11238663",
+    },
+    {
+      year: 2025,
+      title: "Smart data from CCTV: Streamlining automated dataset construction for safer cities",
+      citation:
+        "Amaya, D. A. G., Serrano, J. E., Santos, J. C. M., & Del Castillo, E. A. P. (2025). Smart data from CCTV: Streamlining automated dataset construction for safer cities. In TEMSCON LATAM 2025. IEEE. https://doi.org/10.1109/TEMSCONLATAM65810.2025.11238544",
+    },
+    {
+      year: 2025,
+      title: "CEDNAV–UTB: Efficient image retrieval for arguments with CLIP",
+      citation:
+        "Amaya, D. A. G., Castañeda, J. E. S., Martinez-Santos, J. C., & Puertas, E. (2025). CEDNAV–UTB: Efficient image retrieval for arguments with CLIP. CEUR Workshop Proceedings, 4038, 4601–4609.",
+      citations: 1,
+    },
+    {
+      year: 2025,
+      title: "Implementation of a DDS-based publishing interface for real-time inertial sensor data in navigation systems",
+      citation:
+        "Sosa, M., Serrano, J., Santos, J. C. M., & Puertas, E. (2025). Implementation of a DDS-based publishing interface for real-time inertial sensor data in navigation systems. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11340084",
+      citations: 1,
+    },
+    {
+      year: 2025,
+      title: "Predictive model for STEM vocational guidance through profile analysis and information adaptation with a gender perspective",
+      citation:
+        "Moreno Novoa, M., Henríquez Núñez, Y., Puertas, E., & Martinez-Santos, J. C. (2025). Predictive model for STEM vocational guidance through profile analysis and information adaptation with a gender perspective. In Proceedings of LACCEI 2025. LACCEI. https://doi.org/10.18687/LEIRD2025.1.1.1122",
+    },
+    {
+      year: 2025,
+      title: "COTECMAR-UTB at eRisk 2025: Semantic-centroid symptom ranking and early depression detection using adaptive decision rule",
+      citation:
+        "Mendoza, L., Suarez, J., Puertas, E., Martinez, J., & Serrano, J. (2025). COTECMAR-UTB at eRisk 2025: Semantic-centroid symptom ranking and early depression detection using adaptive decision rule. CEUR Workshop Proceedings, 4038, 1562–1582.",
+    },
+    {
+      year: 2025,
+      title: "Portable molecular detection system using LAMP isothermal amplification with precise PID thermal regulation",
+      citation:
+        "Tovar, A. M., Casseres, M. A. S., Puertas, E., & Martinez-Santos, J. C. (2025). Portable molecular detection system using LAMP isothermal amplification with precise PID thermal regulation. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11340524",
+    },
+    {
+      year: 2025,
+      title: "COTECMAR–UTB at TalentCLEF 2025: Linking job titles and ESCO skills with sentence transformer embeddings",
+      citation:
+        "Llamas, J., Puertas, E., Serrano, J., & Martinez, J. (2025). COTECMAR–UTB at TalentCLEF 2025: Linking job titles and ESCO skills with sentence transformer embeddings. CEUR Workshop Proceedings, 4038, 4438–4447.",
+    },
+    {
+      year: 2025,
+      title: "VerbaNex at TalentCLEF 2025: Semantic matching of multilingual job titles through a framework integrating ESCO taxonomy",
+      citation:
+        "Novoa, M. M., Martinez-Santos, J. C., Serrano, J., & Puertas, E. (2025). VerbaNex at TalentCLEF 2025: Semantic matching of multilingual job titles through a framework integrating ESCO taxonomy. CEUR Workshop Proceedings, 4038, 4448–4458.",
+    },
+    {
+      year: 2025,
+      title: "Hybrid re-ranking for biomedical entity linking using SapBERT embeddings",
+      citation:
+        "Gnecco, D. P., Serrano, J., Puertas, E., & Martinez-Santos, J. C. (2025). Hybrid re-ranking for biomedical entity linking using SapBERT embeddings. CEUR Workshop Proceedings, 4038, 497–508.",
+    },
+    {
+      year: 2025,
+      title: "Economic optimization of local energy markets: Strategies for prosumers with IoT and blockchain integration",
+      citation:
+        "Medina-Reyes, M. F., Puertas, E., & Martinez-Santos, J. C. (2025). Economic optimization of local energy markets: Strategies for prosumers with IoT and blockchain integration. In 1st IEEE Latin American Conference on Internet of Things (LCIoT 2025) (pp. 40–43). IEEE. https://doi.org/10.1109/LCIoT64881.2025.11118552",
+    },
+    {
+      year: 2025,
+      title: "Segmentation of tourists in the department of Sucre, Colombia: An approach based on digital footprints",
+      citation:
+        "Almanza-González, D., Marrugo, L. D. A., Fernández, M. S., Puertas, E., & Martinez-Santos, J. C. (2025). Segmentation of tourists in the department of Sucre, Colombia: An approach based on digital footprints. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11340510",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at CLEF 2025 JOKER Task 3: Multi-model LLM approach for onomastic wordplay translation",
+      citation:
+        "Ramirez, M. P., Jimenez, J. D., Sánchez, D. G., Serrano, J. E., Martinez-Santos, J. C., & Puertas, E. (2025). VerbaNexAI at CLEF 2025 JOKER Task 3: Multi-model LLM approach for onomastic wordplay translation. CEUR Workshop Proceedings, 4038, 2860–2869.",
+    },
+    {
+      year: 2025,
+      title: "PubMed API and LLM-driven hybrid retrieval system for biomedical question answering",
+      citation:
+        "Morillo, A., Agamez, C., Puertas, E., Martinez-Santos, J. C., & Serrano, J. (2025). PubMed API and LLM-driven hybrid retrieval system for biomedical question answering. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11340582",
+    },
+    {
+      year: 2025,
+      title: "Driving operational efficiency in SMEs through structured digital transformation strategies",
+      citation:
+        "Vásquez, J., Puertas, E., Diaz, A. M., Arrieta, F. A. G., & Ospina-Mateus, H. (2025). Driving operational efficiency in SMEs through structured digital transformation strategies. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11340495",
+    },
+    {
+      year: 2025,
+      title: "UTBNLP at CLEF JOKER 2025 Task 2: mBART-50 fine-tuning with dictionary-guided forced decoding for English-French pun translation",
+      citation:
+        "Marrugo-Tobon, D. A., Jimenez, J. D., Serrano, J. E., Martinez-Santos, J. C., & Puertas, E. (2025). UTBNLP at CLEF JOKER 2025 Task 2: mBART-50 fine-tuning with dictionary-guided forced decoding for English-French pun translation. CEUR Workshop Proceedings, 4038, 2838–2848.",
+    },
+    {
+      year: 2025,
+      title: "Tiles-wise inference with vision transformers for multispecies identification in vegetation images",
+      citation:
+        "Menco-Tovar, A., Serrano, J. E., Martinez-Santos, J. C., & Puertas, E. (2025). Tiles-wise inference with vision transformers for multispecies identification in vegetation images. CEUR Workshop Proceedings, 4038, 3102–3110.",
+    },
+    {
+      year: 2025,
+      title: "Prediction of human preferences and explanation generation with LLM: An approach based on RAG, few-shot learning, and Auto-CoT",
+      citation:
+        "Almanza-Gonzalez, D., Serrano, J. E., Martinez-Santos, J. C., & Puertas, E. (2025). Prediction of human preferences and explanation generation with LLM: An approach based on RAG, few-shot learning, and Auto-CoT. CEUR Workshop Proceedings, 4038, 1360–1369.",
+      citations: 1,
+    },
+    {
+      year: 2025,
+      title: "RoBERT-IA: Human-AI collaborative text classification",
+      citation:
+        "Sánchez, D. G., Jimenez, J. D., Ramírez, M. P., Serrano, J. E., Martinez-Santos, J. C., & Puertas, E. (2025). RoBERT-IA: Human-AI collaborative text classification. CEUR Workshop Proceedings, 4038, 3672–3680.",
+    },
+    {
+      year: 2025,
+      title: "Evaluation of image preprocessing algorithms for foggy scene enhancement",
+      citation:
+        "Amaya, D. A. G., Castañeda, J. E. S., Santos, J. C. M., & Del Castillo, E. A. P. (2025). Evaluation of image preprocessing algorithms for foggy scene enhancement. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11340492",
+    },
+    {
+      year: 2025,
+      title: "EarlySTEM: Machine learning platform for early identification of dropout risk in STEM programs",
+      citation:
+        "Novoa, M. M., Arrieta-Guardo, I. S., González-Ortiz, J. F., Negrin-Perez, E. A., Martinez-Santos, J. C., Puertas, E., & Serrano, J. E. (2025). EarlySTEM: Machine learning platform for early identification of dropout risk in STEM programs. In C3 2025 – IEEE Colombian Caribbean Conference. IEEE. https://doi.org/10.1109/C366505.2025.11339990",
+    },
+    {
+      year: 2025,
+      title: "Development of a biomedical question answering system based on transformer models",
+      citation:
+        "López, L., Martinez-Santos, J. C., & Puertas, E. (2025). Development of a biomedical question answering system based on transformer models. CEUR Workshop Proceedings, 4038, 452–459.",
+    },
+    {
+      year: 2025,
+      title: "Adaptive author profiling-based model for personalized tourism recommendations using NLP",
+      citation:
+        "Almanza-Gonzalez, D., Nunez, Y. H., Puertas, E., & Martinez-Santos, J. C. (2025). Adaptive author profiling-based model for personalized tourism recommendations using NLP. In TEMSCON LATAM 2025. IEEE. https://doi.org/10.1109/TEMSCONLATAM65810.2025.11238759",
+    },
+
+    // ── 2024 ────────────────────────────────────────────────────────────────
+    {
+      year: 2024,
+      title: "VerbaNexAI Lab at SemEval-2024 Task 1: A multilayer artificial intelligence model for semantic relationship detection",
+      citation:
+        "Morillo, A., Peña, D., Martinez-Santos, J. C., & Puertas, E. (2024). VerbaNexAI Lab at SemEval-2024 Task 1: A multilayer artificial intelligence model for semantic relationship detection. In Proceedings of SemEval-2024 (pp. 1344–1350). ACL. https://doi.org/10.18653/v1/2024.semeval-1.194",
+      citations: 2,
+    },
+    {
+      year: 2024,
+      title: "VerbaNexAI Lab at SemEval-2024 Task 10: Emotion recognition and reasoning in mixed-coded conversations based on an NRC VAD approach",
+      citation:
+        "Garcia, S., Martinez, E., Cuadrado, J., Martinez-Santos, J. C., & Puertas, E. (2024). VerbaNexAI Lab at SemEval-2024 Task 10: Emotion recognition and reasoning in mixed-coded conversations based on an NRC VAD approach. In Proceedings of SemEval-2024 (pp. 1332–1338). ACL. https://doi.org/10.18653/v1/2024.semeval-1.192",
+      citations: 2,
+    },
+    {
+      year: 2024,
+      title: "VerbaNexAI Lab at SemEval-2024 Task 3: Deciphering emotional causality in conversations using multimodal analysis approach",
+      citation:
+        "Pacheco, V., Cuadrado, J., Martinez, E., Martinez-Santos, J. C., & Puertas, E. (2024). VerbaNexAI Lab at SemEval-2024 Task 3: Deciphering emotional causality in conversations using multimodal analysis approach. In Proceedings of SemEval-2024 (pp. 1339–1343). ACL. https://doi.org/10.18653/v1/2024.semeval-1.193",
+    },
+    {
+      year: 2024,
+      title: "VerbaNexAI at MEDIQA-CORR 2024: Efficacy of GRU with BioWordVec and ClinicalBERT in error correction in clinical notes",
+      citation:
+        "Villate, D., Tinjaca, L., Estrada, L., Puertas, E., & Pajaro, J. (2024). VerbaNexAI at MEDIQA-CORR 2024: Efficacy of GRU with BioWordVec and ClinicalBERT in error correction in clinical notes. In ClinicalNLP 2024 (pp. 461–469). ACL.",
+      citations: 1,
+    },
+    {
+      year: 2024,
+      title: "VerbaNex AI at DIPROMATS 2024: Enhancing propaganda detection in diplomatic tweets with fine-tuned BERT and integrated NLP techniques",
+      citation:
+        "Cuadrado, J., Martinez, E., Cuadrado, J., Martinez-Santos, J. C., & Puertas, E. (2024). VerbaNex AI at DIPROMATS 2024: Enhancing propaganda detection in diplomatic tweets with fine-tuned BERT and integrated NLP techniques. CEUR Workshop Proceedings, 3756.",
+      citations: 1,
+    },
+    {
+      year: 2024,
+      title: "VerbaNexAI Lab at HOMO-MEX 2024: Multiclass and multilabel detection of LGBTQ+ phobic content using transformers",
+      citation:
+        "Gonzalez-Henao, R. D., Marrugo-Tobon, D. A., Martinez-Santos, J. C., & Puertas, E. (2024). VerbaNexAI Lab at HOMO-MEX 2024: Multiclass and multilabel detection of LGBTQ+ phobic content using transformers. CEUR Workshop Proceedings, 3756.",
+    },
+    {
+      year: 2024,
+      title: "Assessment of the level of digital maturity through a process analysis",
+      citation:
+        "Vásquez, J., Castillo, D., Rodriguez-Jaraba, C., Soto, M., & Puertas, E. (2024). Assessment of the level of digital maturity through a process analysis. In Proceedings of LACCEI 2024. LACCEI. https://doi.org/10.18687/LACCEI2024.1.1.1807",
+      citations: 2,
+    },
+    {
+      year: 2024,
+      title: "Implementation of convolutional neural networks for automated disease detection in cucumber crops",
+      citation:
+        "Tovar, A. M., Puertas, E., & Martinez-Santos, J. C. (2024). Implementation of convolutional neural networks for automated disease detection in cucumber crops. Communications in Computer and Information Science, 2208, 156–167. https://doi.org/10.1007/978-3-031-75233-9_12",
+      citations: 1,
+    },
+    {
+      year: 2024,
+      title: "VerbaNex AI at CLEF EXIST 2024: Detection of online sexism using transformer models and profiling techniques",
+      citation:
+        "Martinez, E., Cuadrado, J., Santos, J. C. M., & Puertas, E. (2024). VerbaNex AI at CLEF EXIST 2024: Detection of online sexism using transformer models and profiling techniques. CEUR Workshop Proceedings, 3740, 1107–1113.",
+    },
+    {
+      year: 2024,
+      title: "Unveiling tourist profiles in the department of Sucre: A text analysis approach",
+      citation:
+        "Almanza-Gonzalez, D., Puertas, E., & Martinez-Santos, J. C. (2024). Unveiling tourist profiles in the department of Sucre: A text analysis approach. Communications in Computer and Information Science, 2208, 27–40. https://doi.org/10.1007/978-3-031-75233-9_3",
+      citations: 2,
+    },
+    {
+      year: 2024,
+      title: "TRIP a-bike: An interactive educational system for learning English as a second language",
+      citation:
+        "Ciccarelli, S., Peña, D., Ferraro, F. V., Martinez-Santos, J. C., & Puertas, E. (2024). TRIP a-bike: An interactive educational system for learning English as a second language. In Proceedings of LACCEI 2024. LACCEI. https://doi.org/10.18687/LACCEI2024.1.1.1873",
+    },
+    {
+      year: 2024,
+      title: "Team QTB on feature selection via quantum annealing and hybrid models",
+      citation:
+        "Payares, E., Puertas, E., & Martínez-Santos, J. C. (2024). Team QTB on feature selection via quantum annealing and hybrid models. CEUR Workshop Proceedings, 3740, 3105–3114.",
+      citations: 1,
+    },
+    {
+      year: 2024,
+      title: "Automated detection of depression and anxiety using lexical and phonestheme features in Spanish texts",
+      citation:
+        "Martinez, E., Cuadrado, J., Martinez-Santos, J. C., & Puertas, E. (2024). Automated detection of depression and anxiety using lexical and phonestheme features in Spanish texts. CEUR Workshop Proceedings, 3756.",
+      citations: 1,
+    },
+    {
+      year: 2024,
+      title: "Feature selection for forecasting of energy spot price in the Colombian market",
+      citation:
+        "Gonzalez-Sierra, M. A., Arnedo, R., Puertas, E., & Martinez-Santos, J. C. (2024). Feature selection for forecasting of energy spot price in the Colombian market. In IEEE ANDESCON 2024. IEEE. https://doi.org/10.1109/ANDESCON61840.2024.10755699",
+    },
+    {
+      year: 2024,
+      title: "Enhancing vocational guidance with machine learning: Predicting STEM career viability for high school students",
+      citation:
+        "Moreno-Novoa, M., Puertas, E., & Martinez-Santos, J. C. (2024). Enhancing vocational guidance with machine learning: Predicting STEM career viability for high school students. Communications in Computer and Information Science, 2209, 150–162. https://doi.org/10.1007/978-3-031-75236-0_12",
+      citations: 1,
+    },
+
+    // ── 2023 ────────────────────────────────────────────────────────────────
+    {
+      year: 2023,
+      title: "UTB-NLP at SemEval-2023 Task 3: Weirdness, lexical features for detecting categorical framings, and persuasion in online news",
+      citation:
+        "Cuadrado, J., Martinez, E., Morillo, A., Peña, D., Sossa, K., Martinez-Santos, J. C., & Puertas, E. (2023). UTB-NLP at SemEval-2023 Task 3: Weirdness, lexical features for detecting categorical framings, and persuasion in online news. In Proceedings of SemEval-2023 (pp. 1551–1557). ACL. https://doi.org/10.18653/v1/2023.semeval-1.214",
+      citations: 5,
+    },
+    {
+      year: 2023,
+      title: "Detection of online sexism using lexical features and transformer",
+      citation:
+        "Martinez, E., Cuadrado, J., Martinez-Santos, J. C., & Puertas, E. (2023). Detection of online sexism using lexical features and transformer. In 1st IEEE Colombian Caribbean Conference (C3 2023). IEEE. https://doi.org/10.1109/C358072.2023.10436298",
+      citations: 2,
+      award: "Best Paper Award",
+    },
+    {
+      year: 2023,
+      title: "Automated depression detection in text data: Leveraging lexical features, phonesthemes embedding, and RoBERTa transformer model",
+      citation:
+        "Martinez, E., Cuadrado, J., Peña, D., Martinez-Santos, J. C., & Puertas, E. (2023). Automated depression detection in text data: Leveraging lexical features, phonesthemes embedding, and RoBERTa transformer model. CEUR Workshop Proceedings, 3496.",
+      citations: 3,
+    },
+    {
+      year: 2023,
+      title: "Natural language content evaluation system for multiclass detection of hate speech in tweets using transformers",
+      citation:
+        "Marrugo-Tobón, D. A., Martinez-Santos, J. C., & Puertas, E. (2023). Natural language content evaluation system for multiclass detection of hate speech in tweets using transformers. CEUR Workshop Proceedings, 3496.",
+    },
+    {
+      year: 2023,
+      title: "Natural language contents evaluation system for multi-class news categorization using machine learning and transformers",
+      citation:
+        "Marrugo, D. A., Martinez-Santos, J. C., & Puertas, E. (2023). Natural language contents evaluation system for multi-class news categorization using machine learning and transformers. Communications in Computer and Information Science, 1928, 115–126. https://doi.org/10.1007/978-3-031-46739-4_11",
+      citations: 1,
+    },
+    {
+      year: 2023,
+      title: "RealCheck: A web application for fake news detection using natural language processing",
+      citation:
+        "Puertas, E., Vasquez, J., & Martinez-Santos, J. C. (2023). RealCheck: A web application for fake news detection using natural language processing. In 1st IEEE Colombian Caribbean Conference (C3 2023). IEEE. https://doi.org/10.1109/C358072.2023.10436244",
+      citations: 1,
+    },
+    {
+      year: 2023,
+      title: "Team UTB-NLP at FinancES 2023: Financial targeted sentiment analysis using a phonestheme semantic approach",
+      citation:
+        "Cuadrado, J., Martinez, E., Martinez-Santos, J. C., & Puertas, E. (2023). Team UTB-NLP at FinancES 2023: Financial targeted sentiment analysis using a phonestheme semantic approach. CEUR Workshop Proceedings, 3496.",
+      citations: 1,
+    },
+    {
+      year: 2023,
+      title: "Quantum n-gram language models for tweet classification",
+      citation:
+        "Payares, E., Puertas, E., & Martinez-Santos, J. C. (2023). Quantum n-gram language models for tweet classification. In Proceedings – IEEE 5th International Conference on Cognitive Machine Intelligence (CogMI 2023) (pp. 69–74). IEEE. https://doi.org/10.1109/CogMI58952.2023.00019",
+      citations: 1,
+    },
+    {
+      year: 2023,
+      title: "Long-term effects of degradation on photovoltaic system return on investment",
+      citation:
+        "Cuadrado, J., Martinez, E., Puertas, E., & Martinez-Santos, J. C. (2023). Long-term effects of degradation on photovoltaic system return on investment. IEEE Latin America Transactions, 21(12), 1282–1290. https://doi.org/10.1109/TLA.2023.10305232",
+      citations: 2,
+    },
+    {
+      year: 2023,
+      title: "Intelligent system to detect violations in pedestrian areas committed by vehicles in the city of Cartagena de Indias",
+      citation:
+        "Hernández-Díaz, N., Pañaloza, Y. C., Rios, Y. Y., Martinez-Santos, J. C., & Puertas, E. (2023). Intelligent system to detect violations in pedestrian areas committed by vehicles in the city of Cartagena de Indias. In Proceedings of LACCEI 2023. LACCEI.",
+      citations: 2,
+    },
+    {
+      year: 2023,
+      title: "Dataset for detecting motorcyclists in pedestrian areas",
+      citation:
+        "Díaz, N. H., Peñaloza, Y. C., Rios, Y. Y., Martinez-Santos, J. C., & Puertas, E. (2023). Dataset for detecting motorcyclists in pedestrian areas. Data in Brief, 50. https://doi.org/10.1016/j.dib.2023.109610",
+      citations: 3,
+    },
+    {
+      year: 2023,
+      title: "Researcher profile: An automated solution for searching and gathering people's profiles",
+      citation:
+        "Martinez-Santos, J. C., Vasquez, J., & Puertas, E. (2023). Researcher profile: An automated solution for searching and gathering people's profiles. In 1st IEEE Colombian Caribbean Conference (C3 2023). IEEE. https://doi.org/10.1109/C358072.2023.10436220",
+    },
+    {
+      year: 2023,
+      title: "Component analysis to design an integral sustainability model for micro, small, and medium-sized enterprises",
+      citation:
+        "Vásquez, J., & Puertas, E. (2023). Component analysis to design an integral sustainability model for micro, small, and medium-sized enterprises. In Proceedings of LACCEI 2023. LACCEI.",
+    },
+
+    // ── 2022 ────────────────────────────────────────────────────────────────
+    {
+      year: 2022,
+      title: "Presidential preferences in Colombia through sentiment analysis",
+      citation:
+        "Puertas, E., Martinez-Santos, J. C., & Pertuz-Duran, P. A. (2022). Presidential preferences in Colombia through sentiment analysis. In IEEE ANDESCON 2022. IEEE. https://doi.org/10.1109/ANDESCON56260.2022.9989700",
+      citations: 3,
+    },
+    {
+      year: 2022,
+      title: "Cost-effectiveness analysis of strategies of COVID-19 vaccination in Colombia",
+      citation:
+        "Morales-Zamora, G., Espinosa, O., Puertas, E., Fernández, J. C., Hernández, J., Zakzuk, V., Cepeda, M., Alvis-Gúzman, N., Castañeda-Orjuela, C., & Paternina-Caicedo, A. (2022). Cost-effectiveness analysis of strategies of COVID-19 vaccination in Colombia. Value in Health Regional Issues, 31, 101–110. https://doi.org/10.1016/j.vhri.2022.04.004",
+      citations: 19,
+    },
+    {
+      year: 2022,
+      title: "Detection of broken bars in three-phase motors by using curve fits and classification algorithms",
+      citation:
+        "Hoyos, G., Puertas, E., Villa, J. L., & Martinez-Santos, J. C. (2022). Detection of broken bars in three-phase motors by using curve fits and classification algorithms. In IEEE ANDESCON 2022. IEEE. https://doi.org/10.1109/ANDESCON56260.2022.9989583",
+      citations: 1,
+    },
+
+    // ── 2021 ────────────────────────────────────────────────────────────────
+    {
+      year: 2021,
+      title: "Detection of sociolinguistic features in digital social networks for the detection of communities",
+      citation:
+        "Puertas, E., Moreno-Sandoval, L. G., Redondo, J., Alvarado-Valencia, J. A., & Pomares-Quimbaya, A. (2021). Detection of sociolinguistic features in digital social networks for the detection of communities. Cognitive Computation, 13(2), 518–537. https://doi.org/10.1007/s12559-021-09818-9",
+      citations: 19,
+    },
+    {
+      year: 2021,
+      title: "A sustainability maturity model for micro, small and medium-sized enterprises (MSMEs) based on a data analytics evaluation approach",
+      citation:
+        "Vásquez, J., Aguirre, S., Puertas, E., Bruno, G., Priarone, P. C., & Settineri, L. (2021). A sustainability maturity model for micro, small and medium-sized enterprises (MSMEs) based on a data analytics evaluation approach. Journal of Cleaner Production, 311. https://doi.org/10.1016/j.jclepro.2021.127692",
+      citations: 75,
+    },
+    {
+      year: 2021,
+      title: "Phonetic detection for hate speech spreaders on Twitter",
+      citation:
+        "Puertas, E., & Martinez-Santos, J. C. (2021). Phonetic detection for hate speech spreaders on Twitter. CEUR Workshop Proceedings, 2936, 2118–2125.",
+      citations: 1,
+    },
+
+    // ── 2020 ────────────────────────────────────────────────────────────────
+    {
+      year: 2020,
+      title: "Assembly of polarity, emotion and user statistics for detection of fake profiles — PAN at CLEF 2020",
+      citation:
+        "Moreno-Sandoval, L. G., Puertas, E., Pomares-Quimbaya, A., & Alvarado-Valencia, J. A. (2020). Assembly of polarity, emotion and user statistics for detection of fake profiles — PAN at CLEF 2020. CEUR Workshop Proceedings, 2696.",
+      citations: 1,
+    },
+
+    // ── 2019 ────────────────────────────────────────────────────────────────
+    {
+      year: 2019,
+      title: "Celebrity profiling on Twitter using sociolinguistic features — PAN at CLEF 2019",
+      citation:
+        "Moreno-Sandoval, L. G., Puertas, E., Plaza-Del-Arco, F. M., Pomares-Quimbaya, A., Alvarado-Valencia, J. A., & Alfonso Ureña-López, L. (2019). Celebrity profiling on Twitter using sociolinguistic features — PAN at CLEF 2019. CEUR Workshop Proceedings, 2380.",
+      citations: 2,
+    },
+    {
+      year: 2019,
+      title: "Bots and gender profiling on Twitter using sociolinguistic features — PAN at CLEF 2019",
+      citation:
+        "Puertas, E., Moreno-Sandoval, L. G., Plaza-Del-Arco, F. M., Alvarado-Valencia, J. A., Pomares-Quimbaya, A., & Alfonso Ureña-López, L. (2019). Bots and gender profiling on Twitter using sociolinguistic features — PAN at CLEF 2019. CEUR Workshop Proceedings, 2380.",
+      citations: 4,
+    },
+
+    // ── 2018 ────────────────────────────────────────────────────────────────
+    {
+      year: 2018,
+      title: "Age classification from Spanish tweets: The variable age analyzed by using linear classifiers",
+      citation:
+        "Moreno-Sandoval, L. G., Mendoza-Molina, J. F., Puertas, E. A., Duque-Marín, A., Pomares-Quimbaya, A., & Alvarado-Valencia, J. A. (2018). Age classification from Spanish tweets: The variable age analyzed by using linear classifiers. In Proceedings of ICEIS 2018, Vol. 1 (pp. 275–281). SciTePress. https://doi.org/10.5220/0006811102750281",
+      citations: 3,
+    },
+    {
+      year: 2018,
+      title: "An automatic approach to generate corpus in Spanish",
+      citation:
+        "Puertas, E., Alvarado-Valencia, J. A., Moreno-Sandoval, L. G., & Pomares-Quimbaya, A. (2018). An automatic approach to generate corpus in Spanish. Communications in Computer and Information Science, 885, 150–161. https://doi.org/10.1007/978-3-319-98998-3_12",
+    },
+
+    // ── 2017 ────────────────────────────────────────────────────────────────
+    {
+      year: 2017,
+      title: "Constructor automático de modelos dominios sin corpus preexistente",
+      citation:
+        "Puertas Del Castillo, E. A., Alvarado Valencia, J. A., & Quimbaya, A. P. (2017). Constructor automático de modelos dominios sin corpus preexistente. Procesamiento del Lenguaje Natural, 59, 129–132.",
+      citations: 1,
+    },
+  ],
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, publications };
