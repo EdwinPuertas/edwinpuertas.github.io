@@ -4,11 +4,11 @@ const person: Person = {
   firstName: "Edwin",
   lastName: "Puertas",
   name: `Edwin Puertas`,
-  role: "Profesor e Investigador en IA · NLP · Visión por Computadora",
+  role: "Associate Professor & AI / NLP Researcher",
   avatar: "/images/avatar.jpg",
   email: "epuertas@utb.edu.co",
-  location: "America/Bogota",
-  languages: ["Spanish", "English"],
+  location: "Cartagena de Indias, Colombia",
+  languages: ["English", "Spanish"],
 };
 
 const newsletter: Newsletter = {
@@ -50,8 +50,8 @@ const home: Home = {
   label: "Home",
   title: `Edwin Puertas, PhD`,
   description:
-    "Profesor Asociado e investigador en IA, NLP y Visión por Computadora. Universidad Tecnológica de Bolívar, Cartagena, Colombia.",
-  headline: <>Investigación en IA aplicada desde América Latina</>,
+    "Associate Professor and researcher in AI, NLP and Computer Vision. Technological University of Bolívar, Cartagena, Colombia.",
+  headline: <>AI Research Applied from Latin America</>,
   featured: {
     display: false,
     title: <>Featured</>,
@@ -59,10 +59,10 @@ const home: Home = {
   },
   subline: (
     <>
-      Profesor Asociado en la{" "}
-      <strong>Universidad Tecnológica de Bolívar</strong>. Doctor en Ingeniería
-      (PUJ, 2023). Miembro del IEEE AI Standards Committee. Más de 299 citas en
-      publicaciones internacionales en IA, NLP y Visión por Computadora.
+      Associate Professor at the{" "}
+      <strong>Technological University of Bolívar</strong>. PhD in Engineering
+      (PUJ, 2023). IEEE AI Standards Committee member. Over 299 citations in
+      international publications on AI, NLP and Computer Vision.
     </>
   ),
 };
@@ -70,9 +70,9 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `Edwin Puertas, PhD — Sobre mí`,
+  title: `Edwin Puertas, PhD`,
   description:
-    "Profesor Asociado e investigador en IA, NLP y Visión por Computadora en la Universidad Tecnológica de Bolívar, Cartagena, Colombia.",
+    "Associate Professor and researcher in AI, NLP and Computer Vision at the Technological University of Bolívar, Cartagena, Colombia.",
   tableOfContent: {
     display: true,
     subItems: false,
@@ -86,53 +86,54 @@ const about: About = {
   },
   intro: {
     display: true,
-    title: "Introducción",
+    title: "Introduction",
     description: (
       <>
-        Soy Doctor en Ingeniería por la Pontificia Universidad Javeriana (2023)
-        y Profesor Asociado en la Universidad Tecnológica de Bolívar, donde
-        dirijo los programas de Doctorado y Maestría en Ingeniería de Sistemas.
-        Mi trabajo combina investigación académica con aplicación industrial en
-        Inteligencia Artificial, Procesamiento de Lenguaje Natural (NLP) y
-        Visión por Computadora. Soy miembro del IEEE Artificial Intelligence
-        Standards Committee desde 2022 y cuento con más de 299 citas en
-        publicaciones internacionales.
+        I hold a <strong>PhD in Engineering</strong> from Pontificia Universidad
+        Javeriana (2023) and serve as Associate Professor at the Technological
+        University of Bolívar, where I direct the Doctoral and Master's Programs
+        in Systems Engineering. My work bridges academic research and industrial
+        application in Artificial Intelligence, Natural Language Processing (NLP)
+        and Computer Vision. I have been a member of the{" "}
+        <strong>IEEE Artificial Intelligence Standards Committee</strong> since
+        2022, and my publications have accumulated over 299 citations in
+        international journals and conferences.
       </>
     ),
   },
   work: {
     display: true,
-    title: "Experiencia",
+    title: "Work Experience",
     experiences: [
       {
-        company: "Universidad Tecnológica de Bolívar",
-        timeframe: "2016 – Presente",
-        role: "Profesor Asociado — Director de Doctorado y Maestría en Ingeniería",
+        company: "Technological University of Bolívar",
+        timeframe: "2016 – Present",
+        role: "Associate Professor — Director of Doctoral & Master's Programs in Engineering",
         achievements: [
           <>
-            Dirijo los programas de Doctorado y Maestría en Ingeniería de
-            Sistemas, formando investigadores en IA, NLP y Ciencia de Datos.
+            Lead the Doctoral and Master's Programs in Systems Engineering,
+            mentoring researchers in AI, NLP and Data Science.
           </>,
           <>
-            Investigador principal en proyectos de NLP aplicado al español:
-            análisis de sentimientos, detección de propaganda y framing
-            mediático con modelos basados en transformers (BERT, LLMs).
+            Principal investigator on applied NLP projects for Latin American
+            Spanish: sentiment analysis, propaganda detection and media framing
+            using transformer-based models (BERT, LLMs).
           </>,
           <>
-            Participación en competencias internacionales de NLP: IberLEF,
-            DIPROMATS 2024 y HOMO-MEX 2024.
+            Participated in international NLP competitions: IberLEF, DIPROMATS
+            2024 and HOMO-MEX 2024, collaborating with the Latam AI ecosystem.
           </>,
         ],
         images: [],
       },
       {
         company: "IEEE Artificial Intelligence Standards Committee",
-        timeframe: "2022 – Presente",
-        role: "Miembro activo",
+        timeframe: "2022 – Present",
+        role: "Active Member",
         achievements: [
           <>
-            Contribuyo al desarrollo de estándares internacionales para sistemas
-            de Inteligencia Artificial.
+            Contribute to the development of international standards for
+            Artificial Intelligence systems.
           </>,
         ],
         images: [],
@@ -141,35 +142,29 @@ const about: About = {
   },
   studies: {
     display: true,
-    title: "Formación académica",
+    title: "Education",
     institutions: [
       {
         name: "Pontificia Universidad Javeriana",
-        description: (
-          <>Doctor en Ingeniería — 2016–2023. Bogotá, Colombia.</>
-        ),
+        description: <>PhD in Engineering — 2016–2023. Bogotá, Colombia.</>,
       },
       {
-        name: "Universidad Tecnológica de Bolívar",
-        description: (
-          <>
-            Ingeniero de Sistemas. Cartagena, Colombia.
-          </>
-        ),
+        name: "Technological University of Bolívar",
+        description: <>BSc in Systems Engineering. Cartagena, Colombia.</>,
       },
     ],
   },
   technical: {
     display: true,
-    title: "Áreas de investigación y habilidades",
+    title: "Research Areas & Skills",
     skills: [
       {
-        title: "Inteligencia Artificial & Machine Learning",
+        title: "Artificial Intelligence & Machine Learning",
         description: (
           <>
-            Diseño, entrenamiento y despliegue de modelos de ML y Deep Learning
-            en producción. Especialidad en arquitecturas transformer (BERT,
-            LLMs) y fine-tuning para tareas en español.
+            Design, training and production deployment of ML and Deep Learning
+            models. Specialisation in transformer architectures (BERT, LLMs)
+            and fine-tuning for Spanish-language tasks.
           </>
         ),
         tags: [
@@ -179,32 +174,31 @@ const about: About = {
         images: [],
       },
       {
-        title: "NLP — Procesamiento de Lenguaje Natural",
+        title: "Natural Language Processing (NLP)",
         description: (
           <>
-            Análisis de sentimientos, detección de propaganda, framing
-            mediático, reconocimiento de entidades y clasificación de texto.
-            Corpus y modelos para el español latinoamericano.
-          </>
-        ),
-        tags: [
-          { name: "Python", icon: "python" },
-          { name: "PyTorch", icon: "pytorch" },
-        ],
-        images: [],
-      },
-      {
-        title: "Visión por Computadora",
-        description: (
-          <>
-            Detección de enfermedades en cultivos tropicales, inspección visual
-            y detección de infracciones de tráfico mediante redes neuronales
-            convolucionales y YOLO.
+            Sentiment analysis, propaganda detection, media framing, named
+            entity recognition and text classification. Corpora and models for
+            Latin American Spanish.
           </>
         ),
         tags: [
           { name: "Python", icon: "python" },
           { name: "TensorFlow", icon: "tensorflow" },
+        ],
+        images: [],
+      },
+      {
+        title: "Computer Vision",
+        description: (
+          <>
+            Disease detection in tropical crops, visual inspection and traffic
+            infraction detection using convolutional neural networks and YOLO.
+          </>
+        ),
+        tags: [
+          { name: "Python", icon: "python" },
+          { name: "PyTorch", icon: "pytorch" },
         ],
         images: [],
       },
@@ -215,63 +209,31 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Notas sobre IA, NLP e investigación",
-  description: `Artículos y reflexiones de ${person.name} sobre Inteligencia Artificial, NLP y Ciencia de Datos.`,
+  title: "Notes on AI, NLP and Research",
+  description: `Articles and insights by ${person.name} on Artificial Intelligence, NLP and Data Science.`,
 };
 
 const work: Work = {
   path: "/work",
-  label: "Proyectos",
-  title: `Proyectos — ${person.name}`,
-  description: `Proyectos de investigación e ingeniería de ${person.name} en IA, NLP y Visión por Computadora.`,
+  label: "Projects",
+  title: `Projects — ${person.name}`,
+  description: `Research and engineering projects by ${person.name} in AI, NLP and Computer Vision.`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Galería — ${person.name}`,
-  description: `Imágenes y momentos de la trayectoria investigadora de ${person.name}.`,
+  title: `Gallery — ${person.name}`,
+  description: `Images and moments from ${person.name}'s research journey.`,
   images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    { src: "/images/gallery/horizontal-1.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-4.jpg",   alt: "image", orientation: "vertical"   },
+    { src: "/images/gallery/horizontal-3.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-1.jpg",   alt: "image", orientation: "vertical"   },
+    { src: "/images/gallery/vertical-2.jpg",   alt: "image", orientation: "vertical"   },
+    { src: "/images/gallery/horizontal-2.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/horizontal-4.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/vertical-3.jpg",   alt: "image", orientation: "vertical"   },
   ],
 };
 
