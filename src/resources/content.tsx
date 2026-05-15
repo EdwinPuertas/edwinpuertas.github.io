@@ -7,7 +7,8 @@ const person: Person = {
   role: "Associate Professor & AI / NLP Researcher",
   avatar: "/images/avatar.jpg",
   email: "epuertas@utb.edu.co",
-  location: "Cartagena de Indias, Colombia",
+  location: "America/Bogota",
+  city: "Cartagena de Indias, Colombia",
   languages: ["English", "Spanish"],
 };
 
