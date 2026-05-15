@@ -1,0 +1,41 @@
+---
+title: "TrueShield: Fake News Detection Platform"
+publishedAt: "2024-03-01"
+summary: "A scalable microservices platform that verifies the reliability of user-submitted information using AI-powered entity recognition, cross-source validation, and veracity scoring."
+images: []
+team:
+  - name: "Edwin Puertas"
+    role: "Principal Investigator"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/edwinpuertas"
+---
+
+## Overview
+
+TrueShield is a platform designed to combat the spread of fake news by analyzing and verifying the reliability of user-submitted information. Using a structured process, it identifies key entities, cross-references data from sources like RSS, Twitter, and Reddit, and generates a veracity score based on advanced algorithms.
+
+## Architecture
+
+Built on a scalable microservices architecture, TrueShield features:
+
+- **Client Interface**: Angular-based front end for submitting and reviewing content
+- **Backend**: Django handling orchestration and business logic
+- **APIs**: FastAPI-powered services integrated with AI models from Hugging Face for entity recognition and inference analysis
+- **Infrastructure**: Deployed on AWS using Docker, Terraform, and Ansible for reproducible, production-grade deployments
+
+## Key Features
+
+- **Entity Extraction**: Identifies named entities (people, organizations, locations) in submitted text using NLP models
+- **Multi-source Cross-referencing**: Validates claims against real-time feeds from RSS, Twitter, and Reddit
+- **Veracity Scoring**: Aggregates signals across sources and model outputs into a single reliability score
+- **Scalable Deployment**: Microservices design allows independent scaling of each component under load
+
+## Technologies
+
+- Python · Django · FastAPI · Angular
+- Hugging Face Transformers (NER, natural language inference)
+- Docker · Terraform · Ansible · AWS
+
+## Impact
+
+TrueShield empowers users to evaluate the authenticity of information, fostering a transparent and trustworthy digital ecosystem. The platform is particularly relevant for Spanish-language media contexts where fact-checking infrastructure is limited.

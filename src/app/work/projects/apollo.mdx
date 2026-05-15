@@ -1,0 +1,54 @@
+---
+title: "Apollo: Multimodal Understanding with Vision, Text, and Audio"
+publishedAt: "2023-10-01"
+summary: "A Python package providing unified Audio (Lyre), Text (Pythia), and Vision (Argus) channels for rapidly building multimodal AI applications, with built-in models for NLP, syllabification, and motor pattern analysis."
+images: []
+team:
+  - name: "Edwin Puertas"
+    role: "Principal Investigator"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/edwinpuertas"
+---
+
+## Overview
+
+Apollo is a Python package that provides three unified channels for multimodal AI development: **Audio (Lyre)**, **Text (Pythia)**, and **Vision (Argus)**. It is designed to accelerate the development of complex applications that need to process multiple signal types simultaneously, offering utility functions and pre-integrated AI models across all three channels.
+
+## Channels
+
+### Lyre — Audio
+Processes and analyzes audio streams for speech analysis, prosody extraction, and acoustic feature computation. Designed for applications in mental health assessment, voice biometrics, and multimodal affective computing.
+
+### Pythia — Text
+NLP pipeline covering tokenization, text classification, sentiment analysis, named entity recognition, and syllabification — with particular strength in Spanish-language tasks. Includes pre-trained models optimized for Latin American Spanish.
+
+### Argus — Vision
+Computer vision toolkit featuring:
+- **Head Analysis**: Pose estimation and gaze tracking
+- **Part Indices**: Body part detection and indexing for motor pattern analysis
+- **Facial Movement Analysis**: Action unit detection for affective state inference
+- **Statistical Analysis**: Tools for quantifying variability and asymmetry in motion sequences
+
+## Key Features
+
+- **Unified API**: Single import surface for all three modalities, reducing boilerplate and integration complexity
+- **Pre-built Models**: Text processing and syllabification models are bundled and ready for inference
+- **Diagnostic Tools**: Argus provides complete diagnostics for motor patterns — directly supporting the MentalGuard and Mapping Motion projects
+- **Extensible**: Each channel is independently versioned and can be used standalone or in combination
+
+## Applications
+
+- Multimodal mental health risk detection (MentalGuard)
+- Dyspraxia movement analysis (Mapping Motion)
+- Spanish NLP pipelines for research and industry
+- Real-time audio-visual assistants
+
+## Timeline
+
+**October 2023 – Present**
+
+## Technologies
+
+- Python · PyTorch · Transformers (Hugging Face)
+- OpenCV · MediaPipe · librosa
+- scikit-learn · NumPy · SciPy

@@ -1,0 +1,53 @@
+---
+title: "Automated Traffic Monitoring System in Urban Areas"
+publishedAt: "2023-01-15"
+summary: "A computer vision system that detects unauthorized vehicle incursions into pedestrian zones in Cartagena de Indias, improving enforcement and pedestrian safety using deep learning and real-time video analysis."
+images: []
+team:
+  - name: "Edwin Puertas"
+    role: "Principal Investigator"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/edwinpuertas"
+---
+
+## Overview
+
+This project developed an innovative solution to improve traffic enforcement in urban pedestrian areas. The system automatically detects unauthorized vehicle entries — including motorcycles and other vehicles — that compromise pedestrian safety in designated zones of Cartagena de Indias, Colombia.
+
+## Problem
+
+Pedestrian areas in Colombian cities face persistent unauthorized vehicle incursions, particularly by motorcycles. Manual enforcement is costly, inconsistent, and unable to operate continuously. There was a clear need for an automated, scalable monitoring solution.
+
+## Solution
+
+A deep learning-based computer vision pipeline that processes video feeds from fixed cameras and classifies detected vehicles as authorized or unauthorized based on zone rules and vehicle type.
+
+### Pipeline
+
+1. **Video ingestion**: Real-time streams from IP cameras installed at zone boundaries
+2. **Object detection**: YOLO-based model detects and classifies vehicles (motorcycle, car, truck, bicycle)
+3. **Zone compliance analysis**: Detected objects are mapped to geofenced pedestrian zones
+4. **Alert generation**: Confirmed violations trigger timestamped alerts with cropped evidence images
+5. **Dashboard**: Web interface for reviewing violations, statistics, and camera health
+
+## Key Results
+
+- High precision in motorcycle detection under variable lighting and partial occlusion
+- Publicly released annotated dataset for motorcyclist detection in pedestrian areas
+- Demonstrated feasibility for deployment at scale across multiple zones
+
+## Related Publications
+
+> N. Hernández-Díaz, Y. C. Peñaloza, Y. Y. Rios, J. C. Martinez-Santos, E. Puertas. *A computer vision system for detecting motorcycle violations in pedestrian zones.* Multimedia Tools and Applications, vol. 84, no. 13, pp. 12659–12682, 2025.
+
+> N. H. Díaz, Y. C. Peñaloza, Y. Y. Rios, J. C. Martinez-Santos, E. Puertas. *Dataset for detecting motorcyclists in pedestrian areas.* Data in Brief, vol. 50, 2023.
+
+## Timeline
+
+**January 2023 – Present**
+
+## Technologies
+
+- Python · YOLOv8 · OpenCV
+- FastAPI · PostgreSQL
+- Docker · AWS EC2
