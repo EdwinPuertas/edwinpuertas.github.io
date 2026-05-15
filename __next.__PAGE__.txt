@@ -1,0 +1,163 @@
+1:"$Sreact.fragment"
+2:I[273323,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Column"]
+3:I[479520,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],""]
+4:I[621971,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"RevealFx"]
+5:I[117899,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Badge"]
+6:I[778454,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Row"]
+7:I[311451,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Line"]
+8:I[691722,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Button"]
+9:I[145250,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Avatar"]
+a:I[474855,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"ProjectCard"]
+11:I[89532,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Grid"]
+12:I[814360,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"default"]
+17:I[303847,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js","/_next/static/chunks/0hu7pi6n6-cgz.js"],"Mailchimp"]
+18:I[897367,["/_next/static/chunks/00vf_90pu6nqw.js","/_next/static/chunks/0sa_tlu6oiswd.js","/_next/static/chunks/0d893t_0ecvby.js","/_next/static/chunks/17s052te1mtw5.js","/_next/static/chunks/0i.l9589uvx0j.js"],"OutletBoundary"]
+19:"$Sreact.suspense"
+b:T838,
+## Overview
+
+Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration.
+
+## Key Features
+
+- **Component Library**: Built a set of modular, reusable UI components using React and styled-components in Next.js, focusing on accessibility and responsiveness.
+- **Theming and Customization**: Integrated a theming system that allows easy switching and customization of color palettes, typography, and layout styles using CSS variables and Figma tokens.
+- **Figma Integration**: Collaborated closely with designers by setting up a shared design library in Figma. This library was synchronized with the codebase, ensuring design handoffs were seamless and that design tokens remained consistent across both platforms.
+- **Documentation and Usage Guidelines**: Developed comprehensive documentation with Storybook to showcase components, usage patterns, and best practices, ensuring the design system is easy to adopt by other teams.
+
+## Technologies Used
+
+- **Next.js**: For fast, server-rendered React applications.
+- **Figma**: For creating and managing design assets and prototypes.
+- **Styled-Components**: For styling React components with a modular, themable approach.
+- **Storybook**: For building an interactive, documented component library.
+
+## Challenges and Learnings
+
+One key challenge was balancing the need for flexibility with the desire to maintain design consistency. The solution involved creating well-defined design tokens and establishing clear guidelines for when and how components could be customized. Additionally, setting up effective collaboration workflows between designers and developers using Figma and Git was a learning experience that greatly improved the process.
+
+## Outcome
+
+The design system is now actively used across multiple projects, leading to faster development cycles, fewer design inconsistencies, and improved collaboration between design and development teams. It has become a foundation for scaling our products efficiently while ensuring a cohesive user experience.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"maxWidth":"m","gap":"xl","paddingY":"12","horizontal":"center","children":[["$","$L3",null,{"id":"schema-webPage-/","type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"url\":\"https://demo.magic-portfolio.com/\",\"sameAs\":[],\"headline\":\"Edwin Puertas's Portfolio\",\"description\":\"Portfolio website showcasing my work as a Design Engineer\",\"image\":\"https://demo.magic-portfolio.com/images/og/home.jpg\",\"author\":{\"@type\":\"Person\",\"name\":\"Edwin Puertas\",\"url\":\"https://demo.magic-portfolio.com/about\",\"image\":{\"@type\":\"ImageObject\",\"url\":\"https://demo.magic-portfolio.com/images/avatar.jpg\"}}}"}}],["$","$L2",null,{"fillWidth":true,"horizontal":"center","gap":"m","children":["$","$L2",null,{"maxWidth":"s","horizontal":"center","align":"center","children":[["$","$L4",null,{"fillWidth":true,"horizontal":"center","paddingTop":"16","paddingBottom":"32","paddingLeft":"12","children":["$","$L5",null,{"background":"brand-alpha-weak","paddingX":"12","paddingY":"4","onBackground":"neutral-strong","textVariant":"label-default-s","arrow":false,"href":"/work/building-once-ui-a-customizable-design-system","children":["$","$L6",null,{"paddingY":"2","children":["$","$L6",null,{"gap":"12","vertical":"center","children":[["$","strong",null,{"className":"ml-4","children":"Once UI"}]," ",["$","$L7",null,{"background":"brand-alpha-strong","vert":true,"height":"20"}],["$","span",null,{"className":"brand-on-background-medium mr-4","style":{},"children":"Featured work"}]]}]}]}]}],["$","$L4",null,{"translateY":"4","fillWidth":true,"horizontal":"center","paddingBottom":"16","children":["$","h1",null,{"className":"font-display font-strong font-l neutral-on-background-strong","style":{"textWrap":"balance"},"children":"Building bridges between design and code"}]}],["$","$L4",null,{"translateY":"8","delay":0.2,"fillWidth":true,"horizontal":"center","paddingBottom":"32","children":["$","span",null,{"className":"font-heading font-default font-xl neutral-on-background-weak","style":{"textWrap":"balance"},"children":["I'm Selene, a design engineer at ",["$","span",null,{"className":"font-xl font-strong","style":{},"children":"ONCE UI"}],", where I craft intuitive ",["$","br",null,{}]," user experiences. After hours, I build my own projects."]}]}],["$","$L4",null,{"paddingTop":"12","delay":0.4,"horizontal":"center","paddingLeft":"12","children":["$","$L8",null,{"id":"about","data-border":"rounded","href":"/about","variant":"secondary","size":"m","weight":"default","arrowIcon":true,"children":["$","$L6",null,{"gap":"8","vertical":"center","paddingRight":"4","children":[["$","$L9",null,{"marginRight":"8","style":{"marginLeft":"-0.75rem"},"src":"/images/avatar.jpg","size":"m"}],"About – Edwin Puertas"]}]}]}]]}]}],["$","$L4",null,{"translateY":"16","delay":0.6,"children":["$","$L2",null,{"fillWidth":true,"gap":"xl","marginBottom":"40","paddingX":"l","children":[["$","$La","building-once-ui-a-customizable-design-system",{"priority":true,"href":"/work/building-once-ui-a-customizable-design-system","images":["/images/projects/project-01/cover-01.jpg","/images/projects/project-01/cover-02.jpg","/images/projects/project-01/cover-03.jpg","/images/projects/project-01/cover-04.jpg"],"title":"Building Once UI, a Customizable Design System","description":"Development of a flexible and highly customizable design system using Next.js for front-end and Figma for design collaboration.","content":"$b","avatars":[{"src":"/images/avatar.jpg"},{"src":"/images/projects/project-01/avatar-01.jpg"}],"link":""}]]}]}],"$Lc","$Ld","$Le"]}],["$Lf"],"$L10"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"2WCgBlEUTe83E2esuJz0n"}
+13:T43f,
+## About
+
+Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js.
+
+## License
+
+Magic Portfolio is licensed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). You can only use it for personal purposes, and you must attribute the original work. The attribution is added in the footer by default, but you can place it in any other, visible part of your site.
+
+Subscribe to the [Once UI Pro plan](https://once-ui.com/pricing) to extend the license to [Dopler CC](https://once-ui.com/products/magic-portfolio).
+
+## Quick start
+
+Clone the git repository:
+
+<CodeBlock compact marginBottom="16" codes={[
+  {
+    code: "git clone https://github.com/once-ui-system/magic-portfolio.git",
+    language: "bash"
+  }
+]} />
+
+Install the necessary dependencies:
+
+<CodeBlock compact marginBottom="16" codes={[
+  {
+    code: "npm install",
+    language: "bash"
+  }
+]} />
+
+Start the local development server:
+
+<CodeBlock compact marginBottom="16" codes={[
+  {
+    code: "npm run dev",
+    language: "bash"
+  }
+]} />14:T49d,
+## Enable or disable pages
+
+Magic Portfolio's `RouteGuard` component takes care of conditionally rendering pages based on the `routes` object in the `resources/config.js` file.
+
+<CodeBlock
+    marginBottom="16"
+    highlight="6"
+    codes={[
+  {
+    code:
+`const routes = {
+    '/':        true,
+    '/about':   true,
+    '/work':    true,
+    '/blog':    true,
+    '/gallery': false,
+};`,
+    language: "tsx",
+    label: "src/app/resources/config.js"
+  }
+]} />
+
+The code above will ensure that the `/gallery` page is not accessible and is not displayed in the navigation.
+
+## Add new pages
+
+When creating a new page, it needs to be added to the `routes` object in the `resources/config.js` file.
+
+<CodeBlock
+    marginBottom="16"
+    highlight="6"
+    codes={[
+  {
+    code:
+`const routes = {
+    '/':        true,
+    '/about':   true,
+    '/work':    true,
+    '/blog':    true,
+    '/gallery': false,
+    '/music': true,
+};`,
+    language: "tsx",
+    label: "src/app/resources/config.js"
+  }
+]} />
+
+The code above will ensure that the `/music` page is accessible. Users will be able to navigate to it after adding it to the navigation menu in the `components/Header.tsx` file.c:["$","$L2",null,{"fillWidth":true,"gap":"24","marginBottom":"l","children":[["$","$L6",null,{"fillWidth":true,"paddingRight":"64","children":["$","$L7",null,{"maxWidth":48}]}],["$","$L6",null,{"fillWidth":true,"gap":"24","marginTop":"40","s":{"direction":"column"},"children":[["$","$L6",null,{"flex":1,"paddingLeft":"l","paddingTop":"24","children":["$","h2",null,{"className":"font-display font-strong font-xs neutral-on-background-strong","style":{"textWrap":"balance"},"children":"Latest from the blog"}]}],["$","$L6",null,{"flex":3,"paddingX":"20","children":["$","$L11",null,{"columns":"2","s":{"columns":1},"fillWidth":true,"marginBottom":"40","gap":"16","children":[["$","$L12","quick-start",{"post":{"metadata":{"title":"Quick start with Magic Portfolio","subtitle":"A comprehensive guide to setting up your professional portfolio in minutes","publishedAt":"2025-04-23","summary":"Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js.","image":"/images/gallery/horizontal-1.jpg","images":[],"tag":"Magic Portfolio","team":[],"link":""},"slug":"quick-start","content":"$13"},"thumbnail":false}],["$","$L12","pages",{"post":{"metadata":{"title":"Enable or disable pages for your portfolio","subtitle":"","publishedAt":"2025-04-22","summary":"Magic Portfolio's RouteGuard component takes care of conditionally rendering pages based on your settings.","image":"/images/gallery/horizontal-2.jpg","images":[],"tag":"Magic Portfolio","team":[],"link":""},"slug":"pages","content":"$14"},"thumbnail":false}]]}]}]]}],"$L15"]}]
+16:Tab7,
+## Overview
+
+In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
+
+## Key Features
+
+- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
+- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
+- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
+- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+
+## Technologies Used
+
+- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
+- **React and Next.js**: For building the front-end codebase with clean, reusable components.
+- **Styled-Components**: For managing styles dynamically using design tokens.
+- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+
+## Challenges and Learnings
+
+One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+
+## Outcome
+
+The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
+
+---
+
+This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.d:["$","$L2",null,{"fillWidth":true,"gap":"xl","marginBottom":"40","paddingX":"l","children":[["$","$La","simple-portfolio-builder",{"priority":true,"href":"/work/simple-portfolio-builder","images":["/images/projects/project-01/cover-04.jpg","/images/projects/project-01/video-01.mp4"],"title":"Once UI: Open-source design system","description":"","content":"","avatars":[],"link":""}],["$","$La","automate-design-handovers-with-a-figma-to-code-pipeline",{"priority":true,"href":"/work/automate-design-handovers-with-a-figma-to-code-pipeline","images":["/images/projects/project-01/cover-02.jpg","/images/projects/project-01/image-03.jpg"],"title":"Automating Design Handovers with a Figma to Code Pipeline","description":"Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think.","content":"$16","avatars":[{"src":"/images/avatar.jpg"}],"link":"https://once-ui.com/"}]]}]
+e:["$","$L17",null,{}]
+f:["$","script","script-0",{"src":"/_next/static/chunks/0hu7pi6n6-cgz.js","async":true}]
+10:["$","$L18",null,{"children":["$","$19",null,{"name":"Next.MetadataOutlet","children":"$@1a"}]}]
+15:["$","$L6",null,{"fillWidth":true,"paddingLeft":"64","horizontal":"end","children":["$","$L7",null,{"maxWidth":48}]}]
+1a:null

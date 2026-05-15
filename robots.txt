@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://edwinpuertas.github.io/sitemap.xml
