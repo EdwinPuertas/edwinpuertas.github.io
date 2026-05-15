@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notas sobre IA, NLP e investigación</title>
+    <title>Notes on AI, NLP and Research</title>
     <link>https://demo.magic-portfolio.com/blog</link>
-    <description>Artículos y reflexiones de Edwin Puertas sobre Inteligencia Artificial, NLP y Ciencia de Datos.</description>
+    <description>Articles and insights by Edwin Puertas on Artificial Intelligence, NLP and Data Science.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2026 18:27:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 19:11:20 GMT</lastBuildDate>
     <atom:link href="https://demo.magic-portfolio.com/api/rss" rel="self" type="application/rss+xml" />
     <managingEditor>epuertas@utb.edu.co (Edwin Puertas)</managingEditor>
     <webMaster>epuertas@utb.edu.co (Edwin Puertas)</webMaster>
     <image>
       <url>https://demo.magic-portfolio.com/images/avatar.jpg</url>
-      <title>Notas sobre IA, NLP e investigación</title>
+      <title>Notes on AI, NLP and Research</title>
       <link>https://demo.magic-portfolio.com/blog</link>
     </image>
     
