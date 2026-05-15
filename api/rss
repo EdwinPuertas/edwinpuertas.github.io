@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Writing about design and tech...</title>
+    <title>Notas sobre IA, NLP e investigación</title>
     <link>https://demo.magic-portfolio.com/blog</link>
-    <description>Read what Edwin Puertas has been up to recently</description>
+    <description>Artículos y reflexiones de Edwin Puertas sobre Inteligencia Artificial, NLP y Ciencia de Datos.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2026 17:01:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 18:27:00 GMT</lastBuildDate>
     <atom:link href="https://demo.magic-portfolio.com/api/rss" rel="self" type="application/rss+xml" />
-    <managingEditor>epueta@utb.edu.co (Edwin Puertas)</managingEditor>
-    <webMaster>epueta@utb.edu.co (Edwin Puertas)</webMaster>
+    <managingEditor>epuertas@utb.edu.co (Edwin Puertas)</managingEditor>
+    <webMaster>epuertas@utb.edu.co (Edwin Puertas)</webMaster>
     <image>
       <url>https://demo.magic-portfolio.com/images/avatar.jpg</url>
-      <title>Writing about design and tech...</title>
+      <title>Notas sobre IA, NLP e investigación</title>
       <link>https://demo.magic-portfolio.com/blog</link>
     </image>
     
@@ -23,7 +23,7 @@
       <description><![CDATA[Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js.]]></description>
       <enclosure url="https://demo.magic-portfolio.com/images/gallery/horizontal-1.jpg" type="image/jpeg" />
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Enable or disable pages for your portfolio</title>
@@ -33,7 +33,7 @@
       <description><![CDATA[Magic Portfolio's RouteGuard component takes care of conditionally rendering pages based on your settings.]]></description>
       <enclosure url="https://demo.magic-portfolio.com/images/gallery/horizontal-2.jpg" type="image/jpeg" />
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Styling your portfolio</title>
@@ -43,7 +43,7 @@
       <description><![CDATA[Magic Portfolio's styling is based on Once UI's customization through data-attributes.]]></description>
       <enclosure url="https://demo.magic-portfolio.com/images/gallery/horizontal-3.jpg" type="image/jpeg" />
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Using custom components in markdown</title>
@@ -53,7 +53,7 @@
       <description><![CDATA[Every career is a journey, filled with challenges, growth, and those significant moments that mark a shift in our path.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Create,edit and delete projects</title>
@@ -63,7 +63,7 @@
       <description><![CDATA[Create, edit and delete projects in the work section of your Magic Portfolio.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Updating the content of Magic Portfolio</title>
@@ -73,7 +73,7 @@
       <description><![CDATA[Personalize the portfolio template with your own content.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Create password protected pages</title>
@@ -83,7 +83,7 @@
       <description><![CDATA[Create password protected pages through the RouteGuard component.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Set up Mailchimp and collect emails</title>
@@ -93,7 +93,7 @@
       <description><![CDATA[Set up the Mailchimp newsletter block for your Magic Portfolio.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Localized version of Magic Portfolio</title>
@@ -103,7 +103,7 @@
       <description><![CDATA[Magic Portfolio was localized by François Hernandez.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>SEO settings for Magic Portfolio</title>
@@ -113,7 +113,7 @@
       <description><![CDATA[Manage your Magic Portfolio's SEO settings.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
     <item>
       <title>Create, edit and delete blog posts</title>
@@ -123,7 +123,7 @@
       <description><![CDATA[Create, edit and delete posts in the blog section of your Magic Portfolio.]]></description>
       
       <category>Magic Portfolio</category>
-      <author>epueta@utb.edu.co (Edwin Puertas)</author>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
   </channel>
 </rss>
