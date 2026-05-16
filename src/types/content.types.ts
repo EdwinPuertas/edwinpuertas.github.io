@@ -247,8 +247,13 @@ export interface Gallery extends BasePageConfig {
 export type Publication = {
   year: number;
   title: string;
-  /** Pre-formatted APA citation string */
-  citation: string;
+  /** Abbreviated author list, e.g. "Puertas, E., Martinez, J., and 2 more authors" */
+  authors: string;
+  /** Brief venue/proceedings string, e.g. "In CEUR Workshop Proceedings, 4038, 2025" */
+  venue: string;
+  /** Short category badge, e.g. "CLEF", "SemEval", "IEEE", "Journal", "CCIS" */
+  badge: string;
+  doi?: string;
   citations?: number;
   award?: string;
 };
