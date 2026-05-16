@@ -5,7 +5,7 @@
     <link>https://edwinpuertas.github.io/blog</link>
     <description>Articles and insights by Edwin Puertas on Artificial Intelligence, NLP and Data Science.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 15 May 2026 19:45:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 01:42:54 GMT</lastBuildDate>
     <atom:link href="https://edwinpuertas.github.io/api/rss" rel="self" type="application/rss+xml" />
     <managingEditor>epuertas@utb.edu.co (Edwin Puertas)</managingEditor>
     <webMaster>epuertas@utb.edu.co (Edwin Puertas)</webMaster>
@@ -16,113 +16,13 @@
     </image>
     
     <item>
-      <title>Quick start with Magic Portfolio</title>
-      <link>https://edwinpuertas.github.io/blog/quick-start</link>
-      <guid>https://edwinpuertas.github.io/blog/quick-start</guid>
-      <pubDate>Wed, 23 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Magic Portfolio is a comprehensive, MDX-based, SEO-friendly, responsive portfolio template built with Once UI and Next.js.]]></description>
-      <enclosure url="https://edwinpuertas.github.io/images/gallery/horizontal-1.jpg" type="image/jpeg" />
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Enable or disable pages for your portfolio</title>
-      <link>https://edwinpuertas.github.io/blog/pages</link>
-      <guid>https://edwinpuertas.github.io/blog/pages</guid>
-      <pubDate>Tue, 22 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Magic Portfolio's RouteGuard component takes care of conditionally rendering pages based on your settings.]]></description>
-      <enclosure url="https://edwinpuertas.github.io/images/gallery/horizontal-2.jpg" type="image/jpeg" />
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Styling your portfolio</title>
-      <link>https://edwinpuertas.github.io/blog/styling</link>
-      <guid>https://edwinpuertas.github.io/blog/styling</guid>
-      <pubDate>Mon, 21 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Magic Portfolio's styling is based on Once UI's customization through data-attributes.]]></description>
-      <enclosure url="https://edwinpuertas.github.io/images/gallery/horizontal-3.jpg" type="image/jpeg" />
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Using custom components in markdown</title>
-      <link>https://edwinpuertas.github.io/blog/components</link>
-      <guid>https://edwinpuertas.github.io/blog/components</guid>
-      <pubDate>Sun, 20 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Every career is a journey, filled with challenges, growth, and those significant moments that mark a shift in our path.]]></description>
+      <title>Beyond Words: Deciphering Emotions and Polarity in Microblogging</title>
+      <link>https://edwinpuertas.github.io/blog/beyond-words-emotions-polarity</link>
+      <guid>https://edwinpuertas.github.io/blog/beyond-words-emotions-polarity</guid>
+      <pubDate>Wed, 10 Aug 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[How NLP techniques can capture emotional signals and sentiment polarity hidden in the short, noisy text of social media posts — and why it matters for understanding public opinion at scale.]]></description>
       
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Create,edit and delete projects</title>
-      <link>https://edwinpuertas.github.io/blog/work</link>
-      <guid>https://edwinpuertas.github.io/blog/work</guid>
-      <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Create, edit and delete projects in the work section of your Magic Portfolio.]]></description>
-      
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Updating the content of Magic Portfolio</title>
-      <link>https://edwinpuertas.github.io/blog/content</link>
-      <guid>https://edwinpuertas.github.io/blog/content</guid>
-      <pubDate>Fri, 18 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Personalize the portfolio template with your own content.]]></description>
-      
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Create password protected pages</title>
-      <link>https://edwinpuertas.github.io/blog/password</link>
-      <guid>https://edwinpuertas.github.io/blog/password</guid>
-      <pubDate>Thu, 17 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Create password protected pages through the RouteGuard component.]]></description>
-      
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Set up Mailchimp and collect emails</title>
-      <link>https://edwinpuertas.github.io/blog/mailchimp</link>
-      <guid>https://edwinpuertas.github.io/blog/mailchimp</guid>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Set up the Mailchimp newsletter block for your Magic Portfolio.]]></description>
-      
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Localized version of Magic Portfolio</title>
-      <link>https://edwinpuertas.github.io/blog/localization</link>
-      <guid>https://edwinpuertas.github.io/blog/localization</guid>
-      <pubDate>Tue, 15 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Magic Portfolio was localized by François Hernandez.]]></description>
-      
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>SEO settings for Magic Portfolio</title>
-      <link>https://edwinpuertas.github.io/blog/seo</link>
-      <guid>https://edwinpuertas.github.io/blog/seo</guid>
-      <pubDate>Mon, 14 Apr 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Manage your Magic Portfolio's SEO settings.]]></description>
-      
-      <category>Magic Portfolio</category>
-      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
-    </item>
-    <item>
-      <title>Create, edit and delete blog posts</title>
-      <link>https://edwinpuertas.github.io/blog/blog</link>
-      <guid>https://edwinpuertas.github.io/blog/blog</guid>
-      <pubDate>Mon, 17 Mar 2025 00:00:00 GMT</pubDate>
-      <description><![CDATA[Create, edit and delete posts in the blog section of your Magic Portfolio.]]></description>
-      
-      <category>Magic Portfolio</category>
+      <category>NLP</category>
       <author>epuertas@utb.edu.co (Edwin Puertas)</author>
     </item>
   </channel>
