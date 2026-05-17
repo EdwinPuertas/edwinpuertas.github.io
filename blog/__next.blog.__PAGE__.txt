@@ -3,10 +3,77 @@
 3:I[79520,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js","/_next/static/chunks/05dw_aae1hkfv.js"],""]
 4:I[89532,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js","/_next/static/chunks/05dw_aae1hkfv.js"],"Grid"]
 5:I[14360,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js","/_next/static/chunks/05dw_aae1hkfv.js"],"default"]
-d:I[3847,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js","/_next/static/chunks/05dw_aae1hkfv.js"],"Mailchimp"]
-e:I[97367,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js"],"OutletBoundary"]
-f:"$Sreact.suspense"
-6:T134a,
+e:I[3847,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js","/_next/static/chunks/05dw_aae1hkfv.js"],"Mailchimp"]
+f:I[97367,["/_next/static/chunks/0x.~j7vy9ohz0.js","/_next/static/chunks/02_u0t24az3p9.js","/_next/static/chunks/0tcap4uwvdfq-.js","/_next/static/chunks/0763le8pcf~r8.js","/_next/static/chunks/1860zsbcg5z1o.js"],"OutletBoundary"]
+10:"$Sreact.suspense"
+6:T205a,
+> *Doctoral thesis defended at the Pontificia Universidad Javeriana, Bogotá, Colombia — December 2023.*
+> *Supervised by Jorge Andrés Alvarado Valencia, PhD.*
+> *Full title (Spanish): Análisis de elementos fonéticos y elementos emocionales para predecir la polaridad en fuentes de microblogging.*
+
+---
+
+Every time someone writes a tweet, they make hundreds of micro-decisions they are not consciously aware of: which synonym to choose, whether to use a diminutive, how long to make the sentence, which sounds cluster together in the words they reach for first. These decisions are not random. They are shaped by who the author is, what they feel, and the community they belong to. My doctoral thesis asked whether a machine could learn to read those signals — and what they ultimately reveal about the person writing.
+
+## The Premise: Words Carry More Than Meaning
+
+Classical sentiment analysis treats text as a bag of meaning-bearing tokens. A word is positive or negative based on its dictionary entry or its co-occurrence statistics in a labeled corpus. This works reasonably well for product reviews and long-form opinion pieces. It fails systematically on microblogging, where texts are short, ironic, and saturated with pragmatic cues that survive only in sound and rhythm, not in semantics.
+
+The thesis was built on a different premise: **the phonological shape of a word is not arbitrary**. The sounds authors choose carry emotional loading that is independent of — and sometimes opposed to — the word's semantic content. This phenomenon is called **phonaesthesia**, and the recurring sound-meaning associations it produces are called **phonaesthemes**.
+
+A phonaestheme is not a morpheme. It carries no grammatical function and no stable dictionary meaning. Yet *gl-* words in English (glimmer, gleam, glow, glisten) cluster persistently around visual brightness and positive affect. The *sl-* cluster (slime, slump, slouch, slug) leans negative, heavy, and unpleasant. Readers feel this before they process the meaning — and writers reach for these sounds *because* of that pre-semantic resonance.
+
+My research asked: **do phonaesthemes exist in Spanish? Can they be extracted systematically from microblogging corpora? And can they be used to predict the polarity of a tweet — that is, to infer whether the author is expressing something positive, negative, or neutral?**
+
+## The Emotional Layer: What Feeling Leaves Behind in Language
+
+Phonetic signals capture one dimension of what the author reveals involuntarily. Emotional signals capture another. The thesis developed a complementary feature layer based on three emotional dimensions drawn from psycholinguistic research:
+
+- **Valence** — the positive-to-negative axis of an emotional state.
+- **Arousal** — the degree of activation or intensity associated with the emotion.
+- **Dominance** — the sense of control or power relative to the emotional situation.
+
+These three dimensions — the VAD model — encode emotional nuance that binary positive/negative labels collapse. A tweet expressing fear (low valence, high arousal, low dominance) and a tweet expressing sadness (low valence, low arousal, low dominance) both read as "negative" in standard sentiment classifiers. They feel entirely different to a human reader, and they differ in the phonetic and lexical choices the author makes.
+
+The thesis built a Spanish affective lexicon adapted to the vocabulary of social media — including abbreviations, neologisms, emojis, and code-switching — and integrated it into the polarity prediction pipeline alongside the phonaesthetic features.
+
+## What Words Say About You
+
+The phonaesthetic layer of the model answers a specific question: *what does the author's word choice at the level of sound reveal about their emotional state?*
+
+The methodology proceeded in three steps. First, Spanish tweets were transcribed phonetically using a rule-based engine adapted for the phonological variation found in Colombian, Mexican, and Iberian Spanish — the dominant varieties in the training corpora. Second, phoneme clusters at word onset, coda, and nucleus positions were extracted and mapped to emotional valence distributions derived from annotated data. Third, these phonaesthetic vectors were integrated into a hybrid feature representation alongside morphosyntactic and lexical features.
+
+The model was validated on benchmark tasks from **PAN@CLEF 2019 and 2020** — international shared tasks on author profiling, fake profile detection, and bot identification. The phonaesthetic features improved polarity prediction most significantly on texts where lexical evidence was sparse: short tweets, texts with high rates of slang and abbreviation, and messages where irony inverted the apparent semantic polarity.
+
+## What Emotions Say About You
+
+The emotional feature layer answers the complementary question: *what does the author's emotional signature reveal about their identity and community?*
+
+One of the most consistent findings of the thesis was that **authors are emotionally coherent across their posting histories**. A user who writes angry tweets on Monday is more likely to write angry tweets on Friday — not because the news is consistently bad, but because individual emotional baselines are stable. Incorporating this prior — using a user's historical emotional profile as a regularization signal for per-tweet prediction — reduced false positive rates for ironic and sarcastic texts substantially.
+
+This finding has implications beyond sentiment analysis. It suggests that **polarity prediction and author profiling are not independent tasks**: knowing who is writing helps predict what the text means, and knowing what a text means helps characterize who wrote it. The thesis modeled both directions jointly, which is one of its central methodological contributions.
+
+## From the PhD to the Lab
+
+None of the work ended at the thesis defense. The phonaesthetic feature pipeline is now the text processing backbone of **Apollo**, the open-source multimodal AI package developed at the VerbaNexAI lab. The emotional dimensionality framework directly informs **MentalGuard**, the project for early mental health risk detection in university students, where distinguishing fear from sadness from anhedonia is clinically meaningful. The user-level emotional consistency model influenced the author profiling components of the **TrueShield** fake news detection platform.
+
+The thesis also produced a published record that preceded and accompanied it: the *Cognitive Computation* paper on sociolinguistic features for community detection (2021, 19 citations), the PAN@CLEF system papers from 2019 and 2020, and the earlier work on automatic corpus construction for Spanish that made the entire feature extraction pipeline possible.
+
+## What I Now Understand About Language
+
+Seven years of building models that listen to the sounds of words and the shape of emotions have left me with a conviction I did not start with: **language is not primarily a vehicle for transmitting information**. It is primarily a vehicle for projecting identity and managing affect. The information transmission is secondary — almost incidental.
+
+This has practical consequences for NLP. Models that treat text as a sequence of meaning units will always be systematically fooled by the ways people use language to signal solidarity, perform identity, express irony, and navigate social position. Models that incorporate the full repertoire of signals — phonetic, prosodic, lexical, syntactic, emotional, social-contextual — come closer to what a skilled human reader does when they understand not just what a tweet says, but what it says about the person who wrote it.
+
+That is, ultimately, what the thesis was about: building machines that listen the way people do.
+
+---
+
+*Edwin Puertas, PhD, is Associate Professor and Program Director of the Doctoral and Master's Programs in Systems Engineering at the Technological University of Bolívar (UTB), Cartagena, Colombia. IEEE Senior Member. He leads the VerbaNexAI research group, working on NLP, author profiling, and multimodal AI.*
+
+*The full thesis is available in the institutional repository of the Pontificia Universidad Javeriana.*
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"maxWidth":"m","paddingTop":"24","children":[["$","$L3",null,{"id":"schema-blogPosting-/blog","type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"url\":\"https://edwinpuertas.github.io/blog\",\"sameAs\":[],\"headline\":\"Notes on AI, NLP and Research\",\"description\":\"Articles and insights by Edwin Puertas on Artificial Intelligence, NLP and Data Science.\",\"image\":\"https://edwinpuertas.github.io/images/og/home.jpg\",\"author\":{\"@type\":\"Person\",\"name\":\"Edwin Puertas\",\"url\":\"https://edwinpuertas.github.io/blog\",\"image\":{\"@type\":\"ImageObject\",\"url\":\"https://edwinpuertas.github.io/images/avatar.jpg\"}}}"}}],["$","h1",null,{"className":"font-heading font-strong font-xl neutral-on-background-strong ml-24 mb-l","style":{"textWrap":"balance"},"children":"Notes on AI, NLP and Research"}],["$","$L2",null,{"fillWidth":true,"flex":1,"gap":"40","children":[["$","$L4",null,{"columns":"1","s":{"columns":1},"fillWidth":true,"marginBottom":"40","gap":"16","children":[["$","$L5","doctoral-thesis",{"post":{"metadata":{"title":"What Your Words and Emotions Say About You: A Deep Dive into Phonaesthemes","subtitle":"","publishedAt":"2023-12-01","summary":"A reflection on seven years of doctoral research at the Pontificia Universidad Javeriana — exploring how phonetic and emotional signals hidden in microblogging texts predict polarity and reveal the author behind the words.","image":"","images":[],"tag":"Research","team":[],"link":""},"slug":"doctoral-thesis","content":"$6"},"thumbnail":true}]]}],"$L7","$L8","$L9","$La"]}]]}],["$Lb"],"$Lc"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OGQyx995q1SFmPh1bgBMj"}
+d:T134a,
 > *Originally published on [Medium](https://medium.com/@edwinpuertas/beyond-words-deciphering-emotions-and-polarity-in-microblogging-5a8e7e970cee).*
 
 ## Why microblogging is hard for sentiment analysis
@@ -65,11 +132,10 @@ The challenge of deciphering emotions in microblogging is ultimately a challenge
 ---
 
 *Edwin Puertas is an Associate Professor and NLP researcher at the Technological University of Bolívar, Cartagena, Colombia. He leads the VerbaNexAI research group, focusing on author profiling, sentiment analysis, and multimodal AI. IEEE Senior Member.*
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"maxWidth":"m","paddingTop":"24","children":[["$","$L3",null,{"id":"schema-blogPosting-/blog","type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"url\":\"https://edwinpuertas.github.io/blog\",\"sameAs\":[],\"headline\":\"Notes on AI, NLP and Research\",\"description\":\"Articles and insights by Edwin Puertas on Artificial Intelligence, NLP and Data Science.\",\"image\":\"https://edwinpuertas.github.io/images/og/home.jpg\",\"author\":{\"@type\":\"Person\",\"name\":\"Edwin Puertas\",\"url\":\"https://edwinpuertas.github.io/blog\",\"image\":{\"@type\":\"ImageObject\",\"url\":\"https://edwinpuertas.github.io/images/avatar.jpg\"}}}"}}],["$","h1",null,{"className":"font-heading font-strong font-xl neutral-on-background-strong ml-24 mb-l","style":{"textWrap":"balance"},"children":"Notes on AI, NLP and Research"}],["$","$L2",null,{"fillWidth":true,"flex":1,"gap":"40","children":[["$","$L4",null,{"columns":"1","s":{"columns":1},"fillWidth":true,"marginBottom":"40","gap":"16","children":[["$","$L5","beyond-words-emotions-polarity",{"post":{"metadata":{"title":"Beyond Words: Deciphering Emotions and Polarity in Microblogging","subtitle":"","publishedAt":"2022-08-10","summary":"How NLP techniques can capture emotional signals and sentiment polarity hidden in the short, noisy text of social media posts — and why it matters for understanding public opinion at scale.","image":"","images":[],"tag":"NLP","team":[],"link":""},"slug":"beyond-words-emotions-polarity","content":"$6"},"thumbnail":true}]]}],"$L7","$L8","$L9","$La"]}]]}],["$Lb"],"$Lc"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"5QtxzuPs4ffmZoLORYsW3"}
-7:false
-8:["$","$Ld",null,{"marginBottom":"l"}]
+7:["$","$L4",null,{"columns":"2","s":{"columns":1},"fillWidth":true,"marginBottom":"40","gap":"16","children":[["$","$L5","beyond-words-emotions-polarity",{"post":{"metadata":{"title":"Beyond Words: Deciphering Emotions and Polarity in Microblogging","subtitle":"","publishedAt":"2022-08-10","summary":"How NLP techniques can capture emotional signals and sentiment polarity hidden in the short, noisy text of social media posts — and why it matters for understanding public opinion at scale.","image":"","images":[],"tag":"NLP","team":[],"link":""},"slug":"beyond-words-emotions-polarity","content":"$d"},"thumbnail":true,"direction":"column"}]]}]
+8:["$","$Le",null,{"marginBottom":"l"}]
 9:["$","h2",null,{"className":"font-heading font-strong font-xl neutral-on-background-strong ml-l","style":{"textWrap":"balance"},"children":"Earlier posts"}]
 a:false
 b:["$","script","script-0",{"src":"/_next/static/chunks/05dw_aae1hkfv.js","async":true}]
-c:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
-10:null
+c:["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]
+11:null

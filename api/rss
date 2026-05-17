@@ -5,7 +5,7 @@
     <link>https://edwinpuertas.github.io/blog</link>
     <description>Articles and insights by Edwin Puertas on Artificial Intelligence, NLP and Data Science.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 17 May 2026 00:13:16 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 03:02:36 GMT</lastBuildDate>
     <atom:link href="https://edwinpuertas.github.io/api/rss" rel="self" type="application/rss+xml" />
     <managingEditor>epuertas@utb.edu.co (Edwin Puertas)</managingEditor>
     <webMaster>epuertas@utb.edu.co (Edwin Puertas)</webMaster>
@@ -15,6 +15,16 @@
       <link>https://edwinpuertas.github.io/blog</link>
     </image>
     
+    <item>
+      <title>What Your Words and Emotions Say About You: A Deep Dive into Phonaesthemes</title>
+      <link>https://edwinpuertas.github.io/blog/doctoral-thesis</link>
+      <guid>https://edwinpuertas.github.io/blog/doctoral-thesis</guid>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[A reflection on seven years of doctoral research at the Pontificia Universidad Javeriana — exploring how phonetic and emotional signals hidden in microblogging texts predict polarity and reveal the author behind the words.]]></description>
+      
+      <category>Research</category>
+      <author>epuertas@utb.edu.co (Edwin Puertas)</author>
+    </item>
     <item>
       <title>Beyond Words: Deciphering Emotions and Polarity in Microblogging</title>
       <link>https://edwinpuertas.github.io/blog/beyond-words-emotions-polarity</link>
