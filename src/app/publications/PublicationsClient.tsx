@@ -8,7 +8,7 @@ interface Props {
   items: Publication[];
 }
 
-const BADGE_ORDER = ["CLEF", "SemEval", "IEEE", "Journal", "CCIS", "LACCEI", "ACL", "LNCS", "Conf"];
+const BADGE_ORDER = ["CLEF", "SemEval", "IberLEF", "IEEE", "Journal", "CCIS", "LACCEI", "ACL", "LNCS", "Conf"];
 
 export default function PublicationsClient({ items }: Props) {
   const [query, setQuery] = useState("");
