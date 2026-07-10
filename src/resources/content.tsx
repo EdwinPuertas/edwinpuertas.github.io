@@ -338,6 +338,27 @@ const publications: Publications = {
       badge: "CCIS",
       doi: "10.1007/978-3-032-08206-0_28",
     },
+    {
+      year: 2026,
+      title: "VerbaNexAI at SemEval-2026 Task 4: Two-stage narrative similarity via fine-tuned bi-encoder with MLP ensemble",
+      authors: "Pertuz-Duran, P., Puertas, E., and 2 more authors",
+      venue: "In Proceedings of SemEval-2026. ACL",
+      badge: "SemEval",
+    },
+    {
+      year: 2026,
+      title: "VerbaNexAI at SemEval-2026 Task 5: Few-shot chain-of-thought with selective self-consistency and isotonic calibration for word sense plausibility rating",
+      authors: "Peña Gnecco, D., Puertas, E., and 2 more authors",
+      venue: "In Proceedings of SemEval-2026. ACL",
+      badge: "SemEval",
+    },
+    {
+      year: 2026,
+      title: "VerbaNexAI at ClinicalSkillQA: From visual evidence to procedural order — a two-stage generative vision-language framework for ClinSkillQA",
+      authors: "Menco Tovar, A., Serrano, J. E., and 2 more authors",
+      venue: "In Proceedings of BioNLP 2026 Shared Tasks. ACL",
+      badge: "ACL",
+    },
 
     // ── 2025 ────────────────────────────────────────────────────────────────
     {
@@ -556,6 +577,52 @@ const publications: Publications = {
       venue: "In TEMSCON LATAM 2025. IEEE",
       badge: "IEEE",
       doi: "10.1109/TEMSCONLATAM65810.2025.11238759",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at SemEval-2025 Task 2: Enhancing entity-aware translation with Wikidata-enriched MarianMT",
+      authors: "Peña Gnecco, D., Martinez-Santos, J. C., and 1 more author",
+      venue: "In Proceedings of SemEval-2025 (pp. 1694–1702). ACL",
+      badge: "SemEval",
+      doi: "10.18653/v1/2025.semeval-1.167",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at SemEval-2025 Task 3: Fact retrieval with Google snippets for LLM context filtering to identify hallucinations",
+      authors: "Morillo, A., Puertas, E., and 1 more author",
+      venue: "In Proceedings of SemEval-2025. ACL",
+      badge: "SemEval",
+      doi: "10.18653/v1/2025.semeval-1.202",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at SemEval-2025 Task 9: Advances and challenges in the automatic detection of food hazards",
+      authors: "Menco Tovar, A., Puertas, E., and 1 more author",
+      venue: "In Proceedings of SemEval-2025. ACL",
+      badge: "SemEval",
+      doi: "10.18653/v1/2025.semeval-1.1",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at SemEval-2025 Task 11: A RoBERTa-based approach for the classification of emotions in text",
+      authors: "Almanza, D., Martinez-Santos, J. C., and 1 more author",
+      venue: "In Proceedings of SemEval-2025. ACL",
+      badge: "SemEval",
+      doi: "10.18653/v1/2025.semeval-1.158",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at MentalRiskES 2025: Early detection of gambling disorders using transformer architectures and machine learning models",
+      authors: "Jimenez, J. D., Serrano, J. E., and 2 more authors",
+      venue: "In CEUR Workshop Proceedings, 4098 (IberLEF 2025)",
+      badge: "IberLEF",
+    },
+    {
+      year: 2025,
+      title: "VerbaNexAI at ASQP-PT 2025: Robust detection of tourism aspects using pretrained models and BIO tagging in Portuguese",
+      authors: "Moreno Novoa, M., Serrano, J., and 2 more authors",
+      venue: "In CEUR Workshop Proceedings, 4098 (IberLEF 2025)",
+      badge: "IberLEF",
     },
 
     // ── 2024 ────────────────────────────────────────────────────────────────
