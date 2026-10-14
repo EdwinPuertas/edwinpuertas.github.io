@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Edwin Puertas, PhD — Profesor e Investigador en IA, NLP y Visión por Computadora. Universidad Tecnológica de Bolívar, Colombia." />
+  <meta name="author" content="Edwin Puertas" />
+  <title>Edwin Puertas, PhD</title>
+
+  <style>
+    /* ============================================================
+       VARIABLES — edita aquí colores, tipografía y espaciados
+       ============================================================ */
+    :root {
+      --color-bg:         #ffffff;
+      --color-surface:    #f8f8f6;
+      --color-border:     #e8e8e4;
+      --color-text:       #1a1a1a;
+      --color-muted:      #6b6b6b;
+      --color-accent:     #1a1a1a;
+      --color-accent-alt: #4a4a4a;
+      --color-tag-bg:     #f0f0ec;
+      --color-tag-text:   #3a3a3a;
+      --color-link:       #1a1a1a;
+      --color-link-hover: #4a4a4a;
+
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+      --radius:    6px;
+      --radius-lg: 12px;
+
+      --space-xs:  0.5rem;
+      --space-sm:  1rem;
+      --space-md:  2rem;
+      --space-lg:  4rem;
+      --space-xl:  7rem;
+
+      --max-w: 760px;
+      --nav-h: 60px;
+
+      --transition: 0.2s ease;
+    }
+
+    /* ============================================================
+       MODO OSCURO
+       ============================================================ */
+    [data-theme="dark"] {
+      --color-bg:         #0f0f0f;
+      --color-surface:    #1a1a1a;
+      --color-border:     #2a2a2a;
+      --color-text:       #e8e8e4;
+      --color-muted:      #8a8a8a;
+      --color-accent:     #e8e8e4;
+      --color-accent-alt: #aaaaaa;
+      --color-tag-bg:     #252525;
+      --color-tag-text:   #c8c8c8;
+      --color-link:       #e8e8e4;
+      --color-link-hover: #aaaaaa;
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      transition: background-color var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color var(--transition), opacity var(--transition);
+    }
+
+    a:hover {
+      color: var(--color-link-hover);
+      opacity: 0.75;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    ul { list-style: none; }
+
+    /* ============================================================
+       LAYOUT
+       ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    section {
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* ============================================================
+       TIPOGRAFÍA
+       ============================================================ */
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: var(--space-lg);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--color-text);
+      font-size: 0.975rem;
+    }
+
+    /* ============================================================
+       NAVEGACIÓN
+       ============================================================ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      transition: background-color var(--transition), border-color var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    .nav-logo {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    .nav-logo:hover { opacity: 0.65; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: var(--color-muted);
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-text);
+      opacity: 1;
+    }
+
+    /* Botón modo oscuro */
+    #theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      transition: border-color var(--transition), background var(--transition);
+      flex-shrink: 0;
+    }
+
+    #theme-toggle:hover {
+      background: var(--color-surface);
+    }
+
+    #theme-toggle svg {
+      width: 15px;
+      height: 15px;
+      fill: var(--color-muted);
+      transition: fill var(--transition);
+    }
+
+    /* Menú hamburguesa móvil */
+    #menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    #menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 1.5px;
+      background: var(--color-text);
+      transition: transform var(--transition), opacity var(--transition);
+    }
+
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0;
+      right: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-sm) var(--space-md);
+      z-index: 99;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    #mobile-nav.open { display: flex; }
+
+    #mobile-nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--color-muted);
+      padding: var(--space-xs) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    #mobile-nav a:last-child { border-bottom: none; }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    #hero {
+      padding-top: calc(var(--nav-h) + var(--space-xl));
+      padding-bottom: var(--space-xl);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: var(--space-md);
+    }
+
+    .hero-name {
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-tagline {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: var(--color-muted);
+      margin-bottom: var(--space-md);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .hero-description {
+      font-size: 0.95rem;
+      color: var(--color-muted);
+      max-width: 540px;
+      line-height: 1.75;
+      margin-bottom: var(--space-lg);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      font-size: 0.82rem;
+      color: var(--color-muted);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta-item svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+      opacity: 0.5;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: opacity var(--transition), background var(--transition);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      background: transparent;
+    }
+
+    .btn:hover { opacity: 0.7; }
+
+    .btn-primary {
+      background: var(--color-text);
+      color: var(--color-bg);
+      border-color: var(--color-text);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.8;
+      color: var(--color-bg);
+    }
+
+    /* ============================================================
+       SOBRE MÍ
+       ============================================================ */
+    #sobre-mi .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .about-text p {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .about-info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .about-info-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+    }
+
+    .about-info-value {
+      font-size: 0.9rem;
+      color: var(--color-text);
+    }
+
+    /* ============================================================
+       PROYECTOS
+       ============================================================ */
+    /* ── Para agregar un proyecto: duplica un bloque .project-card ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-sm);
+    }
+
+    .project-card {
+      padding: var(--space-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background: var(--color-surface);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: var(--color-accent-alt);
+      transform: translateY(-2px);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .project-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--color-muted);
+      white-space: nowrap;
+      transition: color var(--transition);
+    }
+
+    .project-link:hover { color: var(--color-text); opacity: 1; }
+
+    .project-desc {
+      font-size: 0.875rem;
+      color: var(--color-muted);
+      line-height: 1.65;
+      margin-bottom: var(--space-sm);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* ============================================================
+       PUBLICACIONES
+       ============================================================ */
+    /* ── Para agregar una publicación: duplica un bloque .pub-item ── */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-sm);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .pub-item:first-child { padding-top: 0; }
+    .pub-item:last-child  { border-bottom: none; }
+
+    .pub-year {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-muted);
+      letter-spacing: 0.04em;
+      padding-top: 3px;
+    }
+
+    .pub-content {}
+
+    .pub-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.45;
+      margin-bottom: 4px;
+    }
+
+    .pub-authors {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      margin-bottom: 4px;
+    }
+
+    .pub-venue {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pub-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 30px;
+      border: 1px solid var(--color-border);
+      color: var(--color-muted);
+      text-decoration: none;
+      transition: border-color var(--transition), color var(--transition);
+    }
+
+    .pub-badge:hover { color: var(--color-text); border-color: var(--color-text); opacity: 1; }
+
+    /* ============================================================
+       HABILIDADES
+       ============================================================ */
+    /* ── Para agregar habilidades: agrega un <span class="tag"> dentro del grupo ── */
+    .skills-group {
+      margin-bottom: var(--space-md);
+    }
+
+    .skills-group:last-child { margin-bottom: 0; }
+
+    .skills-group-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: var(--space-xs);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 30px;
+      background: var(--color-tag-bg);
+      color: var(--color-tag-text);
+      border: 1px solid var(--color-border);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .tag:hover {
+      background: var(--color-text);
+      color: var(--color-bg);
+    }
+
+    /* ============================================================
+       REDES SOCIALES
+       ============================================================ */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-sm);
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: var(--color-text);
+      background: var(--color-surface);
+      transition: border-color var(--transition), transform var(--transition), opacity var(--transition);
+    }
+
+    .social-card:hover {
+      border-color: var(--color-accent-alt);
+      transform: translateY(-2px);
+      opacity: 1;
+    }
+
+    .social-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius);
+      background: var(--color-border);
+      flex-shrink: 0;
+    }
+
+    .social-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--color-muted);
+    }
+
+    .social-info {}
+
+    .social-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .social-handle {
+      font-size: 0.75rem;
+      color: var(--color-muted);
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      padding: var(--space-lg) 0;
+      text-align: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .footer-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 640px) {
+      :root { --space-xl: 4rem; --space-lg: 2.5rem; }
+
+      .nav-links { display: none; }
+      #menu-toggle { display: flex; }
+
+      .pub-item { grid-template-columns: 42px 1fr; gap: 8px; }
+      .social-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 641px) {
+      #mobile-nav { display: none !important; }
+    }
+
+    @media (min-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVEGACIÓN
+       ============================================================ -->
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Edwin Puertas</a>
+
+      <!-- Escritorio -->
+      <div class="nav-links" aria-hidden="false">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#redes">Contacto</a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px;">
+        <!-- Botón modo oscuro -->
+        <button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+          <!-- Ícono sol (modo claro activo) -->
+          <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 4.5Zm0 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 12a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 4.5 12Zm12 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM6.697 6.697a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061L6.697 7.758a.75.75 0 0 1 0-1.06Zm9.546 9.545a.75.75 0 0 1 1.06 0l1.06 1.061a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.061ZM6.697 17.303a.75.75 0 0 1 0-1.06l1.06-1.061a.75.75 0 1 1 1.061 1.06l-1.06 1.061a.75.75 0 0 1-1.061 0ZM16.243 6.697a.75.75 0 0 1 0 1.061l-1.06 1.06a.75.75 0 1 1-1.061-1.06l1.06-1.06a.75.75 0 0 1 1.061 0ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/>
+          </svg>
+          <!-- Ícono luna (modo oscuro activo) -->
+          <svg id="icon-moon" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
+            <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75 9.75 9.75 0 0 1 8.25 6c0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 12c0 5.385 4.365 9.75 9.75 9.75 4.412 0 8.163-2.943 9.502-7.498Z"/>
+          </svg>
+        </button>
+
+        <!-- Hamburguesa móvil -->
+        <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menú móvil desplegable -->
+  <div id="mobile-nav" role="navigation" aria-label="Menú móvil">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#publicaciones">Publicaciones</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#redes">Contacto</a>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="hero" aria-labelledby="hero-name">
+      <div class="container">
+        <p class="hero-eyebrow">Investigador · Docente · IEEE Member</p>
+
+        <h1 class="hero-name" id="hero-name">Edwin Puertas,&nbsp;PhD</h1>
+
+        <p class="hero-tagline">
+          Inteligencia Artificial, NLP y Visión por Computadora aplicados a problemas reales desde América Latina.
+        </p>
+
+        <p class="hero-description">
+          Profesor Asociado en la Universidad Tecnológica de Bolívar, Cartagena. Dirijo los programas de Doctorado y Maestría en Ingeniería, investigo en IA y publico con más de 299 citas en revistas y congresos internacionales.
+        </p>
+
+        <!-- Metadatos rápidos -->
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <!-- Pin -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 14 6 14s6-8.75 6-14c0-3.314-2.686-6-6-6Z"/><circle cx="12" cy="8" r="2"/></svg>
+            Cartagena, Colombia
+          </span>
+          <span class="hero-meta-item">
+            <!-- Book -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+            Universidad Tecnológica de Bolívar
+          </span>
+          <span class="hero-meta-item">
+            <!-- Star -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            IEEE AI Standards Committee (2022–)
+          </span>
+        </div>
+
+        <!-- Llamados a la acción -->
+        <div class="hero-cta">
+          <a href="mailto:epuertas@utb.edu.co" class="btn btn-primary">Escribirme</a>
+          <a href="https://scholar.google.com/citations?user=XXXXXXXXX" target="_blank" rel="noopener" class="btn">Google Scholar</a>
+          <a href="https://github.com/edwinpuertas" target="_blank" rel="noopener" class="btn">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE MÍ
+         ============================================================ -->
+    <section id="sobre-mi" aria-labelledby="label-sobre-mi">
+      <div class="container">
+        <p class="section-label" id="label-sobre-mi">Sobre mí</p>
+
+        <div class="about-text">
+          <p>
+            Soy <strong>Doctor en Ingeniería</strong> por la Pontificia Universidad Javeriana (2023) y Profesor Asociado en la Universidad Tecnológica de Bolívar, donde dirijo los programas de Doctorado y Maestría en Ingeniería de Sistemas. Mi trabajo une la investigación académica con la aplicación industrial, siempre buscando que los modelos funcionen más allá del laboratorio.
+          </p>
+          <p>
+            Trabajo principalmente en <strong>Procesamiento de Lenguaje Natural</strong> (análisis de sentimientos, detección de propaganda, framing mediático, LLMs basados en transformers), <strong>Visión por Computadora</strong> (detección de enfermedades en cultivos, infracciones de tránsito) y <strong>Computación Afectiva</strong>. He participado en competencias internacionales de NLP como IberLEF, DIPROMATS 2024 y HOMO-MEX 2024, y colaboro activamente con el ecosistema Latam AI.
+          </p>
+          <p>
+            Soy miembro del <strong>IEEE Artificial Intelligence Standards Committee</strong> desde 2022 y cuento con más de 299 citas en publicaciones internacionales.
+          </p>
+        </div>
+
+        <!-- Datos clave -->
+        <div class="about-info">
+          <div class="about-info-item">
+            <span class="about-info-label">Institución</span>
+            <span class="about-info-value">Univ. Tecnológica de Bolívar</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">Ubicación</span>
+            <span class="about-info-value">Cartagena, Colombia</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">Doctorado</span>
+            <span class="about-info-value">PUJ, 2023</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">Áreas</span>
+            <span class="about-info-value">AI · NLP · CV · Data Science</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">Citas</span>
+            <span class="about-info-value">299+</span>
+          </div>
+          <div class="about-info-item">
+            <span class="about-info-label">Email</span>
+            <span class="about-info-value"><a href="mailto:epuertas@utb.edu.co">epuertas@utb.edu.co</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROYECTOS
+         ─────────────────────────────────────────────────────────────
+         Para agregar un proyecto:
+         1. Copia un bloque <article class="project-card">…</article>
+         2. Edita title, desc, tags y el href del enlace
+         ============================================================ -->
+    <section id="proyectos" aria-labelledby="label-proyectos">
+      <div class="container">
+        <p class="section-label" id="label-proyectos">Proyectos</p>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1 -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Detección de Propaganda en Medios</h3>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Ver →</a>
+            </div>
+            <p class="project-desc">
+              Sistema basado en transformers para identificar técnicas de propaganda y framing mediático en textos en español. Participación en DIPROMATS 2024.
+            </p>
+            <div class="project-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">BERT</span>
+              <span class="tag">IberLEF</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Visión por Computadora en Cultivos</h3>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Ver →</a>
+            </div>
+            <p class="project-desc">
+              Modelos de detección de enfermedades en cultivos tropicales mediante imágenes de drones y cámaras de bajo costo, orientado a pequeños agricultores.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Computer Vision</span>
+              <span class="tag">YOLO</span>
+              <span class="tag">Agricultura</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Análisis de Sentimientos — Latam AI</h3>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Ver →</a>
+            </div>
+            <p class="project-desc">
+              Pipeline de análisis de sentimientos y detección de discurso de odio (HOMO-MEX 2024) para español con corpus anotados y modelos finetuneados.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Sentiment Analysis</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Español</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 -->
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Computación Afectiva</h3>
+              <a href="#" class="project-link" target="_blank" rel="noopener">Ver →</a>
+            </div>
+            <p class="project-desc">
+              Sistema multimodal para el reconocimiento de estados emocionales humanos integrando señales de texto, voz y expresión facial en tiempo real.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Affective Computing</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Multimodal</span>
+            </div>
+          </article>
+
+          <!-- ── AGREGA MÁS PROYECTOS AQUÍ ── -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PUBLICACIONES
+         ─────────────────────────────────────────────────────────────
+         Para agregar una publicación:
+         1. Copia un bloque <li class="pub-item">…</li>
+         2. Edita año, título, autores, venue y enlaces
+         ============================================================ -->
+    <section id="publicaciones" aria-labelledby="label-publicaciones">
+      <div class="container">
+        <p class="section-label" id="label-publicaciones">Publicaciones seleccionadas</p>
+
+        <ul class="pub-list">
+
+          <!-- Publicación 1 -->
+          <li class="pub-item">
+            <span class="pub-year">2024</span>
+            <div class="pub-content">
+              <p class="pub-title">DIPROMATS 2024: Propaganda Detection in Multilingual Political Texts</p>
+              <p class="pub-authors">Edwin Puertas, et al.</p>
+              <p class="pub-venue">IberLEF @ SEPLN 2024</p>
+              <div class="pub-links">
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">PDF</a>
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Publicación 2 -->
+          <li class="pub-item">
+            <span class="pub-year">2024</span>
+            <div class="pub-content">
+              <p class="pub-title">HOMO-MEX 2024: Homophobia Detection in Mexican Spanish Social Media</p>
+              <p class="pub-authors">Edwin Puertas, et al.</p>
+              <p class="pub-venue">IberLEF @ SEPLN 2024</p>
+              <div class="pub-links">
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">PDF</a>
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Publicación 3 -->
+          <li class="pub-item">
+            <span class="pub-year">2023</span>
+            <div class="pub-content">
+              <p class="pub-title">Sentiment Analysis for Low-Resource Spanish Variants Using Transfer Learning</p>
+              <p class="pub-authors">Edwin Puertas, et al.</p>
+              <p class="pub-venue">Journal of Intelligent &amp; Fuzzy Systems</p>
+              <div class="pub-links">
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">PDF</a>
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">DOI</a>
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Publicación 4 -->
+          <li class="pub-item">
+            <span class="pub-year">2022</span>
+            <div class="pub-content">
+              <p class="pub-title">Plant Disease Detection in Tropical Crops Using Deep Convolutional Neural Networks</p>
+              <p class="pub-authors">Edwin Puertas, et al.</p>
+              <p class="pub-venue">Computers and Electronics in Agriculture</p>
+              <div class="pub-links">
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">PDF</a>
+                <a href="#" class="pub-badge" target="_blank" rel="noopener">DOI</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- ── AGREGA MÁS PUBLICACIONES AQUÍ ── -->
+
+        </ul>
+
+        <div style="margin-top: var(--space-md);">
+          <a href="https://scholar.google.com/citations?user=XXXXXXXXX" target="_blank" rel="noopener" class="btn">
+            Ver todas en Google Scholar →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HABILIDADES
+         ─────────────────────────────────────────────────────────────
+         Para agregar una habilidad: agrega <span class="tag">Nombre</span>
+         dentro del grupo correspondiente, o crea un nuevo grupo.
+         ============================================================ -->
+    <section id="habilidades" aria-labelledby="label-habilidades">
+      <div class="container">
+        <p class="section-label" id="label-habilidades">Habilidades</p>
+
+        <!-- Grupo 1 -->
+        <div class="skills-group">
+          <p class="skills-group-label">Inteligencia Artificial &amp; ML</p>
+          <div class="tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Transformers</span>
+            <span class="tag">BERT / LLMs</span>
+            <span class="tag">Fine-tuning</span>
+            <span class="tag">MLOps</span>
+          </div>
+        </div>
+
+        <!-- Grupo 2 -->
+        <div class="skills-group">
+          <p class="skills-group-label">NLP</p>
+          <div class="tags">
+            <span class="tag">Análisis de Sentimientos</span>
+            <span class="tag">Detección de Propaganda</span>
+            <span class="tag">Named Entity Recognition</span>
+            <span class="tag">Text Classification</span>
+            <span class="tag">Information Extraction</span>
+            <span class="tag">Spanish NLP</span>
+          </div>
+        </div>
+
+        <!-- Grupo 3 -->
+        <div class="skills-group">
+          <p class="skills-group-label">Visión por Computadora</p>
+          <div class="tags">
+            <span class="tag">Object Detection</span>
+            <span class="tag">YOLO</span>
+            <span class="tag">Image Segmentation</span>
+            <span class="tag">OpenCV</span>
+          </div>
+        </div>
+
+        <!-- Grupo 4 -->
+        <div class="skills-group">
+          <p class="skills-group-label">Herramientas &amp; Lenguajes</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">HuggingFace</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- ── AGREGA MÁS GRUPOS AQUÍ ── -->
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         REDES SOCIALES
+         ─────────────────────────────────────────────────────────────
+         Para agregar una red: copia un bloque <a class="social-card">
+         y edita el href, nombre y handle.
+         ============================================================ -->
+    <section id="redes" aria-labelledby="label-redes">
+      <div class="container">
+        <p class="section-label" id="label-redes">Contacto &amp; redes</p>
+
+        <div class="social-grid">
+
+          <!-- Email -->
+          <a href="mailto:epuertas@utb.edu.co" class="social-card" aria-label="Enviar email">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">Email</p>
+              <p class="social-handle">epuertas@utb.edu.co</p>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/edwinpuertas" target="_blank" rel="noopener" class="social-card" aria-label="GitHub">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">GitHub</p>
+              <p class="social-handle">edwinpuertas</p>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/edwinpuertas" target="_blank" rel="noopener" class="social-card" aria-label="LinkedIn">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">LinkedIn</p>
+              <p class="social-handle">edwinpuertas</p>
+            </div>
+          </a>
+
+          <!-- Google Scholar -->
+          <a href="https://scholar.google.com/citations?user=XXXXXXXXX" target="_blank" rel="noopener" class="social-card" aria-label="Google Scholar">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">Google Scholar</p>
+              <p class="social-handle">299+ citas</p>
+            </div>
+          </a>
+
+          <!-- ResearchGate -->
+          <a href="https://www.researchgate.net/profile/Edwin-Puertas" target="_blank" rel="noopener" class="social-card" aria-label="ResearchGate">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.88 12.88 0 0 0-.28 1.64c-.047.517-.07 1.063-.07 1.637 0 .583.023 1.134.07 1.65.047.511.128.978.24 1.4.113.42.26.774.44 1.062.18.287.42.51.72.668a2.14 2.14 0 0 0 1.04.237c.343 0 .66-.07.953-.212.292-.141.54-.339.742-.596.2-.257.356-.567.464-.93.108-.363.162-.773.162-1.23H17.57v-1.01h3.47v5.53h-.78l-.25-1.2c-.22.484-.513.856-.88 1.116-.366.26-.812.39-1.337.39-.63 0-1.18-.145-1.65-.435a3.297 3.297 0 0 1-1.12-1.2 5.892 5.892 0 0 1-.638-1.79 10.63 10.63 0 0 1-.2-2.1c0-.742.07-1.432.207-2.072a5.92 5.92 0 0 1 .644-1.772c.3-.51.692-.913 1.177-1.21.485-.297 1.077-.445 1.776-.445.69 0 1.27.144 1.74.432.47.288.827.665 1.07 1.13.243.466.38.972.41 1.518h-1.38c-.05-.37-.163-.7-.337-.99a2.01 2.01 0 0 0-.66-.694c-.272-.176-.594-.264-.964-.264zm-9.29 1.07c.44 0 .836.09 1.19.27.353.18.647.432.88.758.235.326.41.715.527 1.165.118.45.177.95.177 1.5 0 .55-.059 1.052-.177 1.502a3.562 3.562 0 0 1-.527 1.167 2.46 2.46 0 0 1-.88.76c-.354.18-.75.27-1.19.27-.44 0-.836-.09-1.19-.27a2.46 2.46 0 0 1-.88-.76 3.562 3.562 0 0 1-.527-1.167A6.017 6.017 0 0 1 7.52 4.763c0-.55.059-1.05.177-1.5.118-.45.293-.84.527-1.165a2.46 2.46 0 0 1 .88-.757c.354-.18.75-.27 1.19-.27zm0 1.132c-.297 0-.547.072-.752.218a1.44 1.44 0 0 0-.488.594 3.21 3.21 0 0 0-.264.86 5.877 5.877 0 0 0-.08.994c0 .356.027.688.08.994.054.307.14.576.264.807.124.23.285.413.488.547.203.133.455.2.752.2.297 0 .547-.067.752-.2.203-.134.364-.317.488-.547.124-.23.21-.5.264-.807a5.56 5.56 0 0 0 .08-.994 5.56 5.56 0 0 0-.08-.994 3.21 3.21 0 0 0-.264-.86 1.44 1.44 0 0 0-.488-.594c-.205-.146-.455-.218-.752-.218zM4.43 1.21v7.714H3.07V1.21H4.43zm-1.36 9.1h1.36v1.362H3.07V10.31z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">ResearchGate</p>
+              <p class="social-handle">Edwin Puertas</p>
+            </div>
+          </a>
+
+          <!-- X / Twitter -->
+          <a href="https://x.com/edwinpuertas" target="_blank" rel="noopener" class="social-card" aria-label="X / Twitter">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">X / Twitter</p>
+              <p class="social-handle">@edwinpuertas</p>
+            </div>
+          </a>
+
+          <!-- ── AGREGA MÁS REDES AQUÍ ── -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-name">Edwin Puertas, PhD</p>
+        <p class="footer-copy">
+          © <span id="year"></span> · Universidad Tecnológica de Bolívar · Cartagena, Colombia
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — tema oscuro, menú móvil y año automático
+       ============================================================ -->
+  <script>
+    /* ── Año automático ── */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ── Tema oscuro ── */
+    const toggleBtn  = document.getElementById('theme-toggle');
+    const iconSun    = document.getElementById('icon-sun');
+    const iconMoon   = document.getElementById('icon-moon');
+    const root       = document.documentElement;
+    const STORAGE_KEY = 'ep-theme';
+
+    function applyTheme(theme) {
+      root.setAttribute('data-theme', theme);
+      const dark = theme === 'dark';
+      iconSun.style.display  = dark ? 'none'  : 'block';
+      iconMoon.style.display = dark ? 'block' : 'none';
+      localStorage.setItem(STORAGE_KEY, theme);
+    }
+
+    /* Inicializar desde localStorage o preferencia del sistema */
+    const saved    = localStorage.getItem(STORAGE_KEY);
+    const prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved || (prefDark ? 'dark' : 'light'));
+
+    toggleBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    /* ── Menú móvil ── */
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav  = document.getElementById('mobile-nav');
+
+    menuToggle.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+      menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    });
+
+    /* Cerrar menú móvil al hacer clic en un enlace */
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Abrir menú');
+      });
+    });
+  </script>
+
+</body>
+</html>
