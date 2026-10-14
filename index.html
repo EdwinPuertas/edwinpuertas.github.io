@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Edwin Puertas, PhD — Profesor e Investigador en IA, NLP y Visión por Computadora. Universidad Tecnológica de Bolívar, Colombia." />
+  <meta name="description" content="Edwin Puertas, PhD — Associate Professor & NLP Researcher at Universidad Tecnológica de Bolívar, Colombia. IEEE & ACM Senior Member." />
   <meta name="author" content="Edwin Puertas" />
   <title>Edwin Puertas, PhD</title>
 
   <style>
     /* ============================================================
-       VARIABLES — edita aquí colores, tipografía y espaciados
+       VARIABLES
        ============================================================ */
     :root {
-      --color-bg:         #ffffff;
-      --color-surface:    #f8f8f6;
-      --color-border:     #e8e8e4;
-      --color-text:       #1a1a1a;
-      --color-muted:      #6b6b6b;
-      --color-accent:     #1a1a1a;
-      --color-accent-alt: #4a4a4a;
-      --color-tag-bg:     #f0f0ec;
-      --color-tag-text:   #3a3a3a;
-      --color-link:       #1a1a1a;
-      --color-link-hover: #4a4a4a;
+      --color-bg:         #f4f7fb;
+      --color-surface:    #ffffff;
+      --color-border:     #d0dce8;
+      --color-text:       #0d1117;
+      --color-muted:      #5a6a7a;
+      --color-accent:     #1559a3;
+      --color-accent-alt: #0a3d7a;
+      --color-tag-bg:     #dbeafe;
+      --color-tag-text:   #1e40af;
+      --color-link:       #1559a3;
+      --color-link-hover: #0a3d7a;
 
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -42,21 +42,18 @@
       --transition: 0.2s ease;
     }
 
-    /* ============================================================
-       MODO OSCURO
-       ============================================================ */
     [data-theme="dark"] {
-      --color-bg:         #0f0f0f;
-      --color-surface:    #1a1a1a;
-      --color-border:     #2a2a2a;
-      --color-text:       #e8e8e4;
-      --color-muted:      #8a8a8a;
-      --color-accent:     #e8e8e4;
-      --color-accent-alt: #aaaaaa;
-      --color-tag-bg:     #252525;
-      --color-tag-text:   #c8c8c8;
-      --color-link:       #e8e8e4;
-      --color-link-hover: #aaaaaa;
+      --color-bg:         #0d1117;
+      --color-surface:    #161b22;
+      --color-border:     #1e3a5f;
+      --color-text:       #e0eaf5;
+      --color-muted:      #7a9abc;
+      --color-accent:     #4ea3f7;
+      --color-accent-alt: #90c5ff;
+      --color-tag-bg:     #0e2a4a;
+      --color-tag-text:   #90c5ff;
+      --color-link:       #4ea3f7;
+      --color-link-hover: #90c5ff;
     }
 
     /* ============================================================
@@ -68,10 +65,7 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
       font-family: var(--font-sans);
@@ -90,14 +84,10 @@
       transition: color var(--transition), opacity var(--transition);
     }
 
-    a:hover {
-      color: var(--color-link-hover);
-      opacity: 0.75;
-    }
+    a:hover { color: var(--color-link-hover); opacity: 0.75; }
 
     img { display: block; max-width: 100%; }
-
-    ul { list-style: none; }
+    ul  { list-style: none; }
 
     /* ============================================================
        LAYOUT
@@ -114,12 +104,10 @@
       border-bottom: 1px solid var(--color-border);
     }
 
-    section:last-of-type {
-      border-bottom: none;
-    }
+    section:last-of-type { border-bottom: none; }
 
     /* ============================================================
-       TIPOGRAFÍA
+       TYPOGRAPHY
        ============================================================ */
     .section-label {
       font-size: 0.7rem;
@@ -130,37 +118,17 @@
       margin-bottom: var(--space-lg);
     }
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-    }
-
-    h2 {
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    h3 {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    p {
-      color: var(--color-text);
-      font-size: 0.975rem;
-    }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; }
+    h2 { font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-weight: 600; letter-spacing: -0.01em; }
+    h3 { font-size: 1rem; font-weight: 600; }
+    p  { color: var(--color-text); font-size: 0.975rem; }
 
     /* ============================================================
-       NAVEGACIÓN
+       NAVIGATION
        ============================================================ */
     #nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       height: var(--nav-h);
       background-color: var(--color-bg);
@@ -203,18 +171,14 @@
       transition: color var(--transition);
     }
 
-    .nav-links a:hover {
-      color: var(--color-text);
-      opacity: 1;
-    }
+    .nav-links a:hover { color: var(--color-text); opacity: 1; }
 
-    /* Botón modo oscuro */
+    /* Theme toggle */
     #theme-toggle {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
+      width: 32px; height: 32px;
       border: 1px solid var(--color-border);
       border-radius: 50%;
       background: transparent;
@@ -223,25 +187,49 @@
       flex-shrink: 0;
     }
 
-    #theme-toggle:hover {
-      background: var(--color-surface);
-    }
+    #theme-toggle:hover { background: var(--color-surface); }
 
     #theme-toggle svg {
-      width: 15px;
-      height: 15px;
+      width: 15px; height: 15px;
       fill: var(--color-muted);
       transition: fill var(--transition);
     }
 
-    /* Menú hamburguesa móvil */
+    /* Language toggle */
+    #lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border: 1px solid var(--color-border);
+      border-radius: 30px;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    #lang-toggle span {
+      padding: 5px 9px;
+      color: var(--color-muted);
+      transition: background var(--transition), color var(--transition);
+      border-radius: 30px;
+    }
+
+    #lang-toggle span.active {
+      background: var(--color-text);
+      color: var(--color-bg);
+    }
+
+    /* Mobile hamburger */
     #menu-toggle {
       display: none;
       flex-direction: column;
       justify-content: center;
       gap: 5px;
-      width: 32px;
-      height: 32px;
+      width: 32px; height: 32px;
       background: none;
       border: none;
       cursor: pointer;
@@ -250,8 +238,7 @@
 
     #menu-toggle span {
       display: block;
-      width: 100%;
-      height: 1.5px;
+      width: 100%; height: 1.5px;
       background: var(--color-text);
       transition: transform var(--transition), opacity var(--transition);
     }
@@ -260,8 +247,7 @@
       display: none;
       position: fixed;
       top: var(--nav-h);
-      left: 0;
-      right: 0;
+      left: 0; right: 0;
       background: var(--color-bg);
       border-bottom: 1px solid var(--color-border);
       padding: var(--space-sm) var(--space-md);
@@ -301,9 +287,7 @@
       margin-bottom: var(--space-md);
     }
 
-    .hero-name {
-      margin-bottom: var(--space-sm);
-    }
+    .hero-name    { margin-bottom: var(--space-sm); }
 
     .hero-tagline {
       font-size: clamp(0.95rem, 2vw, 1.1rem);
@@ -329,18 +313,8 @@
       color: var(--color-muted);
     }
 
-    .hero-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-meta-item svg {
-      width: 13px;
-      height: 13px;
-      flex-shrink: 0;
-      opacity: 0.5;
-    }
+    .hero-meta-item { display: flex; align-items: center; gap: 6px; }
+    .hero-meta-item svg { width: 13px; height: 13px; flex-shrink: 0; opacity: 0.5; }
 
     .hero-cta {
       display: flex;
@@ -373,18 +347,26 @@
       border-color: var(--color-text);
     }
 
-    .btn-primary:hover {
-      opacity: 0.8;
-      color: var(--color-bg);
-    }
+    .btn-primary:hover { opacity: 0.8; color: var(--color-bg); }
 
     /* ============================================================
-       SOBRE MÍ
+       ABOUT
        ============================================================ */
-    #sobre-mi .about-grid {
+    .about-photo-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-md);
+      grid-template-columns: 200px 1fr;
+      gap: var(--space-lg);
+      align-items: start;
+      margin-bottom: var(--space-md);
+    }
+
+    .about-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid var(--color-border);
     }
 
     .about-text p {
@@ -405,11 +387,7 @@
       border-top: 1px solid var(--color-border);
     }
 
-    .about-info-item {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
+    .about-info-item { display: flex; flex-direction: column; gap: 3px; }
 
     .about-info-label {
       font-size: 0.72rem;
@@ -419,15 +397,11 @@
       color: var(--color-muted);
     }
 
-    .about-info-value {
-      font-size: 0.9rem;
-      color: var(--color-text);
-    }
+    .about-info-value { font-size: 0.9rem; color: var(--color-text); }
 
     /* ============================================================
-       PROYECTOS
+       PROJECTS
        ============================================================ */
-    /* ── Para agregar un proyecto: duplica un bloque .project-card ── */
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -442,10 +416,7 @@
       transition: border-color var(--transition), transform var(--transition);
     }
 
-    .project-card:hover {
-      border-color: var(--color-accent-alt);
-      transform: translateY(-2px);
-    }
+    .project-card:hover { border-color: var(--color-accent-alt); transform: translateY(-2px); }
 
     .project-header {
       display: flex;
@@ -455,10 +426,7 @@
       margin-bottom: var(--space-xs);
     }
 
-    .project-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
+    .project-title  { font-size: 0.95rem; font-weight: 600; }
 
     .project-link {
       font-size: 0.78rem;
@@ -478,21 +446,12 @@
       margin-bottom: var(--space-sm);
     }
 
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
     /* ============================================================
-       PUBLICACIONES
+       PUBLICATIONS
        ============================================================ */
-    /* ── Para agregar una publicación: duplica un bloque .pub-item ── */
-    .pub-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .pub-list { display: flex; flex-direction: column; gap: 0; }
 
     .pub-item {
       display: grid;
@@ -513,33 +472,10 @@
       padding-top: 3px;
     }
 
-    .pub-content {}
-
-    .pub-title {
-      font-size: 0.92rem;
-      font-weight: 600;
-      line-height: 1.45;
-      margin-bottom: 4px;
-    }
-
-    .pub-authors {
-      font-size: 0.82rem;
-      color: var(--color-muted);
-      margin-bottom: 4px;
-    }
-
-    .pub-venue {
-      font-size: 0.8rem;
-      color: var(--color-muted);
-      font-style: italic;
-      margin-bottom: 8px;
-    }
-
-    .pub-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .pub-title  { font-size: 0.92rem; font-weight: 600; line-height: 1.45; margin-bottom: 4px; }
+    .pub-authors{ font-size: 0.82rem; color: var(--color-muted); margin-bottom: 4px; }
+    .pub-venue  { font-size: 0.8rem; color: var(--color-muted); font-style: italic; margin-bottom: 8px; }
+    .pub-links  { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .pub-badge {
       font-size: 0.72rem;
@@ -557,13 +493,9 @@
     .pub-badge:hover { color: var(--color-text); border-color: var(--color-text); opacity: 1; }
 
     /* ============================================================
-       HABILIDADES
+       SKILLS
        ============================================================ */
-    /* ── Para agregar habilidades: agrega un <span class="tag"> dentro del grupo ── */
-    .skills-group {
-      margin-bottom: var(--space-md);
-    }
-
+    .skills-group { margin-bottom: var(--space-md); }
     .skills-group:last-child { margin-bottom: 0; }
 
     .skills-group-label {
@@ -575,11 +507,7 @@
       margin-bottom: var(--space-xs);
     }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .tag {
       font-size: 0.8rem;
@@ -592,13 +520,10 @@
       transition: background var(--transition), color var(--transition);
     }
 
-    .tag:hover {
-      background: var(--color-text);
-      color: var(--color-bg);
-    }
+    .tag:hover { background: var(--color-text); color: var(--color-bg); }
 
     /* ============================================================
-       REDES SOCIALES
+       SOCIAL / CONTACT
        ============================================================ */
     .social-grid {
       display: grid;
@@ -619,15 +544,10 @@
       transition: border-color var(--transition), transform var(--transition), opacity var(--transition);
     }
 
-    .social-card:hover {
-      border-color: var(--color-accent-alt);
-      transform: translateY(-2px);
-      opacity: 1;
-    }
+    .social-card:hover { border-color: var(--color-accent-alt); transform: translateY(-2px); opacity: 1; }
 
     .social-icon {
-      width: 36px;
-      height: 36px;
+      width: 36px; height: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -636,49 +556,23 @@
       flex-shrink: 0;
     }
 
-    .social-icon svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--color-muted);
-    }
-
-    .social-info {}
-
-    .social-name {
-      font-size: 0.85rem;
-      font-weight: 600;
-      line-height: 1.3;
-    }
-
-    .social-handle {
-      font-size: 0.75rem;
-      color: var(--color-muted);
-    }
+    .social-icon svg { width: 18px; height: 18px; fill: var(--color-muted); }
+    .social-name  { font-size: 0.85rem; font-weight: 600; line-height: 1.3; }
+    .social-handle{ font-size: 0.75rem; color: var(--color-muted); }
 
     /* ============================================================
        FOOTER
        ============================================================ */
-    footer {
-      padding: var(--space-lg) 0;
-      text-align: center;
-    }
+    footer { padding: var(--space-lg) 0; text-align: center; }
 
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-xs);
-    }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: var(--space-xs); }
+    .footer-name  { font-size: 0.85rem; font-weight: 600; }
+    .footer-copy  { font-size: 0.78rem; color: var(--color-muted); }
 
-    .footer-name {
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .footer-copy {
-      font-size: 0.78rem;
-      color: var(--color-muted);
-    }
+    /* ============================================================
+       BILINGUAL — .en / .es
+       ============================================================ */
+    .es { display: none; }
 
     /* ============================================================
        RESPONSIVE
@@ -689,8 +583,22 @@
       .nav-links { display: none; }
       #menu-toggle { display: flex; }
 
+      .about-photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+      }
+
       .pub-item { grid-template-columns: 42px 1fr; gap: 8px; }
       .social-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .about-photo { width: 120px; height: 120px; }
     }
 
     @media (min-width: 641px) {
@@ -706,53 +614,56 @@
 <body>
 
   <!-- ============================================================
-       NAVEGACIÓN
+       NAVIGATION
        ============================================================ -->
-  <nav id="nav" role="navigation" aria-label="Navegación principal">
+  <nav id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Edwin Puertas</a>
 
-      <!-- Escritorio -->
+      <!-- Desktop links -->
       <div class="nav-links" aria-hidden="false">
-        <a href="#sobre-mi">About</a>
-        <a href="#proyectos">Projects</a>
-        <a href="#publicaciones">Publications</a>
-        <a href="#experiencia">Experience</a>
-        <a href="#habilidades">Skills</a>
-        <a href="#redes">Contact</a>
+        <a href="#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
+        <a href="#proyectos"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+        <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
+        <a href="#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
+        <a href="#habilidades"><span class="en">Skills</span><span class="es">Habilidades</span></a>
+        <a href="#redes"><span class="en">Contact</span><span class="es">Contacto</span></a>
       </div>
 
-      <div style="display:flex;align-items:center;gap:10px;">
-        <!-- Botón modo oscuro -->
-        <button id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
-          <!-- Ícono sol (modo claro activo) -->
+      <div style="display:flex;align-items:center;gap:8px;">
+        <!-- Language toggle -->
+        <button id="lang-toggle" aria-label="Switch language / Cambiar idioma">
+          <span id="lang-es">ES</span>
+          <span style="opacity:0.35;padding:0 2px;">|</span>
+          <span id="lang-en" class="active">EN</span>
+        </button>
+
+        <!-- Theme toggle -->
+        <button id="theme-toggle" aria-label="Toggle theme">
           <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 4.5Zm0 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 12a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 4.5 12Zm12 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM6.697 6.697a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061L6.697 7.758a.75.75 0 0 1 0-1.06Zm9.546 9.545a.75.75 0 0 1 1.06 0l1.06 1.061a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.061ZM6.697 17.303a.75.75 0 0 1 0-1.06l1.06-1.061a.75.75 0 1 1 1.061 1.06l-1.06 1.061a.75.75 0 0 1-1.061 0ZM16.243 6.697a.75.75 0 0 1 0 1.061l-1.06 1.06a.75.75 0 1 1-1.061-1.06l1.06-1.06a.75.75 0 0 1 1.061 0ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/>
           </svg>
-          <!-- Ícono luna (modo oscuro activo) -->
           <svg id="icon-moon" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
             <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75 9.75 9.75 0 0 1 8.25 6c0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 12c0 5.385 4.365 9.75 9.75 9.75 4.412 0 8.163-2.943 9.502-7.498Z"/>
           </svg>
         </button>
 
-        <!-- Hamburguesa móvil -->
-        <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <!-- Mobile hamburger -->
+        <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
-  <!-- Menú móvil desplegable -->
-  <div id="mobile-nav" role="navigation" aria-label="Menú móvil">
-    <a href="#sobre-mi">About</a>
-    <a href="#proyectos">Projects</a>
-    <a href="#publicaciones">Publications</a>
-    <a href="#experiencia">Experience</a>
-    <a href="#habilidades">Skills</a>
-    <a href="#redes">Contact</a>
+  <!-- Mobile nav -->
+  <div id="mobile-nav" role="navigation" aria-label="Mobile menu">
+    <a href="#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
+    <a href="#proyectos"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+    <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
+    <a href="#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
+    <a href="#habilidades"><span class="en">Skills</span><span class="es">Habilidades</span></a>
+    <a href="#redes"><span class="en">Contact</span><span class="es">Contacto</span></a>
   </div>
 
   <main>
@@ -767,68 +678,87 @@
         <h1 class="hero-name" id="hero-name">Edwin Puertas,&nbsp;PhD</h1>
 
         <p class="hero-tagline">
-          Inteligencia Artificial, NLP y Visión por Computadora aplicados a problemas reales desde América Latina.
+          <span class="en">AI Software Architect &amp; NLP Researcher. Bridging academic research and real-world applications from Latin America.</span>
+          <span class="es">Arquitecto de Software IA e Investigador NLP. Conectando investigación académica con aplicaciones reales desde América Latina.</span>
         </p>
 
         <p class="hero-description">
-          Profesor Asociado en la Universidad Tecnológica de Bolívar, Cartagena. Dirijo los programas de Doctorado y Maestría en Ingeniería, investigo en IA y publico con más de 299 citas en revistas y congresos internacionales.
+          <span class="en">Associate Professor &amp; Program Director at Universidad Tecnológica de Bolívar, Cartagena. I lead the VerbaNexAI research group and have 299+ citations across international journals and conferences.</span>
+          <span class="es">Profesor Asociado y Director de Programas en la Universidad Tecnológica de Bolívar, Cartagena. Dirijo el grupo de investigación VerbaNexAI y cuento con más de 299 citas en revistas y congresos internacionales.</span>
         </p>
 
-        <!-- Metadatos rápidos -->
         <div class="hero-meta">
           <span class="hero-meta-item">
-            <!-- Pin -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 14 6 14s6-8.75 6-14c0-3.314-2.686-6-6-6Z"/><circle cx="12" cy="8" r="2"/></svg>
             Cartagena, Colombia
           </span>
           <span class="hero-meta-item">
-            <!-- Book -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
             Universidad Tecnológica de Bolívar
           </span>
           <span class="hero-meta-item">
-            <!-- Star -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             IEEE Senior Member · ACM Senior Member
           </span>
         </div>
 
-        <!-- Llamados a la acción -->
         <div class="hero-cta">
-          <a href="mailto:epuerta@utb.edu.co" class="btn btn-primary">Escribirme</a>
-          <a href="https://scholar.google.com/citations?user=Edwin_Puertas" target="_blank" rel="noopener" class="btn">Google Scholar</a>
+          <a href="mailto:epuerta@utb.edu.co" class="btn btn-primary">
+            <span class="en">Contact me</span>
+            <span class="es">Escribirme</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=S_OvkYEAAAAJ&hl=en" target="_blank" rel="noopener" class="btn">Google Scholar</a>
           <a href="https://github.com/edwinpuertas" target="_blank" rel="noopener" class="btn">GitHub</a>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         SOBRE MÍ
+         ABOUT
          ============================================================ -->
     <section id="sobre-mi" aria-labelledby="label-sobre-mi">
       <div class="container">
-        <p class="section-label" id="label-sobre-mi">About</p>
+        <p class="section-label" id="label-sobre-mi">
+          <span class="en">About</span>
+          <span class="es">Sobre mí</span>
+        </p>
 
-        <div class="about-text">
-          <p>
-            Soy <strong>Doctor en Ingeniería</strong> por la Pontificia Universidad Javeriana (2023), Profesor Asociado y Director de Programas de Posgrado en la Universidad Tecnológica de Bolívar, e investigador principal del grupo <strong>VerbaNexAI</strong>. Cuento con amplia experiencia en IA, NLP, Big Data, Data Analytics e Ingeniería de Software, combinando práctica técnica con formación académica para entrenar a la próxima generación de profesionales tecnológicos.
-          </p>
-          <p>
-            Mis áreas de interés incluyen <strong>Inteligencia Artificial</strong> (Deep Learning, Transfer Learning, Reinforcement Learning), <strong>Procesamiento de Lenguaje Natural</strong> (perfilado de autores, análisis de sentimientos, recuperación de información), <strong>Visión por Computadora</strong> (detección de objetos) y análisis de señales multi-dominio. He participado activamente en competencias internacionales: IberLEF, SemEval, CLEF y PAN.
-          </p>
-          <p>
-            Soy <strong>IEEE Senior Member</strong>, <strong>ACM Senior Member</strong> y miembro fundador de la IEEE Colombian Caribbean Section. Best Paper Award en IEEE C3 2023.
-          </p>
+        <div class="about-photo-grid">
+          <img
+            src="public/images/photo.jpg"
+            alt="Edwin Puertas, PhD"
+            class="about-photo"
+            loading="lazy"
+          />
+          <div class="about-text">
+            <p class="en">
+              I am a <strong>Doctor of Engineering</strong> (Pontificia Universidad Javeriana, 2023), Associate Professor and Graduate Program Director at Universidad Tecnológica de Bolívar, and principal investigator of the <strong>VerbaNexAI</strong> research group. I combine technical practice with teaching to train the next generation of technology professionals.
+            </p>
+            <p class="es">
+              Soy <strong>Doctor en Ingeniería</strong> (Pontificia Universidad Javeriana, 2023), Profesor Asociado y Director de Programas de Posgrado en la Universidad Tecnológica de Bolívar, e investigador principal del grupo <strong>VerbaNexAI</strong>. Combino la práctica técnica con la docencia para formar a la próxima generación de profesionales tecnológicos.
+            </p>
+            <p class="en">
+              My research focuses on <strong>Natural Language Processing</strong> (author profiling, sentiment analysis, information retrieval, LLMs), <strong>Computer Vision</strong> (object detection), and multi-domain signal processing. I actively participate in international competitions: IberLEF, SemEval, CLEF and PAN.
+            </p>
+            <p class="es">
+              Mi investigación se centra en <strong>Procesamiento de Lenguaje Natural</strong> (perfilado de autores, análisis de sentimientos, recuperación de información, LLMs), <strong>Visión por Computadora</strong> (detección de objetos) y análisis de señales multi-dominio. Participo activamente en competencias internacionales: IberLEF, SemEval, CLEF y PAN.
+            </p>
+            <p class="en">
+              <strong>IEEE Senior Member</strong>, <strong>ACM Senior Member</strong>, founding member of the IEEE Colombian Caribbean Section, and Best Paper Award at IEEE C3 2023.
+            </p>
+            <p class="es">
+              <strong>IEEE Senior Member</strong>, <strong>ACM Senior Member</strong>, miembro fundador de la IEEE Colombian Caribbean Section y Best Paper Award en IEEE C3 2023.
+            </p>
+          </div>
         </div>
 
-        <!-- Datos clave -->
         <div class="about-info">
           <div class="about-info-item">
-            <span class="about-info-label">Institution</span>
+            <span class="about-info-label"><span class="en">Institution</span><span class="es">Institución</span></span>
             <span class="about-info-value">Univ. Tecnológica de Bolívar</span>
           </div>
           <div class="about-info-item">
-            <span class="about-info-label">Location</span>
+            <span class="about-info-label"><span class="en">Location</span><span class="es">Ubicación</span></span>
             <span class="about-info-value">Cartagena, Colombia</span>
           </div>
           <div class="about-info-item">
@@ -836,11 +766,11 @@
             <span class="about-info-value">PUJ, 2023</span>
           </div>
           <div class="about-info-item">
-            <span class="about-info-label">Areas</span>
+            <span class="about-info-label"><span class="en">Areas</span><span class="es">Áreas</span></span>
             <span class="about-info-value">AI · NLP · CV · Data Science</span>
           </div>
           <div class="about-info-item">
-            <span class="about-info-label">Citations</span>
+            <span class="about-info-label"><span class="en">Citations</span><span class="es">Citas</span></span>
             <span class="about-info-value">299+</span>
           </div>
           <div class="about-info-item">
@@ -852,25 +782,25 @@
     </section>
 
     <!-- ============================================================
-         PROYECTOS
-         ─────────────────────────────────────────────────────────────
-         Para agregar un proyecto:
-         1. Copia un bloque <article class="project-card">…</article>
-         2. Edita title, desc, tags y el href del enlace
+         PROJECTS
          ============================================================ -->
     <section id="proyectos" aria-labelledby="label-proyectos">
       <div class="container">
-        <p class="section-label" id="label-proyectos">Projects</p>
+        <p class="section-label" id="label-proyectos">
+          <span class="en">Projects</span>
+          <span class="es">Proyectos</span>
+        </p>
 
         <div class="projects-grid">
 
           <article class="project-card">
             <div class="project-header">
               <h3 class="project-title">Apollo</h3>
-              <span class="project-link">Oct 2023 – Present</span>
+              <span class="project-link">Oct 2023 – <span class="en">Present</span><span class="es">Presente</span></span>
             </div>
             <p class="project-desc">
-              Python package for multimodal AI understanding with three channels: Audio (Lyre), Text (Pythia) and Vision (Argus). Includes tools for head analysis, motor pattern diagnostics, facial movements and NLP with syllabification.
+              <span class="en">Python package for multimodal AI understanding with three channels: Audio (Lyre), Text (Pythia) and Vision (Argus). Includes tools for head analysis, motor pattern diagnostics, facial movements and NLP with syllabification.</span>
+              <span class="es">Paquete Python para comprensión multimodal con tres canales: Audio (Lyre), Texto (Pythia) y Visión (Argus). Incluye análisis de cabeza, diagnóstico de patrones motores, movimientos faciales y NLP con silabificación.</span>
             </p>
             <div class="project-tags">
               <span class="tag">Multimodal AI</span>
@@ -883,10 +813,11 @@
           <article class="project-card">
             <div class="project-header">
               <h3 class="project-title">TrueShield</h3>
-              <span class="project-link">Active</span>
+              <span class="project-link"><span class="en">Active</span><span class="es">Activo</span></span>
             </div>
             <p class="project-desc">
-              Fake news detection platform using entity recognition, cross-reference from RSS/Twitter/Reddit and a veracity scoring algorithm. Built on microservices with Angular, Django, FastAPI, Hugging Face models and deployed on AWS.
+              <span class="en">Fake news detection platform using entity recognition, cross-reference from RSS/Twitter/Reddit and a veracity scoring algorithm. Built on microservices with Angular, Django, FastAPI, Hugging Face models and deployed on AWS.</span>
+              <span class="es">Plataforma para la detección de noticias falsas usando reconocimiento de entidades, referencias cruzadas de RSS/Twitter/Reddit y un algoritmo de puntuación de veracidad. Arquitectura de microservicios con Angular, Django, FastAPI y AWS.</span>
             </p>
             <div class="project-tags">
               <span class="tag">NLP</span>
@@ -899,10 +830,11 @@
           <article class="project-card">
             <div class="project-header">
               <h3 class="project-title">FrameLens</h3>
-              <span class="project-link">Active</span>
+              <span class="project-link"><span class="en">Active</span><span class="es">Activo</span></span>
             </div>
             <p class="project-desc">
-              NLP methodology for analyzing news framing in Spanish-language media. Identifies cultural and political factors shaping narratives; contributes to media literacy and cross-linguistic public opinion analysis.
+              <span class="en">NLP methodology for analyzing news framing in Spanish-language media. Identifies cultural and political factors shaping narratives; contributes to media literacy and cross-linguistic public opinion analysis.</span>
+              <span class="es">Metodología NLP para analizar el framing noticioso en medios hispanohablantes. Identifica factores culturales y políticos que moldean las narrativas; contribuye a la alfabetización mediática y al análisis de opinión pública.</span>
             </p>
             <div class="project-tags">
               <span class="tag">NLP</span>
@@ -914,10 +846,11 @@
           <article class="project-card">
             <div class="project-header">
               <h3 class="project-title">MentalGuard</h3>
-              <span class="project-link">Active</span>
+              <span class="project-link"><span class="en">Active</span><span class="es">Activo</span></span>
             </div>
             <p class="project-desc">
-              Multimodal AI system for early detection of mental health risk in university students. Integrates NLP techniques on text and audio to provide objective, rapid and scalable risk evaluation beyond traditional self-reporting.
+              <span class="en">Multimodal AI system for early detection of mental health risk in university students. Integrates NLP on text and audio to provide objective, rapid and scalable risk evaluation beyond traditional self-reporting.</span>
+              <span class="es">Sistema IA multimodal para la detección temprana de riesgo de salud mental en estudiantes universitarios. Integra NLP en texto y audio para una evaluación objetiva, rápida y escalable más allá de la auto-evaluación tradicional.</span>
             </p>
             <div class="project-tags">
               <span class="tag">Mental Health</span>
@@ -929,10 +862,11 @@
           <article class="project-card">
             <div class="project-header">
               <h3 class="project-title">Mapping Motion</h3>
-              <span class="project-link">Active</span>
+              <span class="project-link"><span class="en">Active</span><span class="es">Activo</span></span>
             </div>
             <p class="project-desc">
-              Cognitive approach to analyzing movement patterns of individuals with dyspraxia using motion capture and advanced signal processing. Results have practical applications in rehabilitation and assistive technology design.
+              <span class="en">Cognitive approach to analyzing movement patterns of individuals with dyspraxia using motion capture and advanced signal processing. Results have practical applications in rehabilitation and assistive technology design.</span>
+              <span class="es">Enfoque cognitivo para analizar patrones de movimiento en personas con dispraxia mediante captura de movimiento y procesamiento de señales. Aplicaciones en rehabilitación y tecnologías de asistencia.</span>
             </p>
             <div class="project-tags">
               <span class="tag">Signal Processing</span>
@@ -944,10 +878,11 @@
           <article class="project-card">
             <div class="project-header">
               <h3 class="project-title">Traffic Monitoring</h3>
-              <span class="project-link">Jan 2023 – Present</span>
+              <span class="project-link">Jan 2023 – <span class="en">Present</span><span class="es">Presente</span></span>
             </div>
             <p class="project-desc">
-              Automated computer vision system for detecting unauthorized vehicle entries (motorcycles) in pedestrian zones in Cartagena. Developed for an energy company to improve urban pedestrian safety enforcement.
+              <span class="en">Automated computer vision system for detecting unauthorized vehicle entries (motorcycles) in pedestrian zones in Cartagena. Developed for an energy company to improve urban pedestrian safety enforcement.</span>
+              <span class="es">Sistema automatizado de visión por computadora para detectar entradas no autorizadas de vehículos (motos) en zonas peatonales en Cartagena. Desarrollado para mejorar la seguridad vial urbana.</span>
             </p>
             <div class="project-tags">
               <span class="tag">Computer Vision</span>
@@ -962,7 +897,8 @@
               <span class="project-link">2023</span>
             </div>
             <p class="project-desc">
-              Innovative approach to calculate Return on Investment for photovoltaic systems incorporating system degradation and maintenance factors for a more realistic financial estimation over the asset lifecycle.
+              <span class="en">Innovative approach to calculate Return on Investment for photovoltaic systems incorporating system degradation and maintenance factors for a more realistic financial estimation over the asset lifecycle.</span>
+              <span class="es">Enfoque innovador para calcular el ROI de sistemas fotovoltaicos incorporando factores de degradación y mantenimiento, proporcionando una estimación financiera más realista durante el ciclo de vida del activo.</span>
             </p>
             <div class="project-tags">
               <span class="tag">Photovoltaics</span>
@@ -976,17 +912,19 @@
     </section>
 
     <!-- ============================================================
-         PUBLICACIONES
-         ─────────────────────────────────────────────────────────────
-         Para agregar una publicación:
-         1. Copia un bloque <li class="pub-item">…</li>
-         2. Edita año, título, autores, venue y enlaces
+         PUBLICATIONS
          ============================================================ -->
     <section id="publicaciones" aria-labelledby="label-publicaciones">
       <div class="container">
-        <p class="section-label" id="label-publicaciones">Selected Publications</p>
+        <p class="section-label" id="label-publicaciones">
+          <span class="en">Selected Publications</span>
+          <span class="es">Publicaciones seleccionadas</span>
+        </p>
 
-        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1rem;">Most cited</p>
+        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1rem;">
+          <span class="en">Most cited</span>
+          <span class="es">Más citadas</span>
+        </p>
         <ul class="pub-list">
 
           <li class="pub-item">
@@ -994,16 +932,16 @@
             <div class="pub-content">
               <p class="pub-title">A sustainability maturity model for micro, small and medium-sized enterprises (MSMEs) based on a data analytics evaluation approach</p>
               <p class="pub-authors">Vásquez, J., Aguirre, S., Puertas, E., Bruno, G., Priarone, P. C., &amp; Settineri, L.</p>
-              <p class="pub-venue">Journal of Cleaner Production, vol. 311 · <strong>75 citations</strong></p>
+              <p class="pub-venue">Journal of Cleaner Production, vol. 311 · <strong>75 <span class="en">citations</span><span class="es">citas</span></strong></p>
             </div>
           </li>
 
           <li class="pub-item">
             <span class="pub-year">2022</span>
             <div class="pub-content">
-              <p class="pub-title">Cost-effectiveness analysis of strategies of COVID-19 vaccination in Colombia: comparison of high-risk prioritization and no prioritization strategies</p>
+              <p class="pub-title">Cost-effectiveness analysis of strategies of COVID-19 vaccination in Colombia</p>
               <p class="pub-authors">Morales-Zamora, G., Espinosa, O., Puertas, E., et al.</p>
-              <p class="pub-venue">Value in Health Regional Issues, vol. 31 · <strong>19 citations</strong></p>
+              <p class="pub-venue">Value in Health Regional Issues, vol. 31 · <strong>19 <span class="en">citations</span><span class="es">citas</span></strong></p>
             </div>
           </li>
 
@@ -1012,7 +950,7 @@
             <div class="pub-content">
               <p class="pub-title">Detection of sociolinguistic features in digital social networks for the detection of communities</p>
               <p class="pub-authors">Puertas, E., Moreno-Sandoval, L. G., Redondo, J., Alvarado-Valencia, J. A., &amp; Pomares-Quimbaya, A.</p>
-              <p class="pub-venue">Cognitive Computation, vol. 13, no. 2, pp. 518–537 · <strong>19 citations</strong></p>
+              <p class="pub-venue">Cognitive Computation, vol. 13, no. 2, pp. 518–537 · <strong>19 <span class="en">citations</span><span class="es">citas</span></strong></p>
             </div>
           </li>
 
@@ -1021,7 +959,7 @@
             <div class="pub-content">
               <p class="pub-title">UTB-NLP at SemEval-2023 Task 3: Weirdness, lexical features for detecting categorical framings, and persuasion in online news</p>
               <p class="pub-authors">Cuadrado, J., Martinez, E., Morillo, A., Peña, D., Sossa, K., Martinez-Santos, J. C., &amp; Puertas, E.</p>
-              <p class="pub-venue">Proceedings of SemEval-2023 (ACL) · <strong>5 citations</strong></p>
+              <p class="pub-venue">Proceedings of SemEval-2023 (ACL) · <strong>5 <span class="en">citations</span><span class="es">citas</span></strong></p>
             </div>
           </li>
 
@@ -1030,13 +968,16 @@
             <div class="pub-content">
               <p class="pub-title">Bots and gender profiling on Twitter using sociolinguistic features — Notebook for PAN at CLEF 2019</p>
               <p class="pub-authors">Puertas, E., Moreno-Sandoval, L. G., Plaza-Del-Arco, F. M., Alvarado-Valencia, J. A., Pomares-Quimbaya, A., &amp; Ureña-López, L. A.</p>
-              <p class="pub-venue">CEUR-WS, vol. 2380 · <strong>4 citations</strong></p>
+              <p class="pub-venue">CEUR-WS, vol. 2380 · <strong>4 <span class="en">citations</span><span class="es">citas</span></strong></p>
             </div>
           </li>
 
         </ul>
 
-        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-top:2.5rem;margin-bottom:1rem;">Recent</p>
+        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-top:2.5rem;margin-bottom:1rem;">
+          <span class="en">Recent</span>
+          <span class="es">Recientes</span>
+        </p>
         <ul class="pub-list">
 
           <li class="pub-item">
@@ -1044,7 +985,7 @@
             <div class="pub-content">
               <p class="pub-title">A computer vision system for detecting motorcycle violations in pedestrian zones</p>
               <p class="pub-authors">Hernández-Díaz, N., Peñaloza, Y. C., Rios, Y. Y., Martinez-Santos, J. C., &amp; Puertas, E.</p>
-              <p class="pub-venue">Multimedia Tools and Applications, vol. 84, no. 13 · 3 citations</p>
+              <p class="pub-venue">Multimedia Tools and Applications, vol. 84, no. 13 · 3 <span class="en">citations</span><span class="es">citas</span></p>
             </div>
           </li>
 
@@ -1053,7 +994,7 @@
             <div class="pub-content">
               <p class="pub-title">VerbaNexAI lab at SemEval-2024 Task 10: Emotion recognition and reasoning in mixed-coded conversations based on an NRC VAD approach</p>
               <p class="pub-authors">Garcia, S., Martinez, E., Cuadrado, J., Martinez-Santos, J. C., &amp; Puertas, E.</p>
-              <p class="pub-venue">Proceedings of SemEval-2024 (ACL) · 2 citations</p>
+              <p class="pub-venue">Proceedings of SemEval-2024 (ACL) · 2 <span class="en">citations</span><span class="es">citas</span></p>
             </div>
           </li>
 
@@ -1062,7 +1003,7 @@
             <div class="pub-content">
               <p class="pub-title">VerbaNexAI lab at SemEval-2024 Task 1: A multilayer artificial intelligence model for semantic relationship detection</p>
               <p class="pub-authors">Morillo, A., Peña, D., Martinez-Santos, J. C., &amp; Puertas, E.</p>
-              <p class="pub-venue">Proceedings of SemEval-2024 (ACL) · 2 citations</p>
+              <p class="pub-venue">Proceedings of SemEval-2024 (ACL) · 2 <span class="en">citations</span><span class="es">citas</span></p>
             </div>
           </li>
 
@@ -1071,7 +1012,7 @@
             <div class="pub-content">
               <p class="pub-title">Enhancing consistency in piping and instrumentation diagrams using DistilBERT and smart PID systems</p>
               <p class="pub-authors">Gómez-Vega, F., Acuña, O., Camargo, A. C., Jimenez, J. D., et al., &amp; Puertas, E.</p>
-              <p class="pub-venue">Systems and Soft Computing, vol. 7 · 1 citation</p>
+              <p class="pub-venue">Systems and Soft Computing, vol. 7 · 1 <span class="en">citation</span><span class="es">cita</span></p>
             </div>
           </li>
 
@@ -1087,53 +1028,70 @@
         </ul>
 
         <div style="margin-top: var(--space-md);">
-          <a href="https://scholar.google.com/citations?user=Edwin_Puertas" target="_blank" rel="noopener" class="btn">
-            All publications on Google Scholar →
+          <a href="publications.html" class="btn btn-primary">
+            <span class="en">All publications →</span>
+            <span class="es">Todas las publicaciones →</span>
           </a>
+          <a href="https://scholar.google.com/citations?user=S_OvkYEAAAAJ&hl=en" target="_blank" rel="noopener" class="btn">Google Scholar</a>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         EXPERIENCIA & EDUCACIÓN
+         EXPERIENCE & EDUCATION
          ============================================================ -->
     <section id="experiencia" aria-labelledby="label-experiencia">
       <div class="container">
-        <p class="section-label" id="label-experiencia">Experience &amp; Education</p>
+        <p class="section-label" id="label-experiencia">
+          <span class="en">Experience &amp; Education</span>
+          <span class="es">Experiencia &amp; Educación</span>
+        </p>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;">
 
           <div>
-            <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1.5rem;">Experience</p>
+            <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1.5rem;">
+              <span class="en">Experience</span>
+              <span class="es">Experiencia</span>
+            </p>
             <ul class="pub-list">
               <li class="pub-item">
-                <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2008–now</span>
+                <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2008–<span class="en">now</span><span class="es">hoy</span></span>
                 <div class="pub-content">
-                  <p class="pub-title">Associate Professor &amp; Program Director</p>
+                  <p class="pub-title">
+                    <span class="en">Associate Professor &amp; Program Director</span>
+                    <span class="es">Profesor Asociado y Director de Programas</span>
+                  </p>
                   <p class="pub-authors">Universidad Tecnológica de Bolívar</p>
                   <p class="pub-venue">Cartagena, Colombia</p>
                 </div>
               </li>
               <li class="pub-item">
-                <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2024–now</span>
+                <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2024–<span class="en">now</span><span class="es">hoy</span></span>
                 <div class="pub-content">
                   <p class="pub-title">Co-Investigator</p>
                   <p class="pub-authors">Navigating Toward the Future</p>
-                  <p class="pub-venue">Intelligent maintenance in naval environments</p>
+                  <p class="pub-venue">
+                    <span class="en">Intelligent maintenance in naval environments</span>
+                    <span class="es">Mantenimiento inteligente en entornos navales</span>
+                  </p>
                 </div>
               </li>
               <li class="pub-item">
                 <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2016–2023</span>
                 <div class="pub-content">
                   <p class="pub-title">Senior Data Scientist</p>
-                  <p class="pub-authors">CAOBA — Center of Excellence in Big Data &amp; Analytics</p>
+                  <p class="pub-authors">CAOBA — <span class="en">Center of Excellence in Big Data &amp; Analytics</span><span class="es">Centro de Excelencia en Big Data y Analítica</span></p>
                   <p class="pub-venue">Bogotá, Colombia</p>
                 </div>
               </li>
               <li class="pub-item">
                 <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">Jan–Mar 2019</span>
                 <div class="pub-content">
-                  <p class="pub-title">Visiting Researcher</p>
+                  <p class="pub-title">
+                    <span class="en">Visiting Researcher</span>
+                    <span class="es">Investigador Visitante</span>
+                  </p>
                   <p class="pub-authors">Universitat Politècnica de València (UPV)</p>
                   <p class="pub-venue">Valencia, Spain</p>
                 </div>
@@ -1141,7 +1099,10 @@
               <li class="pub-item">
                 <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">Oct 2018–Jan 2019</span>
                 <div class="pub-content">
-                  <p class="pub-title">Visiting Researcher</p>
+                  <p class="pub-title">
+                    <span class="en">Visiting Researcher</span>
+                    <span class="es">Investigador Visitante</span>
+                  </p>
                   <p class="pub-authors">University of Turin</p>
                   <p class="pub-venue">Turin, Italy</p>
                 </div>
@@ -1150,12 +1111,18 @@
           </div>
 
           <div>
-            <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1.5rem;">Education</p>
+            <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1.5rem;">
+              <span class="en">Education</span>
+              <span class="es">Educación</span>
+            </p>
             <ul class="pub-list">
               <li class="pub-item">
                 <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2016–2023</span>
                 <div class="pub-content">
-                  <p class="pub-title">PhD in Engineering</p>
+                  <p class="pub-title">
+                    <span class="en">PhD in Engineering</span>
+                    <span class="es">Doctorado en Ingeniería</span>
+                  </p>
                   <p class="pub-authors">Pontificia Universidad Javeriana</p>
                   <p class="pub-venue">Bogotá, Colombia</p>
                 </div>
@@ -1163,7 +1130,10 @@
               <li class="pub-item">
                 <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">2008–2011</span>
                 <div class="pub-content">
-                  <p class="pub-title">Master in Engineering</p>
+                  <p class="pub-title">
+                    <span class="en">Master in Engineering</span>
+                    <span class="es">Maestría en Ingeniería</span>
+                  </p>
                   <p class="pub-authors">Universidad Tecnológica de Bolívar</p>
                   <p class="pub-venue">Cartagena, Colombia</p>
                 </div>
@@ -1171,7 +1141,10 @@
               <li class="pub-item">
                 <span class="pub-year" style="min-width:5rem;font-size:0.72rem;">1995–2001</span>
                 <div class="pub-content">
-                  <p class="pub-title">BSc in Systems Engineering</p>
+                  <p class="pub-title">
+                    <span class="en">BSc in Systems Engineering</span>
+                    <span class="es">Ingeniería de Sistemas</span>
+                  </p>
                   <p class="pub-authors">Universidad Tecnológica de Bolívar</p>
                   <p class="pub-venue">Cartagena, Colombia</p>
                 </div>
@@ -1184,44 +1157,48 @@
     </section>
 
     <!-- ============================================================
-         HABILIDADES
-         ─────────────────────────────────────────────────────────────
-         Para agregar una habilidad: agrega <span class="tag">Nombre</span>
-         dentro del grupo correspondiente, o crea un nuevo grupo.
+         SKILLS
          ============================================================ -->
     <section id="habilidades" aria-labelledby="label-habilidades">
       <div class="container">
-        <p class="section-label" id="label-habilidades">Skills</p>
+        <p class="section-label" id="label-habilidades">
+          <span class="en">Skills</span>
+          <span class="es">Habilidades</span>
+        </p>
 
-        <!-- Grupo 1 -->
         <div class="skills-group">
-          <p class="skills-group-label">Artificial Intelligence &amp; ML</p>
+          <p class="skills-group-label">
+            <span class="en">Artificial Intelligence &amp; ML</span>
+            <span class="es">Inteligencia Artificial &amp; ML</span>
+          </p>
           <div class="tags">
             <span class="tag">Machine Learning</span>
             <span class="tag">Deep Learning</span>
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">Transfer Learning</span>
             <span class="tag">Transformers</span>
-            <span class="tag">BERT / LLMs</span>
-            <span class="tag">Fine-tuning</span>
+            <span class="tag">LLMs</span>
             <span class="tag">MLOps</span>
           </div>
         </div>
 
-        <!-- Grupo 2 -->
         <div class="skills-group">
           <p class="skills-group-label">NLP</p>
           <div class="tags">
-            <span class="tag">Análisis de Sentimientos</span>
-            <span class="tag">Detección de Propaganda</span>
-            <span class="tag">Named Entity Recognition</span>
+            <span class="tag">Author Profiling</span>
+            <span class="tag">Sentiment Analysis</span>
+            <span class="tag">Information Retrieval</span>
             <span class="tag">Text Classification</span>
-            <span class="tag">Information Extraction</span>
+            <span class="tag">Named Entity Recognition</span>
             <span class="tag">Spanish NLP</span>
           </div>
         </div>
 
-        <!-- Grupo 3 -->
         <div class="skills-group">
-          <p class="skills-group-label">Computer Vision</p>
+          <p class="skills-group-label">
+            <span class="en">Computer Vision</span>
+            <span class="es">Visión por Computadora</span>
+          </p>
           <div class="tags">
             <span class="tag">Object Detection</span>
             <span class="tag">OpenCV</span>
@@ -1229,9 +1206,11 @@
           </div>
         </div>
 
-        <!-- Grupo 4 -->
         <div class="skills-group">
-          <p class="skills-group-label">Programming &amp; Tools</p>
+          <p class="skills-group-label">
+            <span class="en">Programming &amp; Tools</span>
+            <span class="es">Lenguajes y Herramientas</span>
+          </p>
           <div class="tags">
             <span class="tag">Python</span>
             <span class="tag">C++</span>
@@ -1249,7 +1228,6 @@
             <span class="tag">SQL Server</span>
             <span class="tag">MongoDB</span>
             <span class="tag">Docker</span>
-            <span class="tag">MLOps</span>
             <span class="tag">Git</span>
           </div>
         </div>
@@ -1258,19 +1236,18 @@
     </section>
 
     <!-- ============================================================
-         REDES SOCIALES
-         ─────────────────────────────────────────────────────────────
-         Para agregar una red: copia un bloque <a class="social-card">
-         y edita el href, nombre y handle.
+         CONTACT & SOCIAL
          ============================================================ -->
     <section id="redes" aria-labelledby="label-redes">
       <div class="container">
-        <p class="section-label" id="label-redes">Contact &amp; Social</p>
+        <p class="section-label" id="label-redes">
+          <span class="en">Contact &amp; Social</span>
+          <span class="es">Contacto &amp; Redes</span>
+        </p>
 
         <div class="social-grid">
 
-          <!-- Email -->
-          <a href="mailto:epuerta@utb.edu.co" class="social-card" aria-label="Enviar email">
+          <a href="mailto:epuerta@utb.edu.co" class="social-card" aria-label="Email">
             <div class="social-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
@@ -1280,7 +1257,6 @@
             </div>
           </a>
 
-          <!-- GitHub -->
           <a href="https://github.com/edwinpuertas" target="_blank" rel="noopener" class="social-card" aria-label="GitHub">
             <div class="social-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -1291,8 +1267,7 @@
             </div>
           </a>
 
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/edwinpuertas" target="_blank" rel="noopener" class="social-card" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/edwinpuertas/" target="_blank" rel="noopener" class="social-card" aria-label="LinkedIn">
             <div class="social-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </div>
@@ -1302,18 +1277,16 @@
             </div>
           </a>
 
-          <!-- Google Scholar -->
-          <a href="https://scholar.google.com/citations?user=Edwin_Puertas" target="_blank" rel="noopener" class="social-card" aria-label="Google Scholar">
+          <a href="https://scholar.google.com/citations?user=S_OvkYEAAAAJ&hl=en" target="_blank" rel="noopener" class="social-card" aria-label="Google Scholar">
             <div class="social-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
             </div>
             <div class="social-info">
               <p class="social-name">Google Scholar</p>
-              <p class="social-handle">299+ citas</p>
+              <p class="social-handle">299+ <span class="en">citations</span><span class="es">citas</span></p>
             </div>
           </a>
 
-          <!-- ResearchGate -->
           <a href="https://www.researchgate.net/profile/Edwin-Puertas" target="_blank" rel="noopener" class="social-card" aria-label="ResearchGate">
             <div class="social-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.88 12.88 0 0 0-.28 1.64c-.047.517-.07 1.063-.07 1.637 0 .583.023 1.134.07 1.65.047.511.128.978.24 1.4.113.42.26.774.44 1.062.18.287.42.51.72.668a2.14 2.14 0 0 0 1.04.237c.343 0 .66-.07.953-.212.292-.141.54-.339.742-.596.2-.257.356-.567.464-.93.108-.363.162-.773.162-1.23H17.57v-1.01h3.47v5.53h-.78l-.25-1.2c-.22.484-.513.856-.88 1.116-.366.26-.812.39-1.337.39-.63 0-1.18-.145-1.65-.435a3.297 3.297 0 0 1-1.12-1.2 5.892 5.892 0 0 1-.638-1.79 10.63 10.63 0 0 1-.2-2.1c0-.742.07-1.432.207-2.072a5.92 5.92 0 0 1 .644-1.772c.3-.51.692-.913 1.177-1.21.485-.297 1.077-.445 1.776-.445.69 0 1.27.144 1.74.432.47.288.827.665 1.07 1.13.243.466.38.972.41 1.518h-1.38c-.05-.37-.163-.7-.337-.99a2.01 2.01 0 0 0-.66-.694c-.272-.176-.594-.264-.964-.264zm-9.29 1.07c.44 0 .836.09 1.19.27.353.18.647.432.88.758.235.326.41.715.527 1.165.118.45.177.95.177 1.5 0 .55-.059 1.052-.177 1.502a3.562 3.562 0 0 1-.527 1.167 2.46 2.46 0 0 1-.88.76c-.354.18-.75.27-1.19.27-.44 0-.836-.09-1.19-.27a2.46 2.46 0 0 1-.88-.76 3.562 3.562 0 0 1-.527-1.167A6.017 6.017 0 0 1 7.52 4.763c0-.55.059-1.05.177-1.5.118-.45.293-.84.527-1.165a2.46 2.46 0 0 1 .88-.757c.354-.18.75-.27 1.19-.27zm0 1.132c-.297 0-.547.072-.752.218a1.44 1.44 0 0 0-.488.594 3.21 3.21 0 0 0-.264.86 5.877 5.877 0 0 0-.08.994c0 .356.027.688.08.994.054.307.14.576.264.807.124.23.285.413.488.547.203.133.455.2.752.2.297 0 .547-.067.752-.2.203-.134.364-.317.488-.547.124-.23.21-.5.264-.807a5.56 5.56 0 0 0 .08-.994 5.56 5.56 0 0 0-.08-.994 3.21 3.21 0 0 0-.264-.86 1.44 1.44 0 0 0-.488-.594c-.205-.146-.455-.218-.752-.218zM4.43 1.21v7.714H3.07V1.21H4.43zm-1.36 9.1h1.36v1.362H3.07V10.31z"/></svg>
@@ -1324,18 +1297,45 @@
             </div>
           </a>
 
-          <!-- X / Twitter -->
-          <a href="https://x.com/edwinpuertas" target="_blank" rel="noopener" class="social-card" aria-label="X / Twitter">
+          <a href="https://twitter.com/OafToBark23" target="_blank" rel="noopener" class="social-card" aria-label="X / Twitter">
             <div class="social-icon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </div>
             <div class="social-info">
               <p class="social-name">X / Twitter</p>
-              <p class="social-handle">@edwinpuertas</p>
+              <p class="social-handle">@OafToBark23</p>
             </div>
           </a>
 
-          <!-- ── AGREGA MÁS REDES AQUÍ ── -->
+          <a href="https://orcid.org/0000-0002-0758-1851" target="_blank" rel="noopener" class="social-card" aria-label="ORCID">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">ORCID</p>
+              <p class="social-handle">0000-0002-0758-1851</p>
+            </div>
+          </a>
+
+          <a href="https://openreview.net/profile?id=~Edwin_Puertas1" target="_blank" rel="noopener" class="social-card" aria-label="OpenReview">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">OpenReview</p>
+              <p class="social-handle">Edwin_Puertas1</p>
+            </div>
+          </a>
+
+          <a href="https://www.semanticscholar.org/author/Edwin-Puertas/2262229458" target="_blank" rel="noopener" class="social-card" aria-label="Semantic Scholar">
+            <div class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-.wake 1.548 1.878 1.878 0 0 1-1.315.528 1.78 1.78 0 0 1-.53-.081l-.104-.034.069.232c.129.403.425.74.83.931.405.192.876.231 1.316.107.44-.124.787-.4.984-.774l3.405-6.435H10.204zm4.027-2.671a2.23 2.23 0 0 0-1.561-.647c-.576 0-1.13.213-1.543.6a2.031 2.031 0 0 0-.655 1.468c0 .556.216 1.089.601 1.483.386.394.91.617 1.456.617.574 0 1.128-.213 1.543-.6.415-.388.648-.908.648-1.468a2.008 2.008 0 0 0-.489-1.453zm-9.25 3.3A11.93 11.93 0 0 1 0 12.05C0 5.404 5.397 0 12.052 0 18.703 0 24 5.404 24 12.05c0 6.647-5.298 12.05-11.948 12.05a11.95 11.95 0 0 1-5.7-1.437L0 24l1.86-6.477a11.956 11.956 0 0 1-1.016-2.543h3.137z"/></svg>
+            </div>
+            <div class="social-info">
+              <p class="social-name">Semantic Scholar</p>
+              <p class="social-handle">Edwin Puertas</p>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -1358,53 +1358,71 @@
   </footer>
 
   <!-- ============================================================
-       JAVASCRIPT — tema oscuro, menú móvil y año automático
+       JAVASCRIPT
        ============================================================ -->
   <script>
-    /* ── Año automático ── */
+    /* ── Year ── */
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* ── Tema oscuro ── */
-    const toggleBtn  = document.getElementById('theme-toggle');
-    const iconSun    = document.getElementById('icon-sun');
-    const iconMoon   = document.getElementById('icon-moon');
-    const root       = document.documentElement;
-    const STORAGE_KEY = 'ep-theme';
+    /* ── Theme ── */
+    const themeBtn = document.getElementById('theme-toggle');
+    const iconSun  = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    const root     = document.documentElement;
+    const THEME_KEY = 'ep-theme';
 
     function applyTheme(theme) {
       root.setAttribute('data-theme', theme);
       const dark = theme === 'dark';
       iconSun.style.display  = dark ? 'none'  : 'block';
       iconMoon.style.display = dark ? 'block' : 'none';
-      localStorage.setItem(STORAGE_KEY, theme);
+      localStorage.setItem(THEME_KEY, theme);
     }
 
-    /* Inicializar desde localStorage o preferencia del sistema */
-    const saved    = localStorage.getItem(STORAGE_KEY);
-    const prefDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(saved || (prefDark ? 'dark' : 'light'));
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    const prefDark   = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(savedTheme || (prefDark ? 'dark' : 'light'));
 
-    toggleBtn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') || 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
+    themeBtn.addEventListener('click', () => {
+      applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
 
-    /* ── Menú móvil ── */
+    /* ── Language ── */
+    const langBtn  = document.getElementById('lang-toggle');
+    const spanEN   = document.getElementById('lang-en');
+    const spanES   = document.getElementById('lang-es');
+    const LANG_KEY = 'ep-lang';
+
+    function applyLang(lang) {
+      const isEN = lang === 'en';
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.en').forEach(el => el.style.display = isEN ? '' : 'none');
+      document.querySelectorAll('.es').forEach(el => el.style.display = isEN ? 'none' : '');
+      spanEN.classList.toggle('active',  isEN);
+      spanES.classList.toggle('active', !isEN);
+      localStorage.setItem(LANG_KEY, lang);
+    }
+
+    const savedLang = localStorage.getItem(LANG_KEY) || 'en';
+    applyLang(savedLang);
+
+    langBtn.addEventListener('click', () => {
+      applyLang(document.documentElement.lang === 'en' ? 'es' : 'en');
+    });
+
+    /* ── Mobile menu ── */
     const menuToggle = document.getElementById('menu-toggle');
     const mobileNav  = document.getElementById('mobile-nav');
 
     menuToggle.addEventListener('click', () => {
       const open = mobileNav.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', open);
-      menuToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     });
 
-    /* Cerrar menú móvil al hacer clic en un enlace */
     mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Abrir menú');
       });
     });
   </script>
