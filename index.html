@@ -493,6 +493,43 @@
     .pub-badge:hover { color: var(--color-text); border-color: var(--color-text); opacity: 1; }
 
     /* ============================================================
+       THESES
+       ============================================================ */
+    .th-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 30px;
+    }
+    .th-badge-master    { background: #fef3c7; color: #92400e; }
+    .th-badge-undergrad { background: #dcfce7; color: #166534; }
+    .th-badge-program   { background: #dbeafe; color: #1e40af; }
+    [data-theme="dark"] .th-badge-master    { background: #451a03; color: #fde68a; }
+    [data-theme="dark"] .th-badge-undergrad { background: #052e16; color: #86efac; }
+    [data-theme="dark"] .th-badge-program   { background: #0e2a4a; color: #90c5ff; }
+
+    .thesis-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; }
+    .thesis-list   { display: flex; flex-direction: column; gap: 0; }
+
+    .thesis-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-sm);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .thesis-item:first-child { padding-top: 0; }
+    .thesis-item:last-child  { border-bottom: none; }
+
+    .thesis-year   { font-size: 0.78rem; font-weight: 700; color: var(--color-muted); letter-spacing: 0.04em; padding-top: 3px; }
+    .thesis-title  { font-size: 0.92rem; font-weight: 600; line-height: 1.45; margin-bottom: 4px; }
+    .thesis-author { font-size: 0.84rem; color: var(--color-text); margin-bottom: 3px; }
+    .thesis-role   { font-size: 0.82rem; color: var(--color-muted); margin-bottom: 3px; }
+    .thesis-venue  { font-size: 0.8rem;  color: var(--color-muted); font-style: italic; }
+
+    /* ============================================================
        SKILLS
        ============================================================ */
     .skills-group { margin-bottom: var(--space-md); }
@@ -624,6 +661,7 @@
       <div class="nav-links" aria-hidden="false">
         <a href="#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
         <a href="#proyectos"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+        <a href="#tesis"><span class="en">Theses</span><span class="es">Tesis</span></a>
         <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
         <a href="#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
         <a href="#habilidades"><span class="en">Skills</span><span class="es">Habilidades</span></a>
@@ -660,6 +698,7 @@
   <div id="mobile-nav" role="navigation" aria-label="Mobile menu">
     <a href="#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
     <a href="#proyectos"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+    <a href="#tesis"><span class="en">Theses</span><span class="es">Tesis</span></a>
     <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
     <a href="#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
     <a href="#habilidades"><span class="en">Skills</span><span class="es">Habilidades</span></a>
@@ -812,6 +851,22 @@
 
           <article class="project-card">
             <div class="project-header">
+              <h3 class="project-title">RAG Naval Assistant</h3>
+              <span class="project-link">2026</span>
+            </div>
+            <p class="project-desc">
+              <span class="en">Cross-lingual RAG pipeline for naval maintenance Q&A: answers in Spanish using English technical manuals. Offline-first deployment using Granite-4.0-1B, BGE-M3 embeddings, and expert-validated sequential ablation. Master's thesis, UTB.</span>
+              <span class="es">Pipeline RAG multilingüe para Q&amp;A de mantenimiento naval: responde en español usando manuales técnicos en inglés. Despliegue offline con Granite-4.0-1B, embeddings BGE-M3 y ablación secuencial validada por expertos. Tesis de maestría, UTB.</span>
+            </p>
+            <div class="project-tags">
+              <span class="tag">RAG</span>
+              <span class="tag">Cross-Lingual NLP</span>
+              <span class="tag">Naval Maintenance</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
               <h3 class="project-title">Apollo</h3>
               <span class="project-link">Oct 2023 – 2025</span>
             </div>
@@ -925,6 +980,43 @@
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         THESES
+         ============================================================ -->
+    <section id="tesis" aria-labelledby="label-tesis">
+      <div class="container">
+        <p class="section-label" id="label-tesis">
+          <span class="en">Supervised Theses</span>
+          <span class="es">Dirección de Tesis</span>
+        </p>
+
+        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1rem;">
+          <span class="en">Master's</span>
+          <span class="es">Maestría</span>
+        </p>
+        <ul class="thesis-list">
+
+          <li class="thesis-item">
+            <span class="thesis-year">2026</span>
+            <div>
+              <div class="thesis-badges">
+                <span class="th-badge th-badge-master"><span class="en">Master's Thesis</span><span class="es">Tesis de Maestría</span></span>
+                <span class="th-badge th-badge-program"><span class="en">Master's in Engineering</span><span class="es">Maestría en Ingeniería</span></span>
+              </div>
+              <p class="thesis-title">A Retrieval-Augmented Generation Virtual Assistant for Naval Maintenance Using Cross-Lingual English Documents and Spanish Queries</p>
+              <p class="thesis-author">Anderson Morillo Diaz</p>
+              <p class="thesis-role">
+                <span class="en">Director: Edwin Puertas · Co-director: Juan Carlos Martinez</span>
+                <span class="es">Director: Edwin Puertas · Codirector: Juan Carlos Martinez</span>
+              </p>
+              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, June 2026</p>
+            </div>
+          </li>
+
+        </ul>
       </div>
     </section>
 
