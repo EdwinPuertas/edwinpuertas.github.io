@@ -529,6 +529,19 @@
     .thesis-role   { font-size: 0.82rem; color: var(--color-muted); margin-bottom: 3px; }
     .thesis-venue  { font-size: 0.8rem;  color: var(--color-muted); font-style: italic; }
 
+    /* See-all link */
+    .see-all-wrap { text-align: center; margin-top: 2.5rem; }
+    .see-all-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.875rem; font-weight: 600; color: var(--color-accent);
+      text-decoration: none; border: 1px solid var(--color-border);
+      border-radius: 20px; padding: 0.5rem 1.4rem;
+      transition: border-color var(--transition), background var(--transition), color var(--transition);
+    }
+    .see-all-link:hover {
+      border-color: var(--color-accent); background: var(--color-accent); color: #fff;
+    }
+
     /* ============================================================
        SKILLS
        ============================================================ */
@@ -660,8 +673,8 @@
       <!-- Desktop links -->
       <div class="nav-links" aria-hidden="false">
         <a href="#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
-        <a href="#proyectos"><span class="en">Projects</span><span class="es">Proyectos</span></a>
-        <a href="#tesis"><span class="en">Theses</span><span class="es">Tesis</span></a>
+        <a href="projects.html"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+        <a href="theses.html"><span class="en">Theses</span><span class="es">Tesis</span></a>
         <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
         <a href="#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
         <a href="#habilidades"><span class="en">Skills</span><span class="es">Habilidades</span></a>
@@ -697,8 +710,8 @@
   <!-- Mobile nav -->
   <div id="mobile-nav" role="navigation" aria-label="Mobile menu">
     <a href="#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
-    <a href="#proyectos"><span class="en">Projects</span><span class="es">Proyectos</span></a>
-    <a href="#tesis"><span class="en">Theses</span><span class="es">Tesis</span></a>
+    <a href="projects.html"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+    <a href="theses.html"><span class="en">Theses</span><span class="es">Tesis</span></a>
     <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
     <a href="#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
     <a href="#habilidades"><span class="en">Skills</span><span class="es">Habilidades</span></a>
@@ -868,22 +881,6 @@
 
           <article class="project-card">
             <div class="project-header">
-              <h3 class="project-title">RAG Naval Assistant</h3>
-              <span class="project-link">2026</span>
-            </div>
-            <p class="project-desc">
-              <span class="en">Cross-lingual RAG pipeline for naval maintenance Q&A: answers in Spanish using English technical manuals. Offline-first deployment using Granite-4.0-1B, BGE-M3 embeddings, and expert-validated sequential ablation. Master's thesis, UTB.</span>
-              <span class="es">Pipeline RAG multilingüe para Q&amp;A de mantenimiento naval: responde en español usando manuales técnicos en inglés. Despliegue offline con Granite-4.0-1B, embeddings BGE-M3 y ablación secuencial validada por expertos. Tesis de maestría, UTB.</span>
-            </p>
-            <div class="project-tags">
-              <span class="tag">RAG</span>
-              <span class="tag">Cross-Lingual NLP</span>
-              <span class="tag">Naval Maintenance</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
               <h3 class="project-title">ARC Gloria Monitor</h3>
               <span class="project-link">2026</span>
             </div>
@@ -895,40 +892,6 @@
               <span class="tag">Anomaly Detection</span>
               <span class="tag">Predictive Maintenance</span>
               <span class="tag">Naval IoT</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Apollo</h3>
-              <span class="project-link">Oct 2023 – 2025</span>
-            </div>
-            <p class="project-desc">
-              <span class="en">Python package for multimodal AI understanding with three channels: Audio (Lyre), Text (Pythia) and Vision (Argus). Includes tools for head analysis, motor pattern diagnostics, facial movements and NLP with syllabification.</span>
-              <span class="es">Paquete Python para comprensión multimodal con tres canales: Audio (Lyre), Texto (Pythia) y Visión (Argus). Incluye análisis de cabeza, diagnóstico de patrones motores, movimientos faciales y NLP con silabificación.</span>
-            </p>
-            <div class="project-tags">
-              <span class="tag">Multimodal AI</span>
-              <span class="tag">Python</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">NLP</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">TrueShield</h3>
-              <span class="project-link">2025</span>
-            </div>
-            <p class="project-desc">
-              <span class="en">Fake news detection platform using entity recognition, cross-reference from RSS/Twitter/Reddit and a veracity scoring algorithm. Built on microservices with Angular, Django, FastAPI, Hugging Face models and deployed on AWS.</span>
-              <span class="es">Plataforma para la detección de noticias falsas usando reconocimiento de entidades, referencias cruzadas de RSS/Twitter/Reddit y un algoritmo de puntuación de veracidad. Arquitectura de microservicios con Angular, Django, FastAPI y AWS.</span>
-            </p>
-            <div class="project-tags">
-              <span class="tag">NLP</span>
-              <span class="tag">Fake News</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">AWS</span>
             </div>
           </article>
 
@@ -964,54 +927,12 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Mapping Motion</h3>
-              <span class="project-link">2025</span>
-            </div>
-            <p class="project-desc">
-              <span class="en">Cognitive approach to analyzing movement patterns of individuals with dyspraxia using motion capture and advanced signal processing. Results have practical applications in rehabilitation and assistive technology design.</span>
-              <span class="es">Enfoque cognitivo para analizar patrones de movimiento en personas con dispraxia mediante captura de movimiento y procesamiento de señales. Aplicaciones en rehabilitación y tecnologías de asistencia.</span>
-            </p>
-            <div class="project-tags">
-              <span class="tag">Signal Processing</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Healthcare</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">Traffic Monitoring</h3>
-              <span class="project-link">Jan 2023 – 2025</span>
-            </div>
-            <p class="project-desc">
-              <span class="en">Automated computer vision system for detecting unauthorized vehicle entries (motorcycles) in pedestrian zones in Cartagena. Developed for an energy company to improve urban pedestrian safety enforcement.</span>
-              <span class="es">Sistema automatizado de visión por computadora para detectar entradas no autorizadas de vehículos (motos) en zonas peatonales en Cartagena. Desarrollado para mejorar la seguridad vial urbana.</span>
-            </p>
-            <div class="project-tags">
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Object Detection</span>
-              <span class="tag">Smart Cities</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-header">
-              <h3 class="project-title">PV-ROI</h3>
-              <span class="project-link">2023</span>
-            </div>
-            <p class="project-desc">
-              <span class="en">Innovative approach to calculate Return on Investment for photovoltaic systems incorporating system degradation and maintenance factors for a more realistic financial estimation over the asset lifecycle.</span>
-              <span class="es">Enfoque innovador para calcular el ROI de sistemas fotovoltaicos incorporando factores de degradación y mantenimiento, proporcionando una estimación financiera más realista durante el ciclo de vida del activo.</span>
-            </p>
-            <div class="project-tags">
-              <span class="tag">Photovoltaics</span>
-              <span class="tag">Data Analytics</span>
-              <span class="tag">Predictive Models</span>
-            </div>
-          </article>
-
+        </div>
+        <div class="see-all-wrap">
+          <a href="projects.html" class="see-all-link">
+            <span class="en">See all projects →</span>
+            <span class="es">Ver todos los proyectos →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -1026,10 +947,6 @@
           <span class="es">Dirección de Tesis</span>
         </p>
 
-        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-bottom:1rem;">
-          <span class="en">Master's</span>
-          <span class="es">Maestría</span>
-        </p>
         <ul class="thesis-list">
 
           <li class="thesis-item">
@@ -1084,116 +1001,46 @@
           </li>
 
           <li class="thesis-item">
-            <span class="thesis-year">2024</span>
+            <span class="thesis-year">2025</span>
             <div>
               <div class="thesis-badges">
-                <span class="th-badge th-badge-master"><span class="en">Master's Thesis</span><span class="es">Tesis de Maestría</span></span>
-                <span class="th-badge th-badge-program"><span class="en">Master's in Systems &amp; Computing</span><span class="es">Maestría en Sistemas y Computación</span></span>
+                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
+                <span class="th-badge th-badge-program"><span class="en">Industrial Engineering · Systems &amp; Computing</span><span class="es">Ingeniería Industrial · Sistemas y Computación</span></span>
               </div>
-              <p class="thesis-title">Development and Evaluation of an Automated Methodology for Identifying Framing Patterns in News on Digital Platforms Using Natural Language Processing and Machine Learning</p>
-              <p class="thesis-author">Juan Pablo Cuadrado Flechas</p>
+              <p class="thesis-title"><span class="en">Design and Implementation of a Prototype System for Ergonomic Evaluations of Workers Using Artificial Intelligence</span><span class="es">Diseño e Implementación del Prototipo de un Sistema para Realizar Evaluaciones Ergonómicas de Trabajadores de Empresas Usando Inteligencia Artificial</span></p>
+              <p class="thesis-author">Jesus M. Caballero Cartuistes</p>
               <p class="thesis-role">
-                <span class="en">Director: Juan Carlos Martinez-Santos · Co-director: Edwin Puertas</span>
-                <span class="es">Director: Juan Carlos Martinez-Santos · Codirector: Edwin Puertas</span>
+                <span class="en">Advisors: Edwin A. Puertas Del Castillo · Holman Ospina Mateus</span>
+                <span class="es">Asesores: Edwin A. Puertas Del Castillo · Holman Ospina Mateus</span>
               </p>
-              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, November 2024</p>
+              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, June 2025</p>
+            </div>
+          </li>
+
+          <li class="thesis-item">
+            <span class="thesis-year">2025</span>
+            <div>
+              <div class="thesis-badges">
+                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
+                <span class="th-badge th-badge-program"><span class="en">Systems Engineering</span><span class="es">Ingeniería de Sistemas</span></span>
+              </div>
+              <p class="thesis-title"><span class="en">EMO KIDS: Artificial Intelligence System for Child Emotional Assessment</span><span class="es">EMO KIDS: Sistema de Inteligencia Artificial para la Evaluación Emocional Infantil</span></p>
+              <p class="thesis-author">Juan David Colon Martínez, Breyner Pearson Blanco, Samuel Eduardo Sanmartin Safar</p>
+              <p class="thesis-role">
+                <span class="en">Advisor: Edwin Puertas</span>
+                <span class="es">Asesor: Edwin Puertas</span>
+              </p>
+              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, 2025</p>
             </div>
           </li>
 
         </ul>
-
-        <p style="font-size:0.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted);margin-top:var(--space-md);margin-bottom:1rem;">
-          <span class="en">Bachelor's</span>
-          <span class="es">Pregrado</span>
-        </p>
-        <ul class="thesis-list">
-
-          <li class="thesis-item">
-            <span class="thesis-year">2024</span>
-            <div>
-              <div class="thesis-badges">
-                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
-                <span class="th-badge th-badge-program"><span class="en">Systems Engineering</span><span class="es">Ingeniería de Sistemas</span></span>
-              </div>
-              <p class="thesis-title">TrueShield: Automated Veracity Assessment System for Online News Using NLP</p>
-              <p class="thesis-author">Carlos Agamez Palomino, Harold Lagares De Voz</p>
-              <p class="thesis-role">
-                <span class="en">Advisor: Edwin Puertas</span>
-                <span class="es">Asesor: Edwin Puertas</span>
-              </p>
-              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, December 2024</p>
-            </div>
-          </li>
-
-          <li class="thesis-item">
-            <span class="thesis-year">2024</span>
-            <div>
-              <div class="thesis-badges">
-                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
-                <span class="th-badge th-badge-program"><span class="en">Systems Engineering</span><span class="es">Ingeniería de Sistemas</span></span>
-              </div>
-              <p class="thesis-title">Sistema de Gestión de Proyectos de Ingeniería</p>
-              <p class="thesis-author">Anderson Morillo, Brayan Alberto, Iván Zapata, Juan Lengua</p>
-              <p class="thesis-role">
-                <span class="en">Advisor: Edwin Puertas</span>
-                <span class="es">Asesor: Edwin Puertas</span>
-              </p>
-              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, June 2024</p>
-            </div>
-          </li>
-
-          <li class="thesis-item">
-            <span class="thesis-year">2024</span>
-            <div>
-              <div class="thesis-badges">
-                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
-                <span class="th-badge th-badge-program"><span class="en">Systems Engineering</span><span class="es">Ingeniería de Sistemas</span></span>
-              </div>
-              <p class="thesis-title">Trip a Bike: Educational Video Game for English Learning</p>
-              <p class="thesis-author">Daniel Arturo Peña Gnecco, Luis David Payares Machado, Jesus David Nieves Hernandez, Esteban David Castilla Velez</p>
-              <p class="thesis-role">
-                <span class="en">Advisor: Edwin Puertas</span>
-                <span class="es">Asesor: Edwin Puertas</span>
-              </p>
-              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, June 2024</p>
-            </div>
-          </li>
-
-          <li class="thesis-item">
-            <span class="thesis-year">2024</span>
-            <div>
-              <div class="thesis-badges">
-                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
-                <span class="th-badge th-badge-program"><span class="en">Systems Engineering</span><span class="es">Ingeniería de Sistemas</span></span>
-              </div>
-              <p class="thesis-title">AI Affinity Recognizer</p>
-              <p class="thesis-author">Ray Sebastián Mendoza, Ángelo Pérez Correa, Emmanuel Silva Diaz</p>
-              <p class="thesis-role">
-                <span class="en">Advisor: Edwin Puertas</span>
-                <span class="es">Asesor: Edwin Puertas</span>
-              </p>
-              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, 2024</p>
-            </div>
-          </li>
-
-          <li class="thesis-item">
-            <span class="thesis-year">2023</span>
-            <div>
-              <div class="thesis-badges">
-                <span class="th-badge th-badge-undergrad"><span class="en">Undergraduate Thesis</span><span class="es">Trabajo de Grado</span></span>
-                <span class="th-badge th-badge-program"><span class="en">Systems Engineering</span><span class="es">Ingeniería de Sistemas</span></span>
-              </div>
-              <p class="thesis-title">JobMatch-AI: AI-Powered Job Matching Platform</p>
-              <p class="thesis-author">Hernan David Zuluaga Ricardo, Cristian Camilo Puentes Dix, Gian Franco Valdiris Cerpa, Owen de Jesús Tovar Puello</p>
-              <p class="thesis-role">
-                <span class="en">Advisor: Edwin Puertas</span>
-                <span class="es">Asesor: Edwin Puertas</span>
-              </p>
-              <p class="thesis-venue">Universidad Tecnológica de Bolívar, Cartagena, Colombia, December 2023</p>
-            </div>
-          </li>
-
-        </ul>
+        <div class="see-all-wrap">
+          <a href="theses.html" class="see-all-link">
+            <span class="en">See all supervised theses →</span>
+            <span class="es">Ver todas las tesis dirigidas →</span>
+          </a>
+        </div>
       </div>
     </section>
 

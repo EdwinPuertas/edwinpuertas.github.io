@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="All research projects by Edwin Puertas, PhD — NLP, AI, Maritime Systems, and more." />
+  <title>Projects — Edwin Puertas, PhD</title>
+
+  <style>
+    :root {
+      --color-bg:         #f4f7fb;
+      --color-surface:    #ffffff;
+      --color-border:     #d0dce8;
+      --color-text:       #0d1117;
+      --color-muted:      #5a6a7a;
+      --color-accent:     #1559a3;
+      --color-accent-alt: #0a3d7a;
+      --color-tag-bg:     #dbeafe;
+      --color-tag-text:   #1e40af;
+      --color-link:       #1559a3;
+      --color-link-hover: #0a3d7a;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --radius: 6px;
+      --radius-lg: 12px;
+      --max-w: 900px;
+      --nav-h: 60px;
+      --transition: 0.2s ease;
+    }
+    [data-theme="dark"] {
+      --color-bg:         #0d1117;
+      --color-surface:    #161b22;
+      --color-border:     #1e3a5f;
+      --color-text:       #e0eaf5;
+      --color-muted:      #7a9abc;
+      --color-accent:     #4ea3f7;
+      --color-accent-alt: #90c5ff;
+      --color-tag-bg:     #0e2a4a;
+      --color-tag-text:   #90c5ff;
+      --color-link:       #4ea3f7;
+      --color-link-hover: #90c5ff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      transition: background-color var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color var(--transition); }
+    a:hover { color: var(--color-link-hover); opacity: 0.85; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      height: var(--nav-h); background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border); backdrop-filter: blur(8px);
+    }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 2rem;
+      height: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+      color: var(--color-text); letter-spacing: -0.02em;
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links a { text-decoration: none; font-size: 0.875rem; color: var(--color-muted); transition: color var(--transition); }
+    .nav-links a:hover, .nav-links a.active { color: var(--color-text); }
+    #theme-toggle {
+      background: none; border: 1px solid var(--color-border); border-radius: var(--radius);
+      padding: 5px 10px; cursor: pointer; color: var(--color-muted); font-size: 0.8rem;
+      display: flex; align-items: center; gap: 5px; transition: all var(--transition);
+    }
+    #theme-toggle:hover { color: var(--color-text); border-color: var(--color-accent); }
+    #theme-toggle svg { width: 15px; height: 15px; fill: currentColor; }
+    #lang-toggle {
+      background: none; border: 1px solid var(--color-border); border-radius: var(--radius);
+      padding: 5px 10px; cursor: pointer; font-size: 0.8rem; color: var(--color-muted);
+      display: flex; align-items: center; gap: 4px; transition: all var(--transition);
+    }
+    #lang-toggle span.active { color: var(--color-text); font-weight: 600; }
+    #lang-toggle:hover { border-color: var(--color-accent); }
+
+    /* LAYOUT */
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+    main { padding: 4rem 0 6rem; }
+
+    /* PAGE HEADER */
+    .page-header { margin-bottom: 3rem; }
+    .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; }
+    .page-header p  { margin-top: 0.6rem; color: var(--color-muted); font-size: 0.95rem; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.875rem; text-decoration: none; color: var(--color-muted); margin-bottom: 1.5rem; transition: color var(--transition); }
+    .back-link:hover { color: var(--color-accent); }
+
+    /* STATUS BADGES */
+    .status-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .status-chip {
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 0.3rem 0.85rem; border-radius: 20px; border: 1px solid var(--color-border);
+      color: var(--color-muted); cursor: pointer; transition: all var(--transition);
+    }
+    .status-chip.active-chip  { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+    .status-chip.recent-chip  { background: var(--color-tag-bg); color: var(--color-tag-text); border-color: var(--color-accent); }
+    .status-chip.past-chip    { background: var(--color-surface); color: var(--color-muted); border-color: var(--color-border); }
+    [data-theme="dark"] .status-chip.active-chip { background: #052e16; color: #86efac; border-color: #16a34a; }
+
+    /* PROJECT GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex; flex-direction: column;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .project-card:hover { border-color: var(--color-accent-alt); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(21,89,163,0.08); }
+    .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .project-title  { font-size: 0.95rem; font-weight: 600; }
+    .project-link   { font-size: 0.75rem; color: var(--color-muted); white-space: nowrap; }
+    .project-active { display: inline-block; width: 7px; height: 7px; background: #22c55e; border-radius: 50%; margin-right: 5px; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .project-desc { font-size: 0.875rem; color: var(--color-muted); line-height: 1.6; margin-bottom: 1rem; flex-grow: 1; }
+    .project-tags  { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; }
+    .tag { font-size: 0.72rem; padding: 3px 10px; border-radius: 20px; background: var(--color-tag-bg); color: var(--color-tag-text); font-weight: 500; }
+
+    /* FOOTER */
+    footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--color-border); margin-top: 2rem; }
+    .footer-copy { font-size: 0.78rem; color: var(--color-muted); }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Edwin Puertas, PhD</a>
+      <div class="nav-links">
+        <a href="index.html#sobre-mi"><span class="en">About</span><span class="es">Sobre mí</span></a>
+        <a href="projects.html" class="active"><span class="en">Projects</span><span class="es">Proyectos</span></a>
+        <a href="theses.html"><span class="en">Theses</span><span class="es">Tesis</span></a>
+        <a href="publications.html"><span class="en">Publications</span><span class="es">Publicaciones</span></a>
+        <a href="index.html#experiencia"><span class="en">Experience</span><span class="es">Experiencia</span></a>
+        <a href="index.html#redes"><span class="en">Contact</span><span class="es">Contacto</span></a>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button id="lang-toggle" aria-label="Switch language / Cambiar idioma">
+          <span id="lang-es">ES</span>
+          <span style="opacity:0.35;padding:0 2px;">|</span>
+          <span id="lang-en" class="active">EN</span>
+        </button>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 4.5Zm0 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 12a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 4.5 12Zm12 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM6.697 6.697a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061L6.697 7.758a.75.75 0 0 1 0-1.06Zm9.546 9.545a.75.75 0 0 1 1.06 0l1.06 1.061a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.061ZM6.697 17.303a.75.75 0 0 1 0-1.06l1.06-1.061a.75.75 0 1 1 1.061 1.06l-1.06 1.061a.75.75 0 0 1-1.061 0ZM16.243 6.697a.75.75 0 0 1 0 1.061l-1.06 1.06a.75.75 0 1 1-1.061-1.06l1.06-1.06a.75.75 0 0 1 1.061 0ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/>
+          </svg>
+          <svg id="icon-moon" viewBox="0 0 24 24" aria-hidden="true" style="display:none;">
+            <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75 9.75 9.75 0 0 1 8.25 6c0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 12c0 5.385 4.365 9.75 9.75 9.75 4.412 0 8.163-2.943 9.502-7.498Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <a href="index.html#proyectos" class="back-link">← <span class="en">Back</span><span class="es">Volver</span></a>
+
+      <div class="page-header">
+        <h1><span class="en">Research Projects</span><span class="es">Proyectos de Investigación</span></h1>
+        <p><span class="en">All projects — active, recent, and completed.</span><span class="es">Todos los proyectos — activos, recientes y completados.</span></p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ACTIVE PROJECTS -->
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">KUMBE</h3>
+            <span class="project-link"><span class="project-active"></span>Aug 2025 – <span class="en">Present</span><span class="es">Presente</span></span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Multimodal AI system for the preservation and reinterpretation of Afro-descendant oral narratives from the Colombian Caribbean. Builds a corpus combining transcribed oral recordings and curated written materials to document the lexical, syntactic, and performative registers of Palenquero, enabling reproducible NLP research on this endangered language.</span>
+            <span class="es">Sistema de IA multimodal para la preservación y reinterpretación de narrativas orales afrodescendientes del Caribe colombiano. Construye un corpus que combina grabaciones orales transcritas y materiales escritos curados para documentar los registros del palenquero, habilitando investigación en PLN sobre esta lengua en peligro de extinción.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">NLP</span>
+            <span class="tag">Endangered Languages</span>
+            <span class="tag">Multimodal</span>
+            <span class="tag">Cultural Heritage</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Navegando Hacia el Futuro</h3>
+            <span class="project-link"><span class="project-active"></span><span class="en">Active</span><span class="es">Activo</span></span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Maintenance 5.0 integration into the vessel lifecycle for sustainable maritime development in the Colombian Caribbean. Fuses AI, IoT sensor networks, digital twins and advanced analytics to enable predictive maintenance, scaling COTECMAR's system from TRL5 to TRL8. Partners: Armada de Colombia, COTECMAR, UTB, IEEE ColCaribe, Clúster Marítimo de Cartagena.</span>
+            <span class="es">Integración de Mantenimiento 5.0 en el ciclo de vida de embarcaciones para el desarrollo sostenible del Caribe colombiano. Fusiona IA, redes de sensores IoT, gemelos digitales y analítica avanzada para mantenimiento predictivo, escalando el sistema de COTECMAR de TRL5 a TRL8. Alianzas: Armada de Colombia, COTECMAR, UTB, IEEE ColCaribe, Clúster Marítimo de Cartagena.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">IoT</span>
+            <span class="tag">Digital Twins</span>
+            <span class="tag">Predictive Maintenance</span>
+            <span class="tag">Industry 5.0</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">FrameLens</h3>
+            <span class="project-link"><span class="project-active"></span><span class="en">Active</span><span class="es">Activo</span></span>
+          </div>
+          <p class="project-desc">
+            <span class="en">NLP methodology for analyzing news framing in Spanish-language media. Identifies cultural and political factors shaping narratives; contributes to media literacy and cross-linguistic public opinion analysis.</span>
+            <span class="es">Metodología NLP para analizar el framing noticioso en medios hispanohablantes. Identifica factores culturales y políticos que moldean las narrativas; contribuye a la alfabetización mediática y al análisis de opinión pública.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">NLP</span>
+            <span class="tag">Media Framing</span>
+            <span class="tag">Spanish</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">MentalGuard</h3>
+            <span class="project-link"><span class="project-active"></span><span class="en">Active</span><span class="es">Activo</span></span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Multimodal AI system for early detection of mental health risk in university students. Integrates NLP on text and audio to provide objective, rapid and scalable risk evaluation beyond traditional self-reporting.</span>
+            <span class="es">Sistema IA multimodal para la detección temprana de riesgo de salud mental en estudiantes universitarios. Integra NLP en texto y audio para una evaluación objetiva, rápida y escalable más allá de la auto-evaluación tradicional.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">Mental Health</span>
+            <span class="tag">Multimodal</span>
+            <span class="tag">Deep Learning</span>
+          </div>
+        </article>
+
+        <!-- RECENT -->
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">ARC Gloria Monitor</h3>
+            <span class="project-link">2026</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Adaptive ML monitoring system for early anomaly detection in shipboard diesel generator sets aboard the training ship ARC Gloria. Monitors exhaust, cooling-water, and lubricating-oil temperatures via EWMA-based residual detection with time-varying control limits and persistence logic. Master's thesis, UTB.</span>
+            <span class="es">Sistema de monitoreo adaptativo con ML para detección temprana de anomalías en generadores diésel del buque escuela ARC Gloria. Monitoreo de temperatura de escape, agua de enfriamiento y aceite lubricante con detección residual EWMA, límites variables y lógica de persistencia. Tesis de maestría, UTB.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">Anomaly Detection</span>
+            <span class="tag">Predictive Maintenance</span>
+            <span class="tag">Naval IoT</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">RAG Naval Assistant</h3>
+            <span class="project-link">2026</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Cross-lingual RAG pipeline for naval maintenance Q&amp;A: answers in Spanish using English technical manuals. Offline-first deployment using Granite-4.0-1B, BGE-M3 embeddings, and expert-validated sequential ablation. Master's thesis, UTB.</span>
+            <span class="es">Pipeline RAG multilingüe para Q&amp;A de mantenimiento naval: responde en español usando manuales técnicos en inglés. Despliegue offline con Granite-4.0-1B, embeddings BGE-M3 y ablación secuencial validada por expertos. Tesis de maestría, UTB.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">RAG</span>
+            <span class="tag">Cross-Lingual NLP</span>
+            <span class="tag">Naval Maintenance</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Apollo</h3>
+            <span class="project-link">Oct 2023 – 2025</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Python package for multimodal AI understanding with three channels: Audio (Lyre), Text (Pythia) and Vision (Argus). Includes tools for head analysis, motor pattern diagnostics, facial movements and NLP with syllabification.</span>
+            <span class="es">Paquete Python para comprensión multimodal con tres canales: Audio (Lyre), Texto (Pythia) y Visión (Argus). Incluye análisis de cabeza, diagnóstico de patrones motores, movimientos faciales y NLP con silabificación.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">Multimodal AI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">NLP</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">TrueShield</h3>
+            <span class="project-link">2025</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Fake news detection platform using entity recognition, cross-reference from RSS/Twitter/Reddit and a veracity scoring algorithm. Built on microservices with Angular, Django, FastAPI, Hugging Face models and deployed on AWS.</span>
+            <span class="es">Plataforma para la detección de noticias falsas usando reconocimiento de entidades, referencias cruzadas de RSS/Twitter/Reddit y un algoritmo de puntuación de veracidad. Arquitectura de microservicios con Angular, Django, FastAPI y AWS.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">NLP</span>
+            <span class="tag">Fake News</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">AWS</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Mapping Motion</h3>
+            <span class="project-link">2025</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Cognitive approach to analyzing movement patterns of individuals with dyspraxia using motion capture and advanced signal processing. Results have practical applications in rehabilitation and assistive technology design.</span>
+            <span class="es">Enfoque cognitivo para analizar patrones de movimiento en personas con dispraxia mediante captura de movimiento y procesamiento de señales. Aplicaciones en rehabilitación y tecnologías de asistencia.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">Signal Processing</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Healthcare</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">Traffic Monitoring</h3>
+            <span class="project-link">Jan 2023 – 2025</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Automated computer vision system for detecting unauthorized vehicle entries (motorcycles) in pedestrian zones in Cartagena. Developed for an energy company to improve urban pedestrian safety enforcement.</span>
+            <span class="es">Sistema automatizado de visión por computadora para detectar entradas no autorizadas de vehículos (motos) en zonas peatonales en Cartagena. Desarrollado para mejorar la seguridad vial urbana.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Object Detection</span>
+            <span class="tag">Smart Cities</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3 class="project-title">PV-ROI</h3>
+            <span class="project-link">2023</span>
+          </div>
+          <p class="project-desc">
+            <span class="en">Innovative approach to calculate Return on Investment for photovoltaic systems incorporating system degradation and maintenance factors for a more realistic financial estimation over the asset lifecycle.</span>
+            <span class="es">Enfoque innovador para calcular el ROI de sistemas fotovoltaicos incorporando factores de degradación y mantenimiento, proporcionando una estimación financiera más realista durante el ciclo de vida del activo.</span>
+          </p>
+          <div class="project-tags">
+            <span class="tag">Photovoltaics</span>
+            <span class="tag">Data Analytics</span>
+            <span class="tag">Predictive Models</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-copy">© <span id="year"></span> Edwin Puertas, PhD · Universidad Tecnológica de Bolívar · Cartagena, Colombia</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const THEME_KEY = 'ep-theme';
+    const iconSun  = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+
+    function applyTheme(t) {
+      root.setAttribute('data-theme', t);
+      iconSun.style.display  = t === 'dark' ? 'none'  : 'block';
+      iconMoon.style.display = t === 'dark' ? 'block' : 'none';
+      localStorage.setItem(THEME_KEY, t);
+    }
+    const saved = localStorage.getItem(THEME_KEY);
+    applyTheme(saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    const LANG_KEY = 'ep-lang';
+    const spanEN = document.getElementById('lang-en');
+    const spanES = document.getElementById('lang-es');
+
+    function applyLang(lang) {
+      const isEN = lang === 'en';
+      root.lang = lang;
+      document.querySelectorAll('.en').forEach(el => el.style.display = isEN ? '' : 'none');
+      document.querySelectorAll('.es').forEach(el => el.style.display = isEN ? 'none' : '');
+      spanEN.classList.toggle('active',  isEN);
+      spanES.classList.toggle('active', !isEN);
+      localStorage.setItem(LANG_KEY, lang);
+    }
+    applyLang(localStorage.getItem(LANG_KEY) || 'en');
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      applyLang(root.lang === 'en' ? 'es' : 'en');
+    });
+  </script>
+</body>
+</html>
