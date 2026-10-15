@@ -76,14 +76,6 @@
     }
     #theme-toggle:hover { color: var(--color-text); border-color: var(--color-accent); }
     #theme-toggle svg { width: 15px; height: 15px; fill: currentColor; }
-    #lang-toggle {
-      background: none; border: 1px solid var(--color-border); border-radius: var(--radius);
-      padding: 5px 10px; cursor: pointer; font-size: 0.8rem; color: var(--color-muted);
-      display: flex; align-items: center; gap: 4px; transition: all var(--transition);
-    }
-    #lang-toggle span.active { color: var(--color-text); font-weight: 600; }
-    #lang-toggle:hover { border-color: var(--color-accent); }
-
     /* LAYOUT */
     .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
     main { padding: 4rem 0 6rem; }
@@ -138,6 +130,8 @@
       .nav-links { display: none; }
       .thesis-item { grid-template-columns: 44px 1fr; }
     }
+
+    .es { display: none; }
   </style>
 </head>
 <body>
@@ -154,11 +148,6 @@
         <a href="index.html#redes"><span class="en">Contact</span><span class="es">Contacto</span></a>
       </div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <button id="lang-toggle" aria-label="Switch language / Cambiar idioma">
-          <span id="lang-es">ES</span>
-          <span style="opacity:0.35;padding:0 2px;">|</span>
-          <span id="lang-en" class="active">EN</span>
-        </button>
         <button id="theme-toggle" aria-label="Toggle theme">
           <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 12 4.5Zm0 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM4.5 12a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 4.5 12Zm12 0a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM6.697 6.697a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061L6.697 7.758a.75.75 0 0 1 0-1.06Zm9.546 9.545a.75.75 0 0 1 1.06 0l1.06 1.061a.75.75 0 1 1-1.06 1.06l-1.06-1.06a.75.75 0 0 1 0-1.061ZM6.697 17.303a.75.75 0 0 1 0-1.06l1.06-1.061a.75.75 0 1 1 1.061 1.06l-1.06 1.061a.75.75 0 0 1-1.061 0ZM16.243 6.697a.75.75 0 0 1 0 1.061l-1.06 1.06a.75.75 0 1 1-1.061-1.06l1.06-1.06a.75.75 0 0 1 1.061 0ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"/>
@@ -513,23 +502,7 @@
       applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
 
-    const LANG_KEY = 'ep-lang';
-    const spanEN = document.getElementById('lang-en');
-    const spanES = document.getElementById('lang-es');
-
-    function applyLang(lang) {
-      const isEN = lang === 'en';
-      root.lang = lang;
-      document.querySelectorAll('.en').forEach(el => el.style.display = isEN ? '' : 'none');
-      document.querySelectorAll('.es').forEach(el => el.style.display = isEN ? 'none' : '');
-      spanEN.classList.toggle('active',  isEN);
-      spanES.classList.toggle('active', !isEN);
-      localStorage.setItem(LANG_KEY, lang);
-    }
-    applyLang(localStorage.getItem(LANG_KEY) || 'en');
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-      applyLang(root.lang === 'en' ? 'es' : 'en');
-    });
+    document.querySelectorAll('.es').forEach(el => el.style.display = 'none');
   </script>
 </body>
 </html>

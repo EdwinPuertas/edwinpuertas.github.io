@@ -195,34 +195,6 @@
       transition: fill var(--transition);
     }
 
-    /* Language toggle */
-    #lang-toggle {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      border: 1px solid var(--color-border);
-      border-radius: 30px;
-      background: transparent;
-      cursor: pointer;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    #lang-toggle span {
-      padding: 5px 9px;
-      color: var(--color-muted);
-      transition: background var(--transition), color var(--transition);
-      border-radius: 30px;
-    }
-
-    #lang-toggle span.active {
-      background: var(--color-text);
-      color: var(--color-bg);
-    }
-
     /* Mobile hamburger */
     #menu-toggle {
       display: none;
@@ -687,11 +659,6 @@
 
       <div style="display:flex;align-items:center;gap:8px;">
         <!-- Language toggle -->
-        <button id="lang-toggle" aria-label="Switch language / Cambiar idioma">
-          <span id="lang-es">ES</span>
-          <span style="opacity:0.35;padding:0 2px;">|</span>
-          <span id="lang-en" class="active">EN</span>
-        </button>
 
         <!-- Theme toggle -->
         <button id="theme-toggle" aria-label="Toggle theme">
@@ -1523,29 +1490,6 @@
 
     themeBtn.addEventListener('click', () => {
       applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    });
-
-    /* ── Language ── */
-    const langBtn  = document.getElementById('lang-toggle');
-    const spanEN   = document.getElementById('lang-en');
-    const spanES   = document.getElementById('lang-es');
-    const LANG_KEY = 'ep-lang';
-
-    function applyLang(lang) {
-      const isEN = lang === 'en';
-      document.documentElement.lang = lang;
-      document.querySelectorAll('.en').forEach(el => el.style.display = isEN ? '' : 'none');
-      document.querySelectorAll('.es').forEach(el => el.style.display = isEN ? 'none' : '');
-      spanEN.classList.toggle('active',  isEN);
-      spanES.classList.toggle('active', !isEN);
-      localStorage.setItem(LANG_KEY, lang);
-    }
-
-    const savedLang = localStorage.getItem(LANG_KEY) || 'en';
-    applyLang(savedLang);
-
-    langBtn.addEventListener('click', () => {
-      applyLang(document.documentElement.lang === 'en' ? 'es' : 'en');
     });
 
     /* ── Mobile menu ── */

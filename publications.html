@@ -95,15 +95,6 @@
     }
     #theme-toggle:hover { color: var(--color-text); border-color: var(--color-accent); }
 
-    /* LANG TOGGLE */
-    #lang-toggle {
-      background: none; border: 1px solid var(--color-border); border-radius: var(--radius);
-      padding: 5px 10px; cursor: pointer; font-size: 0.8rem; color: var(--color-muted);
-      display: flex; align-items: center; gap: 4px; transition: all var(--transition);
-    }
-    #lang-toggle span.active { color: var(--color-text); font-weight: 600; }
-    #lang-toggle:hover { border-color: var(--color-accent); }
-
     /* PAGE LAYOUT */
     .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
     main { padding: 4rem 0 6rem; }
@@ -207,11 +198,6 @@
         <a href="index.html#redes"><span class="en">Contact</span><span class="es">Contacto</span></a>
       </div>
       <div style="display:flex;align-items:center;gap:8px;">
-        <button id="lang-toggle" aria-label="Toggle language">
-          <span id="lbl-es">ES</span>
-          <span style="opacity:0.35;padding:0 2px;">|</span>
-          <span id="lbl-en" class="active">EN</span>
-        </button>
         <button id="theme-toggle" aria-label="Toggle theme">
           <span id="theme-icon">🌙</span>
         </button>
@@ -1016,7 +1002,6 @@
 
   <script>
     const THEME_KEY = 'ep-theme';
-    const LANG_KEY  = 'ep-lang';
 
     /* THEME */
     const themeBtn  = document.getElementById('theme-toggle');
@@ -1031,24 +1016,6 @@
     });
     applyTheme(localStorage.getItem(THEME_KEY) ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-
-    /* LANGUAGE */
-    const langBtn = document.getElementById('lang-toggle');
-    const lblEN   = document.getElementById('lbl-en');
-    const lblES   = document.getElementById('lbl-es');
-    function applyLang(lang) {
-      const isEN = lang === 'en';
-      document.documentElement.lang = lang;
-      document.querySelectorAll('.en').forEach(el => el.style.display = isEN ? '' : 'none');
-      document.querySelectorAll('.es').forEach(el => el.style.display = isEN ? 'none' : '');
-      lblEN.classList.toggle('active',  isEN);
-      lblES.classList.toggle('active', !isEN);
-      localStorage.setItem(LANG_KEY, lang);
-    }
-    langBtn.addEventListener('click', () => {
-      applyLang(document.documentElement.lang === 'en' ? 'es' : 'en');
-    });
-    applyLang(localStorage.getItem(LANG_KEY) || 'en');
 
     /* FILTER */
     const filterBtns = document.querySelectorAll('.filter-btn');
